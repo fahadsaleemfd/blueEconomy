@@ -74,9 +74,9 @@ slider2:
       different kinds of components, but we'll start with *React*.Component
       subclasses: class ShoppingList extends"
   - title: Node
-    description: "*React* is a declarative, efficient, and flexible JavaScript
+    description: "* *React is a declarative, efficient, and flexible JavaScript
       library for building user interfaces. It lets you compose complex UIs from
-      small and isolated pieces of code called “components”. *React* has a few
-      different kinds of components, but we'll start with *React*.Component
-      subclasses: class ShoppingList extends"
+      small and isolated pieces of code called “components”. React has a few
+      different kinds of components, but we'll start with React.Component
+      subclasses: class ShoppingList extends*"
 ---
