@@ -2,7 +2,7 @@ backend:
   name: github
   # change repo to your git repository url
   branch: master
-  repo: fahadsaleemfd/blueSky
+  repo: fahadsaleemfd/blueEconomy
 media_folder: static/assets
 public_folder: /assets
 
