@@ -1,0 +1,198 @@
+backend:
+  name: github
+  # change repo to your git repository url
+  branch: master
+  repo: fahadsaleemfd/blueSky
+media_folder: static/assets
+public_folder: /assets
+
+collections:
+  - name: blueEconomy
+    label: BlueEconomy
+    label_singular: Slider Image
+    folder: src/pages/posts/blueEconomy/
+    summary: '{{title}}'
+    description: >
+      The description is a great place for tone setting, high level information, and editing
+      guidelines for BlueEconomy.
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string', tagname: 'h1' }
+      - label: 'Video '
+        name: 'video'
+        widget: 'file'
+        required: true
+      - { label: 'description', name: 'description', widget: 'string', hint: 'Description will be here' }
+  - name: beStartup
+    label: BE Startup
+    label_singular: Slider Image
+    folder: src/pages/posts/beStartups/
+    summary: '{{title}}'
+    description: >
+      The description is a great place for tone setting, high level information, and editing
+      guidelines for BE Startups.
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string', tagname: 'h1' }
+      - label: 'Image '
+        name: 'image'
+        widget: 'image'
+        required: true
+      - { label: 'description', name: 'description', widget: 'string', hint: 'Description will be here' }
+
+  - name: beChallenge
+    label: BE Challenge 2021
+    label_singular: Be Challenge 2021
+    folder: src/pages/posts/beChallenge/
+    summary: '{{title1}}'
+    delete: false 
+    description: >
+      The description is a great place for tone setting, high level information, and editing
+      guidelines for BE  BE Challenge 2021.
+    fields:
+      - { label: 'Title', name: 'title1', widget: 'string', tagname: 'h1' }
+      - label: 'Image '
+        name: 'image1'
+        widget: 'image'
+        required: true
+      - { label: 'Description', name: 'description1', widget: 'string' }
+      - label: 'Timeline: key Milestones'
+        name: 'timeline'
+        widget: 'object'
+        fields:
+              - {
+                  label: 'Preparation',
+                  name: preparation,
+                  widget: string,
+                }
+              - {
+                  label: 'Round1',
+                  name: round1,
+                  widget: string,
+                }
+              - {
+                  label: 'Round2',
+                  name: round2,
+                  widget: string,
+                }
+              - {
+                  label: 'Round3',
+                  name: round3,
+                  widget: string,
+                }
+      - label: 'Competition Philosophy'
+        name: 'Philosophy'
+        widget: 'object'
+        fields:
+              - {
+                  label: 'Title',
+                  name:   title,
+                  widget: string,
+                }
+              - {
+                  label: 'Description',
+                  name: description,
+                  widget: markdown,
+                }
+              - {
+                  label: 'Image',
+                  name: image,
+                  widget: image,
+                }
+      - label: 'Slider'
+        name: 'slider'
+        widget: 'list'
+        fields:
+              - {
+                  label: 'Title',
+                  name:   title,
+                  widget: string,
+                }
+              - {
+                  label: 'Description',
+                  name: description,
+                  widget: markdown,
+                }
+              - {
+                  label: 'Image',
+                  name: image,
+                  widget: image,
+                }   
+              - {
+                  label: 'Link',
+                  name: link,
+                  widget: string,
+                }  
+      - label: 'Winner Prizes'
+        name: 'prizes'
+        widget: 'object'
+        fields:
+              - {
+                  label: 'First Prize',
+                  name:   first,
+                  widget: string,
+                }
+              - {
+                  label: 'Second Prize',
+                  name: second,
+                  widget: string,
+                }
+              - {
+                  label: 'Third Prize',
+                  name:   third,
+                  widget: string,
+                }
+              - {
+                  label: 'Honorable Mention(10 Prizes)',
+                  name: honours,
+                  widget: string,
+                }
+      - label: 'Slider 2'
+        name: 'slider2'
+        widget: 'list'
+        fields:
+              - {
+                  label: 'Title',
+                  name:   title,
+                  widget: string,
+                }
+              - {
+                  label: 'Description',
+                  name: description,
+                  widget: markdown,
+                } 
+   
+                    
+          
+
+  - name: resources
+    label: Resources
+    label_singular: Resources 2021
+    folder: src/pages/posts/resources/
+    summary: '{{title}}'
+    create: true
+    description: >
+      The description is a great place for tone setting, high level information, and editing
+      guidelines for BE resources.
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string', tagname: 'h1' }
+      - { label: 'Description', name: 'description', widget: 'string', hint: 'Description will be here' }
+      - { label: 'Title 2', name: 'title2', widget: string, hint: 'Description will be here' }
+      - { label: 'Description 2', name: 'description2', widget: string, hint: 'Description will be here' }
+      - label: 'List Title'
+        name: 'listTitle'
+        widget: 'list'
+        fields:
+              - {
+                  label: 'Title',
+                  name: title,
+                  widget: string,
+                }
+              - {
+                  label: 'Description',
+                  name: description,
+                  widget: string,
+                }
+              - {
+                  label: 'Button Label',
+                  name: buttonLabel,
+                  widget: string,
+                }

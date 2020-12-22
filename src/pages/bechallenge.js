@@ -8,7 +8,10 @@ import TrustedImage from "../dist/assets/images/logo-1.png"
 import {Helmet} from "react-helmet";
 import { StaticQuery, graphql } from "gatsby"
 
-const Challenge = () => {
+const Challenge = () => (
+    <StaticQuery query={Challengesquery} render={data=>{
+        const allData = data.allMarkdownRemark.edges[0].node.frontmatter
+        // console.log(allData)
   return (  <div>
                 <Layout>
                 </Layout>
@@ -18,21 +21,9 @@ const Challenge = () => {
                     <div className="col-12 col-md-6 pr-md-5 align-self-center text-center text-md-left text items">
                         <div data-aos="fade-up"  className="row intro mb-4">
                             <div className="col-12 p-0">
-                                <span className="pre-title m-auto m-md-0">About Blue Economy</span>
-                                <h2><span className="featured"><span>Blue Economy</span></span> Challenge</h2>
-                                <p>It is a Five month Business Plan Training and Competition<br></br>
-
-- To engage the youth of the nation to think and propose new ideas as they see the future of coastal economies<br></br>
-
-- Connects these ideas to mentors and  entrepreneurship<br></br>
-
-- To take them through a 5 month program for training on building awareness on opportunities in BE. <br></br>
-
-- Taking them through a 5 month program building business planning skills and writing a bullet proof business plan. <br></br>
-
-- To celebrate best ideas by helping them accelerate into potential success stories
-
-</p>
+                                <span className="pre-title m-auto m-md-0">About {allData.title1}</span>
+                                <h2><span className="featured"><span>{allData.title1}</span></span> Challenge</h2>
+                                <p>{allData.description1}</p>
                             </div>
                         </div>
                                               
@@ -49,37 +40,35 @@ const Challenge = () => {
                 </div>
             </div>
         </section>
-
+{/* Second Section Start From Here */}
 
         <section id="process" class="section-4 process offers">
             <div class="container full">
                 <div class="row text-center intro">
                     <div class="col-12">
-                        <span class="pre-title">How it works in practice</span>
                         <h2><span class="featured"><span>Key</span></span> Milestones</h2>
-                        <p class="text-max-800">We work with innovative methodologies to ensure that the entire reformatting process is done from start to finish as planned.</p>
                     </div>
                 </div>
                 <div class="row justify-content-center text-center items">
                     <div class="col-12 col-md-6 col-lg-2 item">
                         <div class="step"><span>01</span></div>
-                        <h4>Preparation</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                        <h4>Preparations</h4>
+                        <p>{allData.timeline.preparation}</p>
                     </div>
                     <div class="col-12 col-md-6 col-lg-2 item">
                         <div class="step"><span>02</span></div>
                         <h4>Round 1</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                        <p>{allData.timeline.round1}</p>
                     </div>
                     <div class="col-12 col-md-6 col-lg-2 item">
                         <div class="step"><span>03</span></div>
                         <h4>Round 2</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                        <p>{allData.timeline.round2}</p>
                     </div>
                     <div class="col-12 col-md-6 col-lg-2 item">
                         <div class="step"><span>04</span></div>
                         <h4>Round 3: Top 10 Shortlist</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                        <p>{allData.timeline.round3}</p>
                     </div>
                     {/* <div class="col-12 col-md-6 col-lg-2 item">
                         <div class="step"><span>05</span></div>
@@ -95,9 +84,9 @@ const Challenge = () => {
                 <div class="container">
                     <div class="row text-center intro">
                         <div class="col-12">
-                            <span class="pre-title">Customer Testimonials</span>
-                            <h2>Trusted <span class="featured"><span>Feedback</span></span></h2>
-                            <p class="text-max-800">We work intensively in search of ideals that can add up in the lives of our customers. This is what moves us and we are grateful for the recognition.</p>
+                            {/* <span class="pre-title">Customer Testimonials</span> */}
+                            <h2>Winner <span class="featured"><span>Prizes</span></span></h2>
+                            {/* <p class="text-max-800">We work intensively in search of ideals that can add up in the lives of our customers. This is what moves us and we are grateful for the recognition.</p> */}
                         </div>
                     </div>
                     <div class="swiper-container mid-slider items" data-perview="3"> 
@@ -105,9 +94,11 @@ const Challenge = () => {
                             <div class="swiper-slide slide-center item">
                                 <div class="row card">
                                     <div class="col-12">
-                                        <img src={TrustedImage} alt="Logo" class="logo"/>
-                                        <p>Praesent volutpat justo sit amet elementum malesuada. Praesent sagittis augue justo, in accumsan orci rhoncus at pellentesque.</p>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                        <h3>First Prize</h3>
+                                        <h4> {allData.prizes.first}</h4>
+                                        {/* <img src={TrustedImage} alt="Logo" class="logo"/> */}
+                                        {/* <p>Praesent volutpat justo sit amet elementum malesuada. Praesent sagittis augue justo, in accumsan orci rhoncus at pellentesque.</p> */}
+                                        {/* <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
                                         <i class="quote-right fas fa-quote-right"></i>
                                     </div>
                                 </div>
@@ -115,9 +106,11 @@ const Challenge = () => {
                             <div class="swiper-slide slide-center item">
                                 <div class="row card">
                                     <div class="col-12">
-                                        <img src={TrustedImage} alt="Logo" class="logo"/>
-                                        <p>Praesent volutpat justo sit amet elementum malesuada. Praesent sagittis augue justo, in accumsan orci rhoncus at pellentesque.</p>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                         <h3>2nd Runner Up</h3>
+                                        <h4> {allData.prizes.first}</h4>
+                                        {/* <img src={TrustedImage} alt="Logo" class="logo"/> */}
+                                        {/* <p>Praesent volutpat justo sit amet elementum malesuada. Praesent sagittis augue justo, in accumsan orci rhoncus at pellentesque.</p> */}
+                                        {/* <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
                                         <i class="quote-right fas fa-quote-right"></i>
                                     </div>
                                 </div>
@@ -125,83 +118,30 @@ const Challenge = () => {
                             <div class="swiper-slide slide-center item">
                                 <div class="row card">
                                     <div class="col-12">
-                                        <img src={TrustedImage}/>
+                                        <h3>Runner Up</h3>
+                                        <h4> {allData.prizes.first}</h4>
+                                        {/* <img src={TrustedImage}/>
                                         <p>Praesent volutpat justo sit amet elementum malesuada. Praesent sagittis augue justo, in accumsan orci rhoncus at pellentesque.</p>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
                                         <i class="quote-right fas fa-quote-right"></i>
                                     </div>
                                 </div>
                             </div>
+
                             <div class="swiper-slide slide-center item">
                                 <div class="row card">
                                     <div class="col-12">
-                                        <img src="assets/images/logo-4.png" alt="Logo" class="logo"/>
+                                        <h3>Honorable Mention(10 Prizes)</h3>
+                                        <h4> {allData.prizes.first}</h4>
+                                        {/* <img src={TrustedImage}/>
                                         <p>Praesent volutpat justo sit amet elementum malesuada. Praesent sagittis augue justo, in accumsan orci rhoncus at pellentesque.</p>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
                                         <i class="quote-right fas fa-quote-right"></i>
                                     </div>
                                 </div>
                             </div>
-                            <div class="swiper-slide slide-center item">
-                                <div class="row card">
-                                    <div class="col-12">
-                                        <img src="assets/images/logo-5.png" alt="Logo" class="logo"/>
-                                        <p>Praesent volutpat justo sit amet elementum malesuada. Praesent sagittis augue justo, in accumsan orci rhoncus at pellentesque.</p>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                        <i class="quote-right fas fa-quote-right"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide slide-center item">
-                                <div class="row card">
-                                    <div class="col-12">
-                                        <img src="assets/images/logo-1.png" alt="Logo" class="logo"/>
-                                        <p>Praesent volutpat justo sit amet elementum malesuada. Praesent sagittis augue justo, in accumsan orci rhoncus at pellentesque.</p>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                        <i class="quote-right fas fa-quote-right"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide slide-center item">
-                                <div class="row card">
-                                    <div class="col-12">
-                                        <img src="assets/images/logo-2.png" alt="Logo" class="logo"/>
-                                        <p>Praesent volutpat justo sit amet elementum malesuada. Praesent sagittis augue justo, in accumsan orci rhoncus at pellentesque.</p>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                        <i class="quote-right fas fa-quote-right"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide slide-center item">
-                                <div class="row card">
-                                    <div class="col-12">
-                                        <img src="assets/images/logo-3.png" alt="Logo" class="logo"/>
-                                        <p>Praesent volutpat justo sit amet elementum malesuada. Praesent sagittis augue justo, in accumsan orci rhoncus at pellentesque.</p>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                        <i class="quote-right fas fa-quote-right"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide slide-center item">
-                                <div class="row card">
-                                    <div class="col-12">
-                                        <img src="assets/images/logo-4.png" alt="Logo" class="logo"/>
-                                        <p>Praesent volutpat justo sit amet elementum malesuada. Praesent sagittis augue justo, in accumsan orci rhoncus at pellentesque.</p>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                        <i class="quote-right fas fa-quote-right"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide slide-center item">
-                                <div class="row card">
-                                    <div class="col-12">
-                                        <img src="assets/images/logo-5.png" alt="Logo" class="logo"/>
-                                        <p>Praesent volutpat justo sit amet elementum malesuada. Praesent sagittis augue justo, in accumsan orci rhoncus at pellentesque.</p>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                        <i class="quote-right fas fa-quote-right"></i>
-                                    </div>
-                                </div>
-                            </div>
+
+                          
                         </div>
                     </div>
                 </div>
@@ -212,68 +152,36 @@ const Challenge = () => {
             <div class="container">
                 <div class="row intro">
                     <div class="col-12 col-md-9 align-self-center text-center text-md-left">
-                        <span class="pre-title m-auto ml-md-0">Our business areas</span>
-                        <h2 class="mb-0">Excellence in <span class="featured"><span>Services</span></span></h2>
+                        {/* <span class="pre-title m-auto ml-md-0">Our business areas</span> */}
+                        {/* <h2 class="mb-0">Excellence in <span class="featured"><span>Services</span></span></h2> */}
                     </div>
                     <div class="col-12 col-md-3 align-self-end">
-                        <a href="#contact" class="smooth-anchor btn mx-auto mr-md-0 ml-md-auto outline-button">GET IN TOUCH</a>
+                        {/* <a href="#contact" class="smooth-anchor btn mx-auto mr-md-0 ml-md-auto outline-button">GET IN TOUCH</a> */}
                     </div>
                 </div>
                 <div class="row justify-content-center items">
+
+                {allData.slider2.map(tag => (
                     <div data-aos="fade-up" class="col-12 col-md-6 item">
                         <div class="card">
                             <i class="icon icon-organization"></i>
-                            <h4>Audit & Assurance</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras iaculis diam varius diam ultricies lacinia.</p>
-                            <p>Curabitur convallis, diam a egestas iaculis, neque lorem interdum felis, in viverra lacus tortor in leo.</p>
+                            <h4>{tag.title}</h4>
+                            <p>{tag.description}</p>
                             <a href="#"><i class="btn-icon pulse fas fas fa-arrow-right"></i></a>
                         </div>
                     </div>
-                    <div data-aos="fade-up" class="col-12 col-md-6 item">
-                        <div class="card">
-                            <i class="icon icon-briefcase"></i>
-                            <h4>Financial Advisory</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras iaculis diam varius diam ultricies lacinia.</p>
-                            <p>Curabitur convallis, diam a egestas iaculis, neque lorem interdum felis, in viverra lacus tortor in leo.</p>
-                            <a href="#"><i class="btn-icon pulse fas fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <div data-aos="fade-up" class="col-12 col-md-6 item">
-                        <div class="card">
-                            <i class="icon icon-chart"></i>
-                            <h4>Analytics and M&A</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras iaculis diam varius diam ultricies lacinia.</p>
-                            <p>Curabitur convallis, diam a egestas iaculis, neque lorem interdum felis, in viverra lacus tortor in leo.</p>
-                            <a href="#"><i class="btn-icon pulse fas fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <div data-aos="fade-up" class="col-12 col-md-6 item">
-                        <div class="card">
-                            <i class="icon icon-plane"></i>
-                            <h4>Middle Marketing</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras iaculis diam varius diam ultricies lacinia.</p>
-                            <p>Curabitur convallis, diam a egestas iaculis, neque lorem interdum felis, in viverra lacus tortor in leo.</p>
-                            <a href="#"><i class="btn-icon pulse fas fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <div data-aos="fade-up" class="col-12 col-md-6 item">
-                        <div class="card">
-                            <i class="icon icon-globe-alt"></i>
-                            <h4>Legal Consulting</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras iaculis diam varius diam ultricies lacinia.</p>
-                            <p>Curabitur convallis, diam a egestas iaculis, neque lorem interdum felis, in viverra lacus tortor in leo.</p>
-                            <a href="#"><i class="btn-icon pulse fas fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <div data-aos="fade-up" class="col-12 col-md-6 item">
-                        <div class="card">
-                            <i class="icon icon-drawer"></i>
-                            <h4>Regulatory Risk</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras iaculis diam varius diam ultricies lacinia.</p>
-                            <p>Curabitur convallis, diam a egestas iaculis, neque lorem interdum felis, in viverra lacus tortor in leo.</p>
-                            <a href="#"><i class="btn-icon pulse fas fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
+                ))}
+
+                
+
+                 
+
+                  
+
+                 
+
+
+
                 </div>
             </div>
         </section>
@@ -283,11 +191,12 @@ const Challenge = () => {
 
             </div>
         )
-  }
+    }}/>
+  )
 
   const Challengesquery = graphql`
   query challenge {
-      allMarkdownRemark(filter: {fileAbsolutePath: {regex: "posts/beChallenge/"}}) {
+      allMarkdownRemark(filter: {fileAbsolutePath: {regex: "posts/bechallenge/"}}) {
         edges {
           node {
             id

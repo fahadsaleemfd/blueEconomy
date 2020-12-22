@@ -125,7 +125,7 @@ const Header = ({ siteTitle }) => {
                         </li>
 
                         <li class="nav-item dropdown">
-                            <a  href="bechallenge" class="nav-link"><Link to={'/'}>BE Challenege 2021</Link></a>
+                            <a  href="bechallenge" class="nav-link">BE Challenege 2021</a>
                         </li>
 
                         <li class="nav-item dropdown">
