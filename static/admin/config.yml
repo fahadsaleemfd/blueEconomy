@@ -41,7 +41,7 @@ collections:
   - name: beChallenge
     label: BE Challenge 2021
     label_singular: Be Challenge 2021
-    folder: src/pages/posts/beChallenge/
+    folder: src/pages/posts/bechallenge/
     summary: '{{title1}}'
     delete: false 
     description: >
