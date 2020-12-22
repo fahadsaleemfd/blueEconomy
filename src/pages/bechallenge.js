@@ -78,74 +78,72 @@ const Challenge = () => (
                 </div>
             </div>
         </section>
-
-        <section id="testimonials" class="section-5 carousel testimonials">
-            <div class="overflow-holder">
-                <div class="container">
-                    <div class="row text-center intro">
-                        <div class="col-12">
-                            {/* <span class="pre-title">Customer Testimonials</span> */}
-                            <h2>Winner <span class="featured"><span>Prizes</span></span></h2>
-                            {/* <p class="text-max-800">We work intensively in search of ideals that can add up in the lives of our customers. This is what moves us and we are grateful for the recognition.</p> */}
-                        </div>
-                    </div>
-                    <div class="swiper-container mid-slider items" data-perview="3"> 
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide slide-center item">
-                                <div class="row card">
-                                    <div class="col-12">
-                                        <h3>First Prize</h3>
-                                        <h4> {allData.prizes.first}</h4>
-                                        {/* <img src={TrustedImage} alt="Logo" class="logo"/> */}
-                                        {/* <p>Praesent volutpat justo sit amet elementum malesuada. Praesent sagittis augue justo, in accumsan orci rhoncus at pellentesque.</p> */}
-                                        {/* <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
-                                        <i class="quote-right fas fa-quote-right"></i>
-                                    </div>
-                                </div>
+{/* Winner Prizes */}
+        <section class="section-2 offers">
+            <div class="container">
+                <div class="row text-center intro">
+                    <div class="col-12">
+                        <h2>Winner Prizes</h2>
+                        <div class="row item widget-tags">
+                            <div class="col-12 align-self-center">
                             </div>
-                            <div class="swiper-slide slide-center item">
-                                <div class="row card">
-                                    <div class="col-12">
-                                         <h3>2nd Runner Up</h3>
-                                        <h4> {allData.prizes.first}</h4>
-                                        {/* <img src={TrustedImage} alt="Logo" class="logo"/> */}
-                                        {/* <p>Praesent volutpat justo sit amet elementum malesuada. Praesent sagittis augue justo, in accumsan orci rhoncus at pellentesque.</p> */}
-                                        {/* <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
-                                        <i class="quote-right fas fa-quote-right"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide slide-center item">
-                                <div class="row card">
-                                    <div class="col-12">
-                                        <h3>Runner Up</h3>
-                                        <h4> {allData.prizes.first}</h4>
-                                        {/* <img src={TrustedImage}/>
-                                        <p>Praesent volutpat justo sit amet elementum malesuada. Praesent sagittis augue justo, in accumsan orci rhoncus at pellentesque.</p>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
-                                        <i class="quote-right fas fa-quote-right"></i>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide slide-center item">
-                                <div class="row card">
-                                    <div class="col-12">
-                                        <h3>Honorable Mention(10 Prizes)</h3>
-                                        <h4> {allData.prizes.first}</h4>
-                                        {/* <img src={TrustedImage}/>
-                                        <p>Praesent volutpat justo sit amet elementum malesuada. Praesent sagittis augue justo, in accumsan orci rhoncus at pellentesque.</p>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
-                                        <i class="quote-right fas fa-quote-right"></i>
-                                    </div>
-                                </div>
-                            </div>
-
-                          
                         </div>
                     </div>
                 </div>
+                <div class="row justify-content-center items">
+                    <div class="col-12 col-md-6 col-lg-3 item">
+                        <div class="card">
+                            <i class="icon icon-organization"></i>
+                            <h4>First Prize</h4>
+
+                         
+                            <div class="buttons">
+                                <div class="d-sm-inline-flex">
+                                    {allData.prizes.first}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3 item">
+                        <div class="card">
+                            <i class="icon icon-briefcase"></i>
+                            <h4>2nd Runner Up</h4>
+
+                            <div class="buttons">
+                                <div class="d-sm-inline-flex">
+                                 {allData.prizes.second} 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3 item">
+                        <div class="card">
+                            <i class="icon icon-chart"></i>
+                            <h4>Runner Up</h4>
+                            <div class="buttons">
+                                <div class="d-sm-inline-flex">
+                                  {allData.prizes.third}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row justify-content-center items">
+               <div class="col-12 col-md-6 col-lg-3 item">
+                        <div class="card">
+                            <i class="icon icon-chart"></i>
+                            <h4>Honorable Mention(10 Prizes)</h4>
+                            <div class="buttons">
+                                <div class="d-sm-inline-flex">
+                                {allData.prizes.first}
+                                </div>
+                            </div>
+                        </div>
+                </div>
             </div>
+        </div>
+          
         </section>
 
         <section id="services" class="section-2 odd offers" style={{background:"black"}}>
