@@ -1,6 +1,6 @@
 ---
-title1: BE Challenge
-image1: /assets/1c5b1aa3386eeb2c21d633f04e2ddfbe.jpg
+title1: Blue Economy
+image1: /assets/challenge1.webp
 description1: Thematic Areas would in general require coming up with Solutions
   to existing local/national level problems which may involve Value Addition,
   Market Expansion, Productivity/Yield enhancement, Waste and Cost Reduction,
