@@ -17,22 +17,66 @@ timeline:
 
 
     Selecting Coordinators, Student volunteers, Judges, Trainers, Mentors, Graders and Domain Experts
-  round1: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-    pretium in massa vel mollis. Etiam et magna vitae orci pellentesque
-    bibendum. Suspendisse potenti. Curabitur sed erat suscipit, aliquam est in,
-    laoreet elit. Etiam vulputate mauris in velit sagittis, sit amet imperdiet
-    libero gravida. Nulla mauris dolor, sollicitudin at ligula et, iaculis
-    interdum lacus. Aliquam erat volutpat.
-  round2: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-    pretium in massa vel mollis. Etiam et magna vitae orci pellentesque
-    bibendum. Suspendisse potenti. Curabitur sed erat suscipit, aliquam est in,
-    laoreet elit. Etiam vulputate mauris in velit sagittis, sit amet imperdiet
-    libero gravida. Nulla mauris dolor, sollicitudin at ligula et
-  round3: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-    pretium in massa vel mollis. Etiam et magna vitae orci pellentesque
-    bibendum. Suspendisse potenti. Curabitur sed erat suscipit, aliquam est in,
-    laoreet elit. Etiam vulputate mauris in velit sagittis, sit amet imperdiet
-    libero gravida. iaculis interdum lacus. Aliquam erat volutpat.
+  round1: |-
+    Announcement: Team Registration
+
+    Awareness Seminars at Major Universities
+
+    Marketing Webinars and Seminar – If required meetings at key cities
+
+    Formation of Joint Industry - Academia Teams
+
+    Registration of Ideas and teams
+
+    Preliminary Short Listing
+
+    Idea Selection
+
+    Up to a maximum of top 100 ideas will be short listed. 
+  round2: |-
+    Interviews of shortlisted teams
+
+    Workshop (2 day) On what makes a great BP
+
+    Followed by Short listing of ideas
+
+    Plan, Executive Summary, Presentation and Elevator Pitch
+
+    ES and EP Preparation and Submission
+
+    TRAINING AND SHORTLISTING, & MENTORING
+
+    Short listing based on ES and EP
+
+    Assignment of Mentors
+
+    Mentoring Session-1 1/1 Meetings with teams
+
+    Mentoring and Coaching
+
+    Preparation and submission of BP and DP
+
+    Mentoring Session-2 1/1 Meetings with teams
+
+    Preparation and submission of BP and DP
+
+    Short listing based on FBP and FDP
+
+    Simultaneous Development of Project and industrial  beta testing
+  round3: |-
+    Announcement of TOP 10 Teams
+
+    Mentoring for presentation skills
+
+     
+
+    Finals & Exhibitions
+
+    Conference, exhibition and prize-winning ceremony
+
+     
+
+    International Road Show and training for finalists for making them successes
 slider:
   - title: Demo
     description: Thematic Areas would in general require
@@ -49,30 +93,49 @@ prizes:
   third: 500,000
   honours: "100,000 "
 slider2:
-  - title: React
-    description: "*React* is a declarative, efficient, and flexible JavaScript
-      library for building user interfaces. It lets you compose complex UIs from
-      small and isolated pieces of code called “components”. *React* has a few
-      different kinds of components, but we'll start with *React*.Component
-      subclasses: class ShoppingList extends"
-  - title: Angular
-    description: "*React* is a declarative, efficient, and flexible JavaScript
-      library for building user interfaces. It lets you compose complex UIs from
-      small and isolated pieces of code called “components”. *React* has a few
-      different kinds of components, but we'll start with *React*.Component
-      subclasses: class ShoppingList extends"
-  - title: Gatsby
-    description: "*React* is a declarative, efficient, and flexible JavaScript
-      library for building user interfaces. It lets you compose complex UIs from
-      small and isolated pieces of code called “components”. *React* has a few
-      different kinds of components, but we'll start with *React*.Component
-      subclasses: class ShoppingList extends"
-  - title: Node
-    description: "> *React is a declarative, efficient, and flexible JavaScript
-      library for building user interfaces. It lets you compose complex UIs from
-      small and isolated pieces of code called “components”. React has a few
-      different kinds of components, but we'll start with React.Component
-      subclasses: class ShoppingList extends*"
+  - title: Eligibility Criteria
+    description: >-
+      The competition is open for teams comprising of undergraduate and
+      post-graduate students. The field of study should be multi-disciplinary.
+
+
+      -The program is  restricted to the maritime industry.
+
+
+      -Participants must have a properly constructed business idea and concept paper  along with the team.
+
+
+      -Ideal composition of team (a technologist, business, finance, economy, operations etc.)
+
+
+      -Each team should have an advisor or an industry specialist.
+  - title: Formation of Teams
+    description: >-
+      -Maximum 4 to 5 members permitted in the team.
+
+
+      -One participant cannot be a part of more than one team.
+
+
+      -No change of team structure is permitted after the team is registered.
+
+
+      -One of the team members should be registered as Team Leader.
+
+
+      -The team must register on the link/website provided before: (date)
+
+
+      -All correspondences will be done through his/her email ID.
+
+
+      -Universities with maximum number of participation will get a special participation award.
+  - title: Participate as a Mentor
+    description: >-
+      Are you an industry leader, Academician, or veteran of the marine economy?
+
+
+      Participate as a mentor or judge. We are looking for experts in the fields mentioned in the thematic areas who are willing to guide and coach the student teams towards developing an industry entrepreneurial approach. For more information contact us or register on the link provided.
 Philosophy:
   description: Iteger non ligula nec felis pharetra vestibulum. Integer elementum
     justo vitae posuere sodales. In porta nisi a tortor egestas porta. Aenean
