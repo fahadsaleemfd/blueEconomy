@@ -11,7 +11,7 @@ import { StaticQuery, graphql } from "gatsby"
 const Challenge = () => (
     <StaticQuery query={Challengesquery} render={data=>{
         const allData = data.allMarkdownRemark.edges[0].node.frontmatter
-        // console.log(allData)
+        console.log(data)
   return (  <div>
                 <Layout>
                 </Layout>
@@ -23,7 +23,7 @@ const Challenge = () => (
                             <div className="col-12 p-0">
                                 <span className="pre-title m-auto m-md-0">About {allData.title1}</span>
                                 <h2><span className="featured"><span>{allData.title1}</span></span> Challenge</h2>
-                                <p>{allData.description1}</p>
+                                <div dangerouslySetInnerHTML={{__html:data.allMarkdownRemark.edges[0].node.html}}></div>
                             </div>
                         </div>
                                               
@@ -35,7 +35,7 @@ const Challenge = () => (
                         </div>
                     </div>
                     <div className="col-12 col-md-6 p-0 image">
-                        <img src={bkImage} className="fit-image" alt="Fit Image"/>
+                        <img src={allData.image1} className="fit-image" alt="Fit Image"/>
                     </div>
                 </div>
             </div>
@@ -166,7 +166,7 @@ const Challenge = () => (
                         <div class="card">
                             <i class="icon icon-organization"></i>
                             <h4>{tag.title}</h4>
-                            <p>{tag.description}</p>
+                            <p dangerouslySetInnerHTML={{__html:tag.description}} ></p>
                             <a href="#"><i class="btn-icon pulse fas fas fa-arrow-right"></i></a>
                         </div>
                     </div>

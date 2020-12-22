@@ -46,14 +46,14 @@ collections:
     delete: false 
     description: >
       The description is a great place for tone setting, high level information, and editing
-      guidelines for BE  BE Challenge 2021.
+      guidelines for BE Challenge 2021.
     fields:
       - { label: 'Title', name: 'title1', widget: 'string', tagname: 'h1' }
       - label: 'Image '
         name: 'image1'
         widget: 'image'
         required: true
-      - { label: 'Description', name: 'description1', widget: 'string' }
+      - { label: 'Description', name: 'description1', widget: body }
       - label: 'Timeline: key Milestones'
         name: 'timeline'
         widget: 'object'
@@ -78,49 +78,6 @@ collections:
                   name: round3,
                   widget: string,
                 }
-      - label: 'Competition Philosophy'
-        name: 'Philosophy'
-        widget: 'object'
-        fields:
-              - {
-                  label: 'Title',
-                  name:   title,
-                  widget: string,
-                }
-              - {
-                  label: 'Description',
-                  name: description,
-                  widget: markdown,
-                }
-              - {
-                  label: 'Image',
-                  name: image,
-                  widget: image,
-                }
-      - label: 'Slider'
-        name: 'slider'
-        widget: 'list'
-        fields:
-              - {
-                  label: 'Title',
-                  name:   title,
-                  widget: string,
-                }
-              - {
-                  label: 'Description',
-                  name: description,
-                  widget: markdown,
-                }
-              - {
-                  label: 'Image',
-                  name: image,
-                  widget: image,
-                }   
-              - {
-                  label: 'Link',
-                  name: link,
-                  widget: string,
-                }  
       - label: 'Winner Prizes'
         name: 'prizes'
         widget: 'object'
