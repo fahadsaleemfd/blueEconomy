@@ -11,11 +11,14 @@ import { StaticQuery, graphql } from "gatsby"
 const Challenge = () => (
     <StaticQuery query={Challengesquery} render={data=>{
         const allData = data.allMarkdownRemark.edges[0].node.frontmatter
-        console.log(data)
-  return (  <div>
-                <Layout>
-                </Layout>
-                <section id="funfacts" className="section-2 highlights image-right counter funfacts featured">
+        
+  return (  
+  <div>
+        <Layout>
+                <SEO title="Be Challenge 2021" />
+        </Layout>
+
+        <section id="funfacts" className="section-2 highlights image-right counter funfacts featured">
             <div classNameName="container">
                 <div className="row">
                     <div className="col-12 col-md-6 pr-md-5 align-self-center text-center text-md-left text items">
@@ -99,7 +102,7 @@ const Challenge = () => (
                          
                             <div class="buttons">
                                 <div class="d-sm-inline-flex">
-                                    {allData.prizes.first}
+                                 Rs.{allData.prizes.first}
                                 </div>
                             </div>
                         </div>
@@ -111,7 +114,7 @@ const Challenge = () => (
 
                             <div class="buttons">
                                 <div class="d-sm-inline-flex">
-                                 {allData.prizes.second} 
+                                 Rs. {allData.prizes.second} 
                                 </div>
                             </div>
                         </div>
@@ -122,7 +125,7 @@ const Challenge = () => (
                             <h4>Runner Up</h4>
                             <div class="buttons">
                                 <div class="d-sm-inline-flex">
-                                  {allData.prizes.third}
+                                 Rs. {allData.prizes.third}
                                 </div>
                             </div>
                         </div>
@@ -136,13 +139,13 @@ const Challenge = () => (
                             <h4>Honorable Mention(10 Prizes)</h4>
                             <div class="buttons">
                                 <div class="d-sm-inline-flex">
-                                {allData.prizes.first}
+                                Rs. {allData.prizes.honours}
                                 </div>
                             </div>
                         </div>
                 </div>
             </div>
-        </div>
+         </div>
           
         </section>
 
@@ -159,26 +162,16 @@ const Challenge = () => (
                 </div>
                 <div class="row justify-content-center items">
 
-                {allData.slider2.map(tag => (
-                    <div data-aos="fade-up" class="col-12 col-md-6 item">
-                        <div class="card">
-                            <i class="icon icon-organization"></i>
-                            <h4>{tag.title}</h4>
-                            <p dangerouslySetInnerHTML={{__html:tag.description}} ></p>
-                            <a href="#"><i class="btn-icon pulse fas fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                ))}
-
-                
-
-                 
-
-                  
-
-                 
-
-
+                        {allData.slider2.map(tag => (
+                            <div data-aos="fade-up" class="col-12 col-md-6 item">
+                                <div class="card">
+                                    <i class="icon icon-organization"></i>
+                                    <h4>{tag.title}</h4>
+                                    <p dangerouslySetInnerHTML={{__html:tag.description}} ></p>
+                                    <a href="#"><i class="btn-icon pulse fas fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        ))}
 
                 </div>
             </div>
