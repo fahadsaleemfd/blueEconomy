@@ -80,7 +80,7 @@ description1: Thematic Areas would in general require coming up with Solutions
   particular locality, city and/or Pakistan
 image1: /assets/challenge1.webp
 ---
-\    It is a Five month Business Plan Training and Competition
+  It is a Five month Business Plan Training and Competition
 
 * To engage the youth of the nation to think and propose new ideas as they see the future of coastal economies
 * Connects these ideas to mentors and  entrepreneurship
