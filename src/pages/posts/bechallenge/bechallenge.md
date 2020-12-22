@@ -1,10 +1,22 @@
 ---
 timeline:
-  preparation: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    Suspendisse pretium in massa vel mollis. Etiam et magna vitae orci
-    pellentesque bibendum. Suspendisse potenti. Curabitur sed erat suscipit,
-    aliquam est in, laoreet elit. Etiam vulputate mauris in velit sagittis, sit
-    amet imperdiet libero gravida.
+  preparation: >-
+    Formation of Project Management Committees, Sponsorship, Event Management,
+    and other committees.
+
+
+    Finalization thematic areas, awards criteria, and prize money
+
+    Website development and Social Media Activations
+
+
+    Establishing University centers for awareness campaigns
+
+
+    System training: how to use forms, templates and criterions.
+
+
+    Selecting Coordinators, Student volunteers, Judges, Trainers, Mentors, Graders and Domain Experts
   round1: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
     pretium in massa vel mollis. Etiam et magna vitae orci pellentesque
     bibendum. Suspendisse potenti. Curabitur sed erat suscipit, aliquam est in,
