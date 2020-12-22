@@ -32,8 +32,8 @@ const Challenge = () => (
                                               
                         <div data-aos="fade-up" className="buttons">
                             <div className="d-sm-inline-flex mb-5 mb-md-0">
-                                <a href="#contact" className="smooth-anchor mx-auto mt-4 btn primary-button">GET IN TOUCH</a>
-                                <a href="#" className="mx-auto ml-sm-4 mt-4 btn outline-button">READ MORE</a>
+                                <a href="#contact" className="smooth-anchor mx-auto mt-4 btn primary-button">Register</a>
+                                <a href="#" className="mx-auto ml-sm-4 mt-4 btn outline-button">Mentor Me</a>
                             </div>
                         </div>
                     </div>
