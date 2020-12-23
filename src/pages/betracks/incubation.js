@@ -8,10 +8,13 @@ import TrustedImage from "../../dist/assets/images/logo-1.png"
 import {Helmet} from "react-helmet";
 import { StaticQuery, graphql } from "gatsby"
 
-const Incubation = () => {
+const Incubation = () => (
     
-        
-  return (  
+    <StaticQuery query={Incubationquery} render={data=>{
+
+        const fetchData = data.allMarkdownRemark.edges
+  
+        return (  
         <div>
             <Layout>
                 <SEO title="Be Challenge 2021" />            
@@ -21,239 +24,33 @@ const Incubation = () => {
         <section id="blog" class="section-1 showcase blog-grid filter-section projects">
             <div class="overflow-holder">
                 <div class="container">
-                    <div class="row justify-content-center text-center">
-
-                    </div>
                     <div class="row items filter-items">
+
+                    {fetchData.map(tag => (
+
                         <div class="col-12 col-md-6 col-lg-4 item filter-item" data-groups='["innovation","social","technology"]'>
                             <div class="row card p-0 text-center">
                                 <div class="image-over">
-                                    <img src="assets/images/news-1.jpg" alt="Lorem ipsum"/>
+                                    <img src={tag.node.frontmatter.image} alt="Lorem ipsum"/>
                                 </div>
                                 <div class="card-footer d-lg-flex align-items-center justify-content-center">
-                                    <a href="#" class="d-lg-flex align-items-center"><i class="icon-user"></i>Andrea Miller</a>
-                                    <a href="#" class="d-lg-flex align-items-center"><i class="icon-clock"></i>2 Days Ago</a>
+                                    <a href="#" class="d-lg-flex align-items-center"><i class="icon-user"></i></a>
+                                    {/* <a href="#" class="d-lg-flex align-items-center"><i class="icon-clock"></i>2 Days Ago</a> */}
                                 </div>
                                 <div class="card-caption col-12 p-0">
                                     <div class="card-body">
                                         <a href="#">
-                                            <h4>Increasing creativity is possible for everyone</h4>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                            <h4>{tag.node.frontmatter.firsttitle}</h4>
+                                            {/* <p>{tag.node.frontmatter.description}</p> */}
                                         </a>
                                     </div>
                                 </div>
                             </div>
-                        </div>            
-                        <div class="col-12 col-md-6 col-lg-4 item filter-item" data-groups='["institutional","events","environment"]'>
-                            <div class="row card p-0 text-center">
-                                <div class="image-over">
-                                    <img src="assets/images/news-2.jpg" alt="Lorem ipsum"/>
-                                </div>
-                                <div class="card-footer d-lg-flex align-items-center justify-content-center">
-                                    <a href="#" class="d-lg-flex align-items-center"><i class="icon-user"></i>John Smith</a>
-                                    <a href="#" class="d-lg-flex align-items-center"><i class="icon-clock"></i>9 Days Ago</a>
-                                </div>
-                                <div class="card-caption col-12 p-0">
-                                    <div class="card-body">
-                                        <a href="#">
-                                            <h4>Because market research is part of the business plan</h4>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>     
-                        <div class="col-12 col-md-6 col-lg-4 item filter-item" data-groups='["environment","institutional","social"]'>
-                            <div class="row card p-0 text-center">
-                                <div class="image-over">
-                                    <img src="assets/images/news-3.jpg" alt="Lorem ipsum"/>
-                                </div>
-                                <div class="card-footer d-lg-flex align-items-center justify-content-center">
-                                    <a href="#" class="d-lg-flex align-items-center"><i class="icon-user"></i>Andrea Miller</a>
-                                    <a href="#" class="d-lg-flex align-items-center"><i class="icon-clock"></i>16 Days Ago</a>
-                                </div>
-                                <div class="card-caption col-12 p-0">
-                                    <div class="card-body">
-                                        <a href="#">
-                                            <h4>Working from home is now a trend</h4>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 col-lg-4 item filter-item" data-groups='["technology","events","innovation"]'>
-                            <div class="row card p-0 text-center">
-                                <div class="image-over">
-                                    <img src="assets/images/news-4.jpg" alt="Lorem ipsum"/>
-                                </div>
-                                <div class="card-footer d-lg-flex align-items-center justify-content-center">
-                                    <a href="#" class="d-lg-flex align-items-center"><i class="icon-user"></i>John Smith</a>
-                                    <a href="#" class="d-lg-flex align-items-center"><i class="icon-clock"></i>23 Days Ago</a>
-                                </div>
-                                <div class="card-caption col-12 p-0">
-                                    <div class="card-body">
-                                        <a href="#">
-                                            <h4>Tips for having a good relationship at work</h4>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 col-lg-4 item filter-item" data-groups='["social","environment","events"]'>
-                            <div class="row card p-0 text-center">
-                                <div class="image-over">
-                                    <img src="assets/images/news-5.jpg" alt="Lorem ipsum"/>
-                                </div>
-                                <div class="card-footer d-lg-flex align-items-center justify-content-center">
-                                    <a href="#" class="d-lg-flex align-items-center"><i class="icon-user"></i>David Cooper</a>
-                                    <a href="#" class="d-lg-flex align-items-center"><i class="icon-clock"></i>30 Days Ago</a>
-                                </div>
-                                <div class="card-caption col-12 p-0">
-                                    <div class="card-body">
-                                        <a href="#">
-                                            <h4>David Cooper tells about the opening of the new office in Baltimore</h4>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 col-lg-4 item filter-item" data-groups='["innovation","institutional","technology"]'>
-                            <div class="row card p-0 text-center">
-                                <div class="image-over">
-                                    <img src="assets/images/news-1.jpg" alt="Lorem ipsum"/>
-                                </div>
-                                <div class="card-footer d-lg-flex align-items-center justify-content-center">
-                                    <a href="#" class="d-lg-flex align-items-center"><i class="icon-user"></i>Andrea Miller</a>
-                                    <a href="#" class="d-lg-flex align-items-center"><i class="icon-clock"></i>2 Days Ago</a>
-                                </div>
-                                <div class="card-caption col-12 p-0">
-                                    <div class="card-body">
-                                        <a href="#">
-                                            <h4>Increasing creativity is possible for everyone</h4>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 col-lg-4 item filter-item" data-groups='["innovation","social","technology"]'>
-                            <div class="row card p-0 text-center">
-                                <div class="image-over">
-                                    <img src="assets/images/news-1.jpg" alt="Lorem ipsum"/>
-                                </div>
-                                <div class="card-footer d-lg-flex align-items-center justify-content-center">
-                                    <a href="#" class="d-lg-flex align-items-center"><i class="icon-user"></i>Andrea Miller</a>
-                                    <a href="#" class="d-lg-flex align-items-center"><i class="icon-clock"></i>2 Days Ago</a>
-                                </div>
-                                <div class="card-caption col-12 p-0">
-                                    <div class="card-body">
-                                        <a href="#">
-                                            <h4>Increasing creativity is possible for everyone</h4>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>            
-                        <div class="col-12 col-md-6 col-lg-4 item filter-item" data-groups='["institutional","events","environment"]'>
-                            <div class="row card p-0 text-center">
-                                <div class="image-over">
-                                    <img src="assets/images/news-2.jpg" alt="Lorem ipsum"/>
-                                </div>
-                                <div class="card-footer d-lg-flex align-items-center justify-content-center">
-                                    <a href="#" class="d-lg-flex align-items-center"><i class="icon-user"></i>John Smith</a>
-                                    <a href="#" class="d-lg-flex align-items-center"><i class="icon-clock"></i>9 Days Ago</a>
-                                </div>
-                                <div class="card-caption col-12 p-0">
-                                    <div class="card-body">
-                                        <a href="#">
-                                            <h4>Because market research is part of the business plan</h4>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>     
-                        <div class="col-12 col-md-6 col-lg-4 item filter-item" data-groups='["environment","institutional","social"]'>
-                            <div class="row card p-0 text-center">
-                                <div class="image-over">
-                                    <img src="assets/images/news-3.jpg" alt="Lorem ipsum"/>
-                                </div>
-                                <div class="card-footer d-lg-flex align-items-center justify-content-center">
-                                    <a href="#" class="d-lg-flex align-items-center"><i class="icon-user"></i>Andrea Miller</a>
-                                    <a href="#" class="d-lg-flex align-items-center"><i class="icon-clock"></i>16 Days Ago</a>
-                                </div>
-                                <div class="card-caption col-12 p-0">
-                                    <div class="card-body">
-                                        <a href="#">
-                                            <h4>Working from home is now a trend</h4>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 col-lg-4 item filter-item" data-groups='["technology","events","innovation"]'>
-                            <div class="row card p-0 text-center">
-                                <div class="image-over">
-                                    <img src="assets/images/news-4.jpg" alt="Lorem ipsum"/>
-                                </div>
-                                <div class="card-footer d-lg-flex align-items-center justify-content-center">
-                                    <a href="#" class="d-lg-flex align-items-center"><i class="icon-user"></i>John Smith</a>
-                                    <a href="#" class="d-lg-flex align-items-center"><i class="icon-clock"></i>23 Days Ago</a>
-                                </div>
-                                <div class="card-caption col-12 p-0">
-                                    <div class="card-body">
-                                        <a href="#">
-                                            <h4>Tips for having a good relationship at work</h4>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 col-lg-4 item filter-item" data-groups='["social","environment","events"]'>
-                            <div class="row card p-0 text-center">
-                                <div class="image-over">
-                                    <img src="assets/images/news-5.jpg" alt="Lorem ipsum"/>
-                                </div>
-                                <div class="card-footer d-lg-flex align-items-center justify-content-center">
-                                    <a href="#" class="d-lg-flex align-items-center"><i class="icon-user"></i>David Cooper</a>
-                                    <a href="#" class="d-lg-flex align-items-center"><i class="icon-clock"></i>30 Days Ago</a>
-                                </div>
-                                <div class="card-caption col-12 p-0">
-                                    <div class="card-body">
-                                        <a href="#">
-                                            <h4>David Cooper tells about the opening of the new office in Baltimore</h4>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 col-lg-4 item filter-item" data-groups='["innovation","institutional","technology"]'>
-                            <div class="row card p-0 text-center">
-                                <div class="image-over">
-                                    <img src="assets/images/news-1.jpg" alt="Lorem ipsum"/>
-                                </div>
-                                <div class="card-footer d-lg-flex align-items-center justify-content-center">
-                                    <a href="#" class="d-lg-flex align-items-center"><i class="icon-user"></i>Andrea Miller</a>
-                                    <a href="#" class="d-lg-flex align-items-center"><i class="icon-clock"></i>2 Days Ago</a>
-                                </div>
-                                <div class="card-caption col-12 p-0">
-                                    <div class="card-body">
-                                        <a href="#">
-                                            <h4>Increasing creativity is possible for everyone</h4>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-1 filter-sizer"></div>
+                        </div>   
+                    ))}
+
+
+
                     </div>
                     <div class="row">
                         <div class="col-12">
@@ -286,58 +83,29 @@ const Incubation = () => {
             
             </div>
         )
+    }}/>
+    )
 
+  const Incubationquery = graphql`
+  query incubation {
+    allMarkdownRemark(filter: {fileAbsolutePath: {regex: "posts/betracks/"}}) {
+      edges {
+        node {
+          id
+          frontmatter {
+            firsttitle
+            description
+            date
+            projectLink
+            link
+            image
+          }
+        }
+      }
     }
-
-//   const Challengesquery = graphql`
-//   query challenge {
-//       allMarkdownRemark(filter: {fileAbsolutePath: {regex: "posts/bechallenge/"}}) {
-//         edges {
-//           node {
-//             id
-//             html
-//             frontmatter {
-//               title1
-//               image1
-//               description1
-//               timeline {
-//                   preparation
-//                   round1
-//                   round2
-//                   round3
-//                 }
-//               Philosophy {
-//                   title
-//                   description
-//                   image
+  }
   
-//               }
-//               slider {
-//                   title
-//                   description
-//                   image
-//                   link
-  
-//               }
-//               prizes {
-//                   first
-//                   second
-//                   third
-//                   honours
-//               }
-//               slider2 {
-//                   title
-//                   description
-//               }
-             
-//             }
-            
-//           }
-//         }
-//       }
-//     }
-  
-//    `
+   `
 
 
 
