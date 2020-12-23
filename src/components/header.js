@@ -115,7 +115,7 @@ const Header = ({ siteTitle }) => {
                             <a href="#" class="nav-link">BE Tracks<i class="icon-arrow-down"></i></a>
                             <ul class="dropdown-menu">
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link" href="betracks/incubation">Incubation Tracks<i class="icon-arrow-right"></i></a>
+                                    <a class="nav-link" href="/incubation">Incubation Tracks<i class="icon-arrow-right"></i></a>
                                     <a class="nav-link" href="#">Funding Orgnizations<i class="icon-arrow-right"></i></a>
                                     <a class="nav-link" href="#">Business Competition<i class="icon-arrow-right"></i></a>
                                     <a class="nav-link" href="#">Inernational Universities<i class="icon-arrow-right"></i></a>
@@ -125,7 +125,7 @@ const Header = ({ siteTitle }) => {
                         </li>
 
                         <li class="nav-item dropdown">
-                            <a  href="bechallenge" class="nav-link">BE Challenege 2021</a>
+                            <a  href="/bechallenge" class="nav-link">BE Challenege 2021</a>
                         </li>
 
                         <li class="nav-item dropdown">
