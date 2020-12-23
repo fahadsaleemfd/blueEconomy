@@ -116,40 +116,21 @@ collections:
                   name: description,
                   widget: text,
                 } 
-   
-                    
-          
+     
 
-  - name: resources
-    label: Resources
-    label_singular: Resources 2021
-    folder: src/pages/posts/resources/
+  - name: betracks
+    label: Be Tracks
+    label_singular: Be Tracks
+    folder: src/pages/posts/betracks/
     summary: '{{title}}'
     create: true
     description: >
       The description is a great place for tone setting, high level information, and editing
-      guidelines for BE resources.
+      guidelines for BE Tracks.
     fields:
-      - { label: 'Title', name: 'title', widget: 'string', tagname: 'h1' }
-      - { label: 'Description', name: 'description', widget: 'string', hint: 'Description will be here' }
-      - { label: 'Title 2', name: 'title2', widget: string, hint: 'Description will be here' }
-      - { label: 'Description 2', name: 'description2', widget: string, hint: 'Description will be here' }
-      - label: 'List Title'
-        name: 'listTitle'
-        widget: 'list'
-        fields:
-              - {
-                  label: 'Title',
-                  name: title,
-                  widget: string,
-                }
-              - {
-                  label: 'Description',
-                  name: description,
-                  widget: string,
-                }
-              - {
-                  label: 'Button Label',
-                  name: buttonLabel,
-                  widget: string,
-                }
+      - { label: 'First Title', name: 'firsttitle', widget: 'string', tagname: 'h1' }
+      - { label: 'Second Title', name: 'secondtitle', widget: 'string', tagname: 'h1' }
+      - { label: 'Description', name: 'description', widget: 'markdown', hint: 'Description will be here' }
+      - { label: 'Link', name: 'link', widget: 'string', }
+      - { label: 'Project Link', name: 'projectLink', widget: 'string' }
+     

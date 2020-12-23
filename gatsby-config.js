@@ -24,6 +24,13 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `pages`,
+        path: `${__dirname}/src/pages/betracks`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
         path: `${__dirname}/src/pages/posts/bechallenge`,
       },
     },
