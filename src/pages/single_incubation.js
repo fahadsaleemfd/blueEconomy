@@ -101,7 +101,7 @@ const SingleIncubation = ({data}) => {
 
  export const Incubation_single = graphql`
   query single_incubation($slug: String!){
-    markdownRemark(fields:{slug:{eq:$slug}}) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
                   id
                   frontmatter {
                            firsttitle
