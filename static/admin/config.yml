@@ -149,7 +149,7 @@ collections:
     create: true
     description: >
       The description is a great place for tone setting, high level information, and editing
-      guidelines for BE Tracks.
+      guidelines for Funding Orgnizations.
     fields:
       - { label: 'Title', name: 'title', widget: 'string', tagname: 'h1' }
       - { label: 'Description', name: 'description', widget: 'text', hint: 'Description will be here' }
@@ -170,7 +170,28 @@ collections:
     create: true
     description: >
       The description is a great place for tone setting, high level information, and editing
-      guidelines for BE Tracks.
+      guidelines for Business Competition.
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string', tagname: 'h1' }
+      - { label: 'Description', name: 'description', widget: 'text', hint: 'Description will be here' }
+      - { label: 'Link', name: 'link', widget: 'string' }
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - { label: 'Project Link', name: 'projectLink', widget: 'string' }
+      - label: 'Image '
+        name: 'image'
+        widget: 'image'
+        required: true
+  
+  - name: international
+    label: International Universities
+    label_singular: International Universities
+    folder: src/pages/posts/international/
+    summary: '{{title}}'
+    slug: "{{year}}-{{month}}-{{day}}"
+    create: true
+    description: >
+      The description is a great place for tone setting, high level information, and editing
+      guidelines for International Universities.
     fields:
       - { label: 'Title', name: 'title', widget: 'string', tagname: 'h1' }
       - { label: 'Description', name: 'description', widget: 'text', hint: 'Description will be here' }
