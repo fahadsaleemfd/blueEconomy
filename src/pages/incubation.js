@@ -113,6 +113,7 @@ const Incubation = () => (
           fields{
             slug
           }
+          excerpt
         }
       }
     }
