@@ -7,6 +7,7 @@ import bkImage from "../dist/assets/images/about-5.jpg"
 import TrustedImage from "../dist/assets/images/logo-1.png"
 import {Helmet} from "react-helmet";
 import { StaticQuery, graphql } from "gatsby"
+import { node } from "prop-types"
 
 const Incubation = () => (
     
@@ -24,29 +25,36 @@ const Incubation = () => (
         <section id="blog" class="section-1 showcase blog-grid filter-section projects">
             <div class="overflow-holder">
                 <div class="container">
+                    
                     <div class="row items filter-items">
 
-                    {fetchData.map(tag => (
-
+                    {fetchData.map((tag,index) => (
+                        
                         <div class="col-12 col-md-6 col-lg-4 item filter-item" data-groups='["innovation","social","technology"]'>
+                            
                             <div class="row card p-0 text-center">
                                 <div class="image-over">
                                     <img src={tag.node.frontmatter.image} alt="Lorem ipsum"/>
                                 </div>
                                 <div class="card-footer d-lg-flex align-items-center justify-content-center">
-                                    <a href="#" class="d-lg-flex align-items-center"><i class="icon-user"></i></a>
+                                    {/* <Link to={node.fields.slug} class="d-lg-flex align-items-center"><i class="icon-user"></i></Link> */}
                                     {/* <a href="#" class="d-lg-flex align-items-center"><i class="icon-clock"></i>2 Days Ago</a> */}
                                 </div>
                                 <div class="card-caption col-12 p-0">
                                     <div class="card-body">
-                                        <a href="#">
-                                            <h4>{tag.node.frontmatter.firsttitle}</h4>
+
+                                        <Link to={tag.node.fields.slug}>
+                                            <h4>{tag.node.frontmatter.firsttitle }</h4>
                                             <p>{tag.node.frontmatter.description.substring(0,200)}</p>
-                                        </a>
+                                        
+                                        </Link>
+                
                                     </div>
                                 </div>
                             </div>
-                        </div>   
+                        </div>  
+                        
+                        
                     ))}
 
 
@@ -87,8 +95,10 @@ const Incubation = () => (
     )
 
   const Incubationquery = graphql`
-  query incubation {
-    allMarkdownRemark(filter: {fileAbsolutePath: {regex: "posts/betracks/"}}) {
+  query incubation{
+    allMarkdownRemark(filter: {fileAbsolutePath: {regex: "posts/betracks/"}}
+    
+    ) {
       edges {
         node {
           id
@@ -99,6 +109,9 @@ const Incubation = () => (
             projectLink
             link
             image
+          }
+          fields{
+            slug
           }
         }
       }
