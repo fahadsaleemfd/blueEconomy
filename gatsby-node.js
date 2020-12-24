@@ -14,24 +14,12 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 }
 
 exports.createPages = async ({ graphql, actions }) => {
-  const { createPage } = actions
-  const incubation_template = path.resolve('src/pages/single_incubation.js');
+    const { createPage } = actions
+  	const incubation_template = path.resolve('src/pages/single_incubation.js');
 	const funding_templete = path.resolve('src/pages/single_funding.js');
+	const business_templete = path.resolve('src/pages/single_business.js');
+    const international_templete = path.resolve('src/pages/single_international.js');
 
-
-  // const result = await graphql(`
-  //   query {
-  //     allMarkdownRemark (filter: {fileAbsolutePath: {regex: "posts/betracks/"}}){
-  //       edges {
-  //         node {
-  //           fields {
-  //             slug
-  //           }
-  //         }
-  //       }
-  //     }
-  //   }
-  // `)
 
   return graphql(`
 		{
@@ -46,6 +34,26 @@ exports.createPages = async ({ graphql, actions }) => {
 				}
 			}
 			funding: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "posts/fundings/"}}
+			) {
+				edges {
+					node {
+						fields {
+							slug
+						}
+					}
+				}
+			}
+			business: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "posts/business/"}}
+			) {
+				edges {
+					node {
+						fields {
+							slug
+						}
+					}
+				}
+			}
+			international: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "posts/international/"}}
 			) {
 				edges {
 					node {
@@ -81,6 +89,31 @@ exports.createPages = async ({ graphql, actions }) => {
         },
 			});
 		});
+
+// 
+		result.data.business.edges.forEach(({ node }) => {
+			createPage({
+				path: node.fields.slug,
+        component: business_templete,
+        context: {
+          slug: node.fields.slug,
+        },
+			});
+		});
+
+
+		result.data.international.edges.forEach(({ node }) => {
+			createPage({
+				path: node.fields.slug,
+        component: international_templete,
+        context: {
+          slug: node.fields.slug,
+        },
+			});
+		});
+
+
+
 	});
 }
 
