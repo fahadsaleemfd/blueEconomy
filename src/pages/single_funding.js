@@ -8,8 +8,8 @@ import TrustedImage from "../dist/assets/images/logo-1.png"
 import {Helmet} from "react-helmet";
 import { StaticQuery, graphql } from "gatsby"
 
-const SingleIncubation = ({data}) => {
-        console.log(data)
+const SingleFunding = ({data}) => {
+        console.log(data.markdownRemark.frontmatter)
         return (  
                 <div>
                     <Layout>
@@ -23,7 +23,7 @@ const SingleIncubation = ({data}) => {
                         <img src="assets/images/bg-wide.jpg" alt="Full Image" class="full-image" data-mask="80"/>
                         <div class="slide-content row text-center">
                             <div class="col-12 mx-auto inner">
-                                <h1 class="mb-0 title effect-static-text">{data.markdownRemark.frontmatter.firsttitle}</h1>
+                                <h1 class="mb-0 title effect-static-text">{data.markdownRemark.frontmatter.title}</h1>
                             </div>
                         </div>
                     </div>
@@ -38,7 +38,7 @@ const SingleIncubation = ({data}) => {
                     <div class="col-12 col-lg-8 p-0 text">
                         <div class="row intro">
                             <div class="col-12">
-                                <h2 class="mb-0"><span>{data.markdownRemark.frontmatter.secondtitle}</span></h2>
+                                <h2 class="mb-0"><span>{data.markdownRemark.frontmatter.title}</span></h2>
                             </div>
 
                           
@@ -96,16 +96,14 @@ const SingleIncubation = ({data}) => {
 
                     }
 
- export const Incubation_single = graphql`
-  query single_incubation($slug: String){
+ export const Funding_single = graphql`
+  query single_funding($slug: String){
     markdownRemark(fields: { slug: { eq: $slug } }) {
                   id
                   frontmatter {
-                           firsttitle
-                           secondtitle
+                          title
                            description
                            date
-                           projectLink
                            link
                            image
                     }
@@ -121,4 +119,4 @@ const SingleIncubation = ({data}) => {
 
 
   
-export default SingleIncubation
+export default SingleFunding

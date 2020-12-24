@@ -15,29 +15,100 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
-  const result = await graphql(`
-    query {
-      allMarkdownRemark {
-        edges {
-          node {
-            fields {
-              slug
-            }
-          }
-        }
-      }
-    }
-  `)
+  const incubation_template = path.resolve('src/pages/single_incubation.js');
+	const funding_templete = path.resolve('src/pages/single_funding.js');
 
-  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-    createPage({
-      path: node.fields.slug,
-      component: path.resolve(`./src/pages/single_incubation.js`),
-      context: {
-        // Data passed to context is available
-        // in page queries as GraphQL variables.
-        slug: node.fields.slug,
-      },
-    })
-  })
+
+  // const result = await graphql(`
+  //   query {
+  //     allMarkdownRemark (filter: {fileAbsolutePath: {regex: "posts/betracks/"}}){
+  //       edges {
+  //         node {
+  //           fields {
+  //             slug
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+  // `)
+
+  return graphql(`
+		{
+			incu: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "posts/betracks/"}}
+			) {
+				edges {
+					node {
+						fields {
+							slug
+						}
+					}
+				}
+			}
+			funding: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "posts/fundings/"}}
+			) {
+				edges {
+					node {
+						fields {
+							slug
+						}
+					}
+				}
+			}
+		}
+	`).then(result => {
+		if (result.errors) {
+			Promise.reject(result.errors);
+		}
+
+		// Create doc pages
+		result.data.funding.edges.forEach(({ node }) => {
+			createPage({
+				path: node.fields.slug,
+        component: funding_templete,
+        context: {
+                  slug: node.fields.slug,
+                },
+			});
+		});
+		// Create blog pages
+		result.data.incu.edges.forEach(({ node }) => {
+			createPage({
+				path: node.fields.slug,
+        component: incubation_template,
+        context: {
+          slug: node.fields.slug,
+        },
+			});
+		});
+	});
 }
+
+// exports.createPages = async ({ graphql, actions }) => {
+//   const { createPage } = actions
+//   const res = await graphql(`
+//     query {
+//       allMarkdownRemark (filter: {fileAbsolutePath: {regex: "posts/fundings/"}}){
+//         edges {
+//           node {
+//             fields {
+//               slug
+//             }
+//           }
+//         }
+//       }
+//     }
+//   `)
+
+//   res.data.allMarkdownRemark.edges.forEach(({ node }) => {
+//     createPage({
+//       path: node.fields.slug,
+//       component: path.resolve(`./src/pages/single_funding.js`),
+//       context: {
+//         // Data passed to context is available
+//         // in page queries as GraphQL variables.
+//         slug: node.fields.slug,
+//       },
+//     })
+//   })
+// }

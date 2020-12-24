@@ -9,10 +9,10 @@ import {Helmet} from "react-helmet";
 import { StaticQuery, graphql } from "gatsby"
 import { node } from "prop-types"
 
-const Incubation = () => (
+const Funding = () => (
     
-    <StaticQuery query={Incubationquery} render={data=>{
-            
+    <StaticQuery query={fundings} render={data=>{
+
         const fetchData = data.allMarkdownRemark.edges
   
         return (  
@@ -44,7 +44,7 @@ const Incubation = () => (
                                     <div class="card-body">
 
                                         <Link to={tag.node.fields.slug}>
-                                            <h4>{tag.node.frontmatter.firsttitle }</h4>
+                                            <h4>{tag.node.frontmatter.title }</h4>
                                             <p>{tag.node.frontmatter.description.substring(0,200)}</p>
                                         
                                         </Link>
@@ -94,18 +94,18 @@ const Incubation = () => (
     }}/>
     )
 
-  const Incubationquery = graphql`
-  query incubation{
-    allMarkdownRemark(filter: {fileAbsolutePath: {regex: "posts/betracks/"}} 
+  const fundings = graphql`
+  query fundingquery{
+    allMarkdownRemark(filter: {fileAbsolutePath: {regex: "posts/fundings/"}}
+    
     ) {
       edges {
         node {
           id
           frontmatter {
-            firsttitle
+            title
             description
             date
-            projectLink
             link
             image
           }
@@ -123,4 +123,4 @@ const Incubation = () => (
 
 
   
-export default Incubation
+export default Funding

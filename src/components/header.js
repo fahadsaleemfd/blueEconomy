@@ -118,7 +118,7 @@ const Header = ({ siteTitle }) => {
                                     {/* <a class="nav-link" href="/incubation"> */}
                                     <Link class="nav-link" to={'/incubation'}> Incubation Tracks<i class="icon-arrow-right"></i></Link>   
                                     {/* </a> */}
-                                    <a class="nav-link" href="#">Funding Orgnizations<i class="icon-arrow-right"></i></a>
+                                    <Link class="nav-link" to={'/funding'}>Funding Orgnizations<i class="icon-arrow-right"></i></Link>
                                     <a class="nav-link" href="#">Business Competition<i class="icon-arrow-right"></i></a>
                                     <a class="nav-link" href="#">Inernational Universities<i class="icon-arrow-right"></i></a>
                                     <a class="nav-link" href="#">FAQS<i class="icon-arrow-right"></i></a>
