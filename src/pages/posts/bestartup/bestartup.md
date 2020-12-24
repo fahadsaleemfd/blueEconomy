@@ -16,13 +16,13 @@ description: >-
 smallscale:
   title: Small Scale Startups
   description: Small scale business ideas for participating teams to take help from
-  image: /assets/bureo.webp
+  image: /assets/business-team-discussing-ideas-startup_74855-4380.jpg
 medscale:
   title: Medium Scale Startups
   description: Medium scale business ideas for participating teams to take help from
-  image: /assets/algaplus.webp
+  image: /assets/business_growth.jpg
 lgscale:
   title: Large Scale Startups
   description: Large scale business ideas participating teams to take help from
-  image: /assets/seaport.webp
+  image: /assets/business_planning-100671979-primary.idge.jpg
 ---
