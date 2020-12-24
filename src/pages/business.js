@@ -9,9 +9,9 @@ import {Helmet} from "react-helmet";
 import { StaticQuery, graphql } from "gatsby"
 import { node } from "prop-types"
 
-const Business = () => (
+const Bestartup = () => (
     
-    <StaticQuery query={Businessq} render={data=>{
+    <StaticQuery query={Bestartupq} render={data=>{
             
         const fetchData = data.allMarkdownRemark.edges
   
@@ -94,8 +94,8 @@ const Business = () => (
     }}/>
     )
 
-  const Businessq = graphql`
-  query businessquery{
+  const Bestartupq = graphql`
+  query Bestartupquery{
     allMarkdownRemark(filter: {fileAbsolutePath: {regex: "posts/business/"}} 
     ) {
       edges {
@@ -123,4 +123,4 @@ const Business = () => (
 
 
   
-export default Business
+export default Bestartup

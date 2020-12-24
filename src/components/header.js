@@ -102,7 +102,7 @@ const Header = ({ siteTitle }) => {
                             <a href="#" class="nav-link">Be Ideas<i class="icon-arrow-down"></i></a>
                             <ul class="dropdown-menu">
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link" href="#">BE Startups<i class="icon-arrow-right"></i></a>
+                                    <Link to={'/bestartup'}>BE Startups<i class="icon-arrow-right"></i></Link>
                                     <a class="nav-link" href="#">Small Scale<i class="icon-arrow-right"></i></a>
                                     <a class="nav-link" href="#">Medium Scale<i class="icon-arrow-right"></i></a>
                                     <a class="nav-link" href="#">Large Scale<i class="icon-arrow-right"></i></a>

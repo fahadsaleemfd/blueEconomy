@@ -206,4 +206,38 @@ collections:
         name: 'image'
         widget: 'image'
         required: true
+
+  - name: bestartup
+    label: Be Startup
+    label_singular: Be Startup
+    folder: src/pages/posts/bestartup/
+    summary: '{{title}}'
+    slug: "{{year}}-{{month}}-{{day}}"
+    description: >
+      The description is a great place for tone setting, high level information, and editing
+      guidelines for International Universities.
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string', tagname: 'h1' }
+      - { label: 'Description', name: 'description', widget: 'text', hint: 'Description will be here' }
+      - label: 'Small Scale Startups'
+        name: 'smallscale'
+        widget: 'object'
+        fields:
+          - { label: 'Title', name: 'description', widget: 'string' }
+          - { label: 'Description', name: 'description', widget: 'text' }
+          - { label: 'Image', name: 'image', widget: 'image' }
+      - label: 'Medium Scale Startups'
+        name: 'medscale'
+        widget: 'object'
+        fields:
+          - { label: 'Title', name: 'description', widget: 'string' }
+          - { label: 'Description', name: 'description', widget: 'text' }
+          - { label: 'Image', name: 'image', widget: 'image' }
+      - label: 'Large Scale Startups'
+        name: 'lgscale'
+        widget: 'object'
+        fields:
+         - { label: 'Title', name: 'description', widget: 'string' }
+         - { label: 'Description', name: 'description', widget: 'text' }
+         - { label: 'Image', name: 'image', widget: 'image' }
      
