@@ -15,7 +15,7 @@ description1: >-
 
 
   We have been pioneers in this field having been the team behind running the MITEFP-Business Acceleration Plan from 2007-2015, University led programs such as Discover Prime Ministers Challenge that ran between 2011-2014 and IBA Invent which were huge successes. Additionally, we have worked to develop sector wise and district wise ecosystems such as the agribusiness ecosystem for SAU-Tando jam, IT ecosystem in tis nascent stages in association with MOITT and PSEB and HEC, IST for commercialization of research and others. Participating teams reported that they benefitted tremendously from participating in these competitions
-image1: /assets/can-logo.webp
+image1: /assets/business-team-discussing-ideas-startup_74855-4380.jpg
 link1: https://seaport-solutions.com/en/home-english/
 date1: 2020-12-23T08:57:58.044Z
 title2: Sponsors
@@ -32,7 +32,7 @@ description2: To mitigate the gaps in the national maritime domain, a need was
   interests. MSF envisions itself as a leading platform for stakeholders in
   generating policy-oriented discourse on national, regional, and global
   maritime affairs domains
-image2: /assets/maritime.webp
+image2: /assets/business_growth.jpg
 link2: https://seaport-solutions.com/en/home-english/
 date2: 2020-12-23T08:57:58.044Z
 ---
