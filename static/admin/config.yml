@@ -118,9 +118,9 @@ collections:
                 } 
      
 
-  - name: betracks
-    label: Be Tracks
-    label_singular: Be Tracks
+  - name: incubation
+    label: Incubation Canters
+    label_singular: Incubation Canters
     folder: src/pages/posts/betracks/
     summary: '{{firsttitle}}'
     slug: "{{year}}-{{month}}-{{day}}"
