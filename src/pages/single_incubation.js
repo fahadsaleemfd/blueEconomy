@@ -69,7 +69,6 @@ const SingleIncubation = ({data}) => {
                     
                    
                     <aside class="col-12 col-lg-4 pl-lg-5 p-0 float-right sidebar">
-    
                         <div class="row item widget-tags">
                             <div class="col-12 align-self-center">
                                 <h4 class="title">Tags</h4>
