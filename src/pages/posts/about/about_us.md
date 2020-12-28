@@ -1,28 +1,38 @@
 ---
-title1: SEAPort Solutions
-description1: "NEPTUNE which stands for New Cross Sectoral Value Chains Creation
-  across Europe Facilitated By Clusters for SMEs’ Innovation in Blue Growth,  is
-  an innovation action project supported by the European Commission and its
-  HORIZON 2020 program under the call for proposal INNOSUP-1-2015 Cluster
-  facilitated projects for new value chains. The project brings together the
-  expertise of 8 clusters, 2 cluster and entrepreneurship support organizations,
-  1 engineer school and 1 consultant company from 7 European countries: France,
-  Greece, Italy, Poland, Romania, Spain and Sweden. The accelerator runs for 30
-  months until December 2018."
-image1: /assets/seaport-1-.webp
+title1: Cambridge Advisors Network (CAN)
+description1: >-
+  Cambridge Advisors Network proactively works to develop collaborative linkages
+  among industry, academia and government to build relationships within the
+  entrepreneurial ecosystem in Pakistan. We are a boutique consulting firm
+  focused on helping firms develop products and services for relevant ant
+  audiences in the context of the environment that we operate in. Our working
+  philosophy is built around the triple helix model of integrating the three
+  sectors to accelerate growth and innovation within sectors and for the larger
+  economic and social benefits.
+
+
+  ​
+
+
+  We have been pioneers in this field having been the team behind running the MITEFP-Business Acceleration Plan from 2007-2015, University led programs such as Discover Prime Ministers Challenge that ran between 2011-2014 and IBA Invent which were huge successes. Additionally, we have worked to develop sector wise and district wise ecosystems such as the agribusiness ecosystem for SAU-Tando jam, IT ecosystem in tis nascent stages in association with MOITT and PSEB and HEC, IST for commercialization of research and others. Participating teams reported that they benefitted tremendously from participating in these competitions
+image1: /assets/can-logo.webp
 link1: https://seaport-solutions.com/en/home-english/
 date1: 2020-12-23T08:57:58.044Z
-title2: SEAPort Solutions
-description2: "NEPTUNE which stands for New Cross Sectoral Value Chains Creation
-  across Europe Facilitated By Clusters for SMEs’ Innovation in Blue Growth,  is
-  an innovation action project supported by the European Commission and its
-  HORIZON 2020 program under the call for proposal INNOSUP-1-2015 Cluster
-  facilitated projects for new value chains. The project brings together the
-  expertise of 8 clusters, 2 cluster and entrepreneurship support organizations,
-  1 engineer school and 1 consultant company from 7 European countries: France,
-  Greece, Italy, Poland, Romania, Spain and Sweden. The accelerator runs for 30
-  months until December 2018."
-image2: /assets/seaport-1-.webp
+title2: Maritime Study Forum (MSF)
+description2: To mitigate the gaps in the national maritime domain, a need was
+  felt to establish an informal yet professional research and outreach body to
+  focus on the above aspects titled “Marine Echo”. The envisioned body named as
+  “Maritime Study Forum (MSF)”, is established as an informal, independent, and
+  non-partisan research institute dedicated to studying the emerging role of
+  maritime in international relations, focusing on the Indian Ocean and beyond,
+  and on issues having direct/indirect influence or significance for Pakistan.
+  MSF is dedicated to generating meaningful dialogue, cutting edge research, and
+  human development through engaging academia, media, civil society, policy
+  practitioners, and opinion makers for the advancement of Pakistan’s maritime
+  interests. MSF envisions itself as a leading platform for stakeholders in
+  generating policy-oriented discourse on national, regional, and global
+  maritime affairs domains
+image2: /assets/maritime.webp
 link2: https://seaport-solutions.com/en/home-english/
 date2: 2020-12-23T08:57:58.044Z
 ---
