@@ -130,7 +130,7 @@ collections:
       guidelines for BE Tracks.
     fields:
       - { label: 'First Title', name: 'firsttitle', widget: 'string', tagname: 'h1' }
-      - {label: "Tags", name: "tags", widget: "list" , multiple: true}
+      - {label: "Tags", name: "tags", widget: "list"}
       - { label: 'Second Title', name: 'secondtitle', widget: 'string', tagname: 'h1' }
       - { label: 'Description', name: 'description', widget: 'text', hint: 'Description will be here' }
       - { label: 'Link', name: 'link', widget: 'string' }
