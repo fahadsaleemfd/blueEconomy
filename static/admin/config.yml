@@ -319,5 +319,26 @@ collections:
       - { label: 'Seccond Link', name: 'link2', widget: 'string' }
       - { label: 'Second Date', name: 'date2', widget: 'date' }
 
+  - name: sponsors_and_partners
+    label: Sponsors and Partners
+    label_singular: Sponsors and Partners
+    folder: src/pages/posts/sponsers_and_partners/
+    summary: '{{title1}}-{{title2}}'
+    slug: "{{year}}-{{month}}-{{day}}"
+    description: >
+      The description is a great place for tone setting, high level information, and editing
+      guidelines for About US.
+    fields:
+      - { label: 'Partners Title', name: 'title1', widget: 'string', tagname: 'h1' }
+      - { label: 'Partners Description', name: 'description1', widget: 'text', hint: 'Description will be here' }
+      - { label: 'Partners Image', name: 'image1', widget: 'image' }
+      - { label: 'Partners Link', name: 'link1', widget: 'string' }
+      - { label: 'Partners Date', name: 'date1', widget: 'date' }
+      - { label: 'Sponsors', name: 'title2', widget: 'string', tagname: 'h1' }
+      - { label: 'Sponsors Description', name: 'description2', widget: 'text', hint: 'Description will be here' }
+      - { label: 'Sponsors Image', name: 'image2', widget: 'image' }
+      - { label: 'Sponsors Link', name: 'link2', widget: 'string' }
+      - { label: 'Sponsors Creation Date', name: 'date2', widget: 'date' }
+
   
      

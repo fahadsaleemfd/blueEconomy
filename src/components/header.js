@@ -88,8 +88,8 @@ const Header = ({ siteTitle }) => {
                             <a href="#" class="nav-link">About <i class="icon-arrow-down"></i></a>
                             <ul class="dropdown-menu">
                                 <li class="nav-item dropdown">
-                                    <Link class="nav-link" to={'/about'}>CAN and MSF</Link>
-                                    <a class="nav-link" href="#">Sponsors/Partners<i class="icon-arrow-right"></i></a>
+                                    <Link class="nav-link" to={'/can-and-msf'}>CAN and MSF</Link>
+                                    <Link class="nav-link" to={'/sponsors_and_partners'}>Sponsors/Partners</Link>
                                 </li>
                             </ul>
                         </li>

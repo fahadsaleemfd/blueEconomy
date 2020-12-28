@@ -8,9 +8,9 @@ import TrustedImage from "../dist/assets/images/logo-1.png"
 import {Helmet} from "react-helmet";
 import { StaticQuery, graphql } from "gatsby"
 
-const About = () => (
+const Sponsors = () => (
 
-    <StaticQuery query={aboutquery} render={data=>{
+    <StaticQuery query={sponserquery} render={data=>{
         const queryData = data.allMarkdownRemark.edges[0].node.frontmatter
 
         return (  
@@ -53,7 +53,7 @@ const About = () => (
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-12 p-0 pr-md-5" style={{textAlign:"center"}}>
+                            <div class="col-12 p-0 pr-md-5" style={{textAlign:"left"}}>
                                <p>{queryData.description1}</p>
                             </div>
                         </div>
@@ -79,7 +79,7 @@ const About = () => (
                     
                 </div>
                 
-                <div class="col-12 col-lg-8 align-self-top text" style={{textAlign:"center"}}>
+                <div class="col-12 col-lg-8 align-self-top text" style={{textAlign:"left"}}>
                         <div class="row intro m-0">
                             <div class="col-12 p-0">
                                 
@@ -89,7 +89,7 @@ const About = () => (
                         </div>
                         <div class="row">
                             <div class="col-12 p-0 pr-md-5">
-                               <p>{queryData.description2}</p>
+                               <p style={{color:"white"}}>{queryData.description2}</p>
                             </div>
                         </div>
                 </div>
@@ -116,9 +116,9 @@ const About = () => (
 
 )
 
-const aboutquery = graphql`
-    query aboutus{
-      allMarkdownRemark(filter: {fileAbsolutePath: {regex: "posts/about/"}} 
+const sponserquery = graphql`
+    query sponser{
+      allMarkdownRemark(filter: {fileAbsolutePath: {regex: "posts/sponsers_and_partners/"}} 
       ) {
         edges {
           node {
@@ -146,4 +146,4 @@ const aboutquery = graphql`
  }`
   
 
-export default About
+export default Sponsors
