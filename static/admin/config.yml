@@ -298,5 +298,27 @@ collections:
       - { label: 'Link', name: 'link', widget: 'string' }
       - { label: 'Date', name: 'date', widget: 'date' }
 
+  - name: about
+    label: About US
+    label_singular: About US
+    folder: src/pages/posts/about/
+    summary: '{{title}}'
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}"
+    description: >
+      The description is a great place for tone setting, high level information, and editing
+      guidelines for About US.
+    fields:
+      - { label: 'First Title', name: 'title1', widget: 'string', tagname: 'h1' }
+      - { label: 'Description', name: 'description1', widget: 'text', hint: 'Description will be here' }
+      - { label: 'First Image', name: 'image1', widget: 'image' }
+      - { label: 'First Link', name: 'link1', widget: 'string' }
+      - { label: 'Date', name: 'date1', widget: 'date' }
+      - { label: 'Second Title', name: 'title2', widget: 'string', tagname: 'h1' }
+      - { label: 'Second Description', name: 'description2', widget: 'text', hint: 'Description will be here' }
+      - { label: 'Second Image', name: 'image2', widget: 'image' }
+      - { label: 'Seccond Link', name: 'link2', widget: 'string' }
+      - { label: 'Second Date', name: 'date2', widget: 'date' }
+
   
      

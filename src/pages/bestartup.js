@@ -15,7 +15,7 @@ const Bestartup = () => (
             
     const queryData = data.allMarkdownRemark.edges[0].node.frontmatter
 
-    console.log(queryData)
+ 
   
         return ( 
         <div>
