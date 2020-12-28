@@ -103,9 +103,9 @@ const Header = ({ siteTitle }) => {
                             <ul class="dropdown-menu">
                                 <li class="nav-item dropdown">
                                     <Link to={'/bestartup'}>BE Startups<i class="icon-arrow-right"></i></Link>
-                                    <a class="nav-link" href="#">Small Scale<i class="icon-arrow-right"></i></a>
-                                    <a class="nav-link" href="#">Medium Scale<i class="icon-arrow-right"></i></a>
-                                    <a class="nav-link" href="#">Large Scale<i class="icon-arrow-right"></i></a>
+                                    <Link to={'/smallscale'}>Small Scale<i class="icon-arrow-right"></i></Link>
+                                    <Link to={'/medscale'}>Medium Scale</Link>
+                                    <Link to={'/largescale'}>Large Scale</Link>
                                 </li>
                             </ul>
                         </li>
@@ -116,7 +116,7 @@ const Header = ({ siteTitle }) => {
                             <ul class="dropdown-menu">
                                 <li class="nav-item dropdown">
                                     {/* <a class="nav-link" href="/incubation"> */}
-                                    <Link class="nav-link" to={'/incubation'}> Incubation Tracks<i class="icon-arrow-right"></i></Link>   
+                                    <Link class="nav-link" to={'/incubation'}>Incubation Tracks<i class="icon-arrow-right"></i></Link>   
                                     {/* </a> */}
                                     <Link class="nav-link" to={'/funding'}>Funding Orgnizations<i class="icon-arrow-right"></i></Link>
                                     <Link class="nav-link" to={'/business'}>Business Competition<i class="icon-arrow-right"></i></Link>

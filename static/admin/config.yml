@@ -240,4 +240,63 @@ collections:
             - { label: 'Title', name: 'title', widget: 'string' }
             - { label: 'Description', name: 'description', widget: 'text' }
             - { label: 'Image', name: 'image', widget: 'image' }
+
+  - name: smallscale
+    label: Small Scale
+    label_singular: Small Scale
+    folder: src/pages/posts/smallscale/
+    summary: '{{title}}'
+    slug: "{{year}}-{{month}}-{{day}}"
+    description: >
+      The description is a great place for tone setting, high level information, and editing
+      guidelines for Small Scale.
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string', tagname: 'h1' }
+      - { label: 'City', name: 'city', widget: 'string', tagname: 'h1' }
+      - { label: 'Description', name: 'description', widget: 'text', hint: 'Description will be here' }
+      - { label: 'Description', name: 'description', widget: 'text' }
+      - { label: 'Image', name: 'image', widget: 'image' }
+      - { label: 'Link', name: 'link', widget: 'string' }
+      - { label: 'Date', name: 'date', widget: 'date' }
+
+  
+  
+  - name: medscale
+    label: Medium Scale
+    label_singular: Medium Scale
+    folder: src/pages/posts/medium/
+    summary: '{{title}}'
+    slug: "{{year}}-{{month}}-{{day}}"
+    description: >
+      The description is a great place for tone setting, high level information, and editing
+      guidelines for Medium Scale.
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string', tagname: 'h1' }
+      - { label: 'City', name: 'city', widget: 'string', tagname: 'h1' }
+      - { label: 'Description', name: 'description', widget: 'text', hint: 'Description will be here' }
+      - { label: 'Description', name: 'description', widget: 'text' }
+      - { label: 'Image', name: 'image', widget: 'image' }
+      - { label: 'Link', name: 'link', widget: 'string' }
+      - { label: 'Date', name: 'date', widget: 'date' }
+
+
+  - name: largescale
+    label: Large Scale
+    label_singular: Large Scale
+    folder: src/pages/posts/largescale/
+    summary: '{{title}}'
+    slug: "{{year}}-{{month}}-{{day}}"
+    description: >
+      The description is a great place for tone setting, high level information, and editing
+      guidelines for Large Scale.
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string', tagname: 'h1' }
+      - { label: 'City', name: 'city', widget: 'string', tagname: 'h1' }
+      - { label: 'Description', name: 'description', widget: 'text', hint: 'Description will be here' }
+      - { label: 'Description', name: 'description', widget: 'text' }
+      - { label: 'Image', name: 'image', widget: 'image' }
+      - { label: 'Link', name: 'link', widget: 'string' }
+      - { label: 'Date', name: 'date', widget: 'date' }
+
+  
      

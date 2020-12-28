@@ -20,7 +20,7 @@ const Bestartup = () => (
         return ( 
         <div>
             <Layout>
-                <SEO title="Be Challenge 2021" />            
+                <SEO title="Small Scale" />            
             </Layout>
 
             <section id="services" class="section-2 odd offers" style={{background:"black"}}>
