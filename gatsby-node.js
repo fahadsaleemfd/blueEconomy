@@ -18,7 +18,8 @@ exports.createPages = async ({ graphql, actions }) => {
   	const incubation_template = path.resolve('src/pages/single_incubation.js');
 	const funding_templete = path.resolve('src/pages/single_funding.js');
 	const business_templete = path.resolve('src/pages/single_business.js');
-    const international_templete = path.resolve('src/pages/single_international.js');
+	const international_templete = path.resolve('src/pages/single_international.js');
+	const scale_template = path.resolve('src/pages/single_scale.js');
 
 
   return graphql(`
@@ -63,6 +64,39 @@ exports.createPages = async ({ graphql, actions }) => {
 					}
 				}
 			}
+			smallscale: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "posts/smallscale/"}}
+			) {
+				edges {
+					node {
+						fields {
+							slug
+						}
+					}
+				}
+			}
+			medscale: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "posts/medscale/"}}
+			) {
+				edges {
+					node {
+						fields {
+							slug
+						}
+					}
+				}
+			}
+
+			lgscale: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "posts/lgscale/"}}
+			) {
+				edges {
+					node {
+						fields {
+							slug
+						}
+					}
+				}
+			}
+
+
 		}
 	`).then(result => {
 		if (result.errors) {
@@ -112,36 +146,37 @@ exports.createPages = async ({ graphql, actions }) => {
 			});
 		});
 
+		result.data.smallscale.edges.forEach(({ node }) => {
+			createPage({
+				path: node.fields.slug,
+        component: scale_template,
+        context: {
+          slug: node.fields.slug,
+        },
+			});
+		});
+
+		result.data.medscale.edges.forEach(({ node }) => {
+			createPage({
+				path: node.fields.slug,
+        component: scale_template,
+        context: {
+          slug: node.fields.slug,
+        },
+			});
+		});
+
+		result.data.lgscale.edges.forEach(({ node }) => {
+			createPage({
+				path: node.fields.slug,
+        component: scale_template,
+        context: {
+          slug: node.fields.slug,
+        },
+			});
+		});
+
 
 
 	});
 }
-
-// exports.createPages = async ({ graphql, actions }) => {
-//   const { createPage } = actions
-//   const res = await graphql(`
-//     query {
-//       allMarkdownRemark (filter: {fileAbsolutePath: {regex: "posts/fundings/"}}){
-//         edges {
-//           node {
-//             fields {
-//               slug
-//             }
-//           }
-//         }
-//       }
-//     }
-//   `)
-
-//   res.data.allMarkdownRemark.edges.forEach(({ node }) => {
-//     createPage({
-//       path: node.fields.slug,
-//       component: path.resolve(`./src/pages/single_funding.js`),
-//       context: {
-//         // Data passed to context is available
-//         // in page queries as GraphQL variables.
-//         slug: node.fields.slug,
-//       },
-//     })
-//   })
-// }
