@@ -283,7 +283,7 @@ collections:
   - name: largescale
     label: Large Scale
     label_singular: Large Scale
-    folder: src/pages/posts/largescale/
+    folder: src/pages/posts/lgscale/
     summary: '{{title}}'
     create: true
     slug: "{{year}}-{{month}}-{{day}}"
