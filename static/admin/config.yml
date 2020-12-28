@@ -302,8 +302,7 @@ collections:
     label: About US
     label_singular: About US
     folder: src/pages/posts/about/
-    summary: '{{title}}'
-    create: true
+    summary: '{{title1}}-{{title2}}'
     slug: "{{year}}-{{month}}-{{day}}"
     description: >
       The description is a great place for tone setting, high level information, and editing
