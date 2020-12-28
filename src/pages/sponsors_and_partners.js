@@ -29,7 +29,7 @@ const Sponsors = () => (
                             <div class="col-12 mx-auto inner">
                                 <nav data-aos="zoom-out-up" data-aos-delay="800" aria-label="breadcrumb">
                                 </nav>
-                                <h1 class="mb-0 title effect-static-text">About Us</h1>
+                                <h1 class="mb-0 title effect-static-text">Sponsos and Partners</h1>
                             </div>
                         </div>
                     </div>
