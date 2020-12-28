@@ -340,5 +340,38 @@ collections:
       - { label: 'Sponsors Link', name: 'link2', widget: 'string' }
       - { label: 'Sponsors Creation Date', name: 'date2', widget: 'date' }
 
+
+  - name: resources
+    label: Resources
+    label_singular: Resources
+    folder: src/pages/posts/resources/
+    summary: '{{title1}}-{{title2}}'
+    slug: "{{year}}-{{month}}-{{day}}"
+    description: >
+      The description is a great place for tone setting, high level information, and editing
+      guidelines for Resources.
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Description', name: 'description', widget: text}
+      - label: 'First Section'
+        name: 'section1'
+        widget: 'object'
+        fields:
+              - {
+                  label: 'Title',
+                  name: title,
+                  widget: string,
+                }
+              - {
+                  label: 'Description',
+                  name: description,
+                  widget: text,
+                }
+              - {
+                  label: 'Link',
+                  name: round2,
+                  widget: string,
+                }
+
   
      

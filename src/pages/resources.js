@@ -76,9 +76,29 @@ const Resources = () => (
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras iaculis diam varius diam ultricies lacinia nauris lacus tellus.</p>
                         </div>
                     </div>
+                    <div class="col-12 col-md-6 col-lg-6 item">
+                        <div class="card">
+                            <i class="icon featured icon-people"></i>
+                            <h4>Human Capital</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras iaculis diam varius diam ultricies lacinia nauris lacus tellus.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6 item">
+                        <div class="card">
+                            <i class="icon featured icon-people"></i>
+                            <h4>Human Capital</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras iaculis diam varius diam ultricies lacinia nauris lacus tellus.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6 item">
+                        <div class="card">
+                            <i class="icon featured icon-people"></i>
+                            <h4>Human Capital</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras iaculis diam varius diam ultricies lacinia nauris lacus tellus.</p>
+                        </div>
+                    </div>
                    
                 
-                  
                 </div>
             </div>
         </section>
