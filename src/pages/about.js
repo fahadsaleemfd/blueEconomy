@@ -75,7 +75,7 @@ const About = () => (
                 <div class="row">
                 <div  class="col-11 col-lg-4" style={{textAlign:"center"}}>
    
-                       <img src={queryData.image1} class="fit-image" /> 
+                       <img src={queryData.image2} class="fit-image" /> 
                     
                 </div>
                 
