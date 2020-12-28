@@ -345,7 +345,7 @@ collections:
     label: Resources
     label_singular: Resources
     folder: src/pages/posts/resources/
-    summary: '{{title1}}-{{title2}}'
+    summary: '{{title}}'
     slug: "{{year}}-{{month}}-{{day}}"
     description: >
       The description is a great place for tone setting, high level information, and editing
@@ -369,7 +369,64 @@ collections:
                 }
               - {
                   label: 'Link',
-                  name: round2,
+                  name: link,
+                  widget: string,
+                }
+      - label: 'Second Section'
+        name: 'section2'
+        widget: 'object'
+        fields:
+              - {
+                  label: 'Title',
+                  name: title,
+                  widget: string,
+                }
+              - {
+                  label: 'Description',
+                  name: description,
+                  widget: text,
+                }
+              - {
+                  label: 'Link',
+                  name: link,
+                  widget: string,
+                }
+      - label: 'Third Section'
+        name: 'section3'
+        widget: 'object'
+        fields:
+              - {
+                  label: 'Title',
+                  name: title,
+                  widget: string,
+                }
+              - {
+                  label: 'Description',
+                  name: description,
+                  widget: text,
+                }
+              - {
+                  label: 'Link',
+                  name: link,
+                  widget: string,
+                }
+      - label: 'Fourth Section'
+        name: 'section4'
+        widget: 'object'
+        fields:
+              - {
+                  label: 'Title',
+                  name: title,
+                  widget: string,
+                }
+              - {
+                  label: 'Description',
+                  name: description,
+                  widget: text,
+                }
+              - {
+                  label: 'Link',
+                  name: link,
                   widget: string,
                 }
 
