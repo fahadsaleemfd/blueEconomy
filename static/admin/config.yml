@@ -345,7 +345,7 @@ collections:
     label: Resources 
     label_singular: Resources
     folder: src/pages/posts/resources/
-    summary: '{{title1}}'
+    summary: '{{title}}'
     delete: false 
     description: >
       The description is a great place for tone setting, high level information, and editing
@@ -355,6 +355,63 @@ collections:
       - { label: 'Description', name: 'description', widget: 'string', tagname: 'h1' }
       - label: 'First Section'
         name: 'first'
+        widget: 'object'
+        fields:
+              - {
+                  label: 'Title',
+                  name: title,
+                  widget: string,
+                }
+              - {
+                  label: 'Decsritpion',
+                  name: description,
+                  widget: text,
+                }
+              - {
+                  label: 'Link',
+                  name: link,
+                  widget: string,
+                }
+      - label: 'Second Section'
+        name: 'second'
+        widget: 'object'
+        fields:
+              - {
+                  label: 'Title',
+                  name: title,
+                  widget: string,
+                }
+              - {
+                  label: 'Decsritpion',
+                  name: description,
+                  widget: text,
+                }
+              - {
+                  label: 'Link',
+                  name: link,
+                  widget: string,
+                }
+      - label: 'Third Section'
+        name: 'third'
+        widget: 'object'
+        fields:
+              - {
+                  label: 'Title',
+                  name: title,
+                  widget: string,
+                }
+              - {
+                  label: 'Decsritpion',
+                  name: description,
+                  widget: text,
+                }
+              - {
+                  label: 'Link',
+                  name: link,
+                  widget: string,
+                }
+      - label: 'Fourth Section'
+        name: 'fourth'
         widget: 'object'
         fields:
               - {

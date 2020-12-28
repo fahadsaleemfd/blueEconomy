@@ -114,7 +114,7 @@ const Resources = () => (
 
   const Resourcesq = graphql`
   query resourcesquery{
-    allMarkdownRemark(filter: {fileAbsolutePath: {regex: "posts/business/"}} 
+    allMarkdownRemark(filter: {fileAbsolutePath: {regex: "posts/resources/"}} 
     ) {
       edges {
         node {
@@ -122,6 +122,12 @@ const Resources = () => (
           frontmatter {
             title
             description
+            first{
+                title
+            }
+            second{
+                title
+            }
             
           }
          
