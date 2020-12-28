@@ -12,8 +12,9 @@ import { node } from "prop-types"
 const Resources = () => (
     
     <StaticQuery query={Resourcesq} render={data=>{
+        console.log(data)
             
-        const fetchData = data.allMarkdownRemark.edges
+        // const fetchData = data.allMarkdownRemark.edges
   
         return (  
         <div>
@@ -50,12 +51,12 @@ const Resources = () => (
                     <div class="col-12 col-lg-12 align-self-top text">
                         <div class="row intro m-0">
                             <div class="col-12  p-0">
-                                <h2><span class="featured">Our Resources</span></h2>
+                                <h2><span class="featured"></span></h2>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-12 p-0 pr-md-5">
-                            Blue Economy Initiative brings you four areas as resources to guide all the teams on their journey of startups which comprises of local and international mentors/coaches, Training and development, Industry consultants and Academia R&D projects.  
+                                {/* {fetchData.description} */}
                             </div>
                         </div>
                     </div>
@@ -121,15 +122,9 @@ const Resources = () => (
           frontmatter {
             title
             description
-            date
-            projectLink
-            link
-            image
+            
           }
-          fields{
-            slug
-          }
-          excerpt
+         
         }
       }
     }

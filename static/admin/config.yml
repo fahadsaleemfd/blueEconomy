@@ -372,63 +372,9 @@ collections:
                   name: link,
                   widget: string,
                 }
-      - label: 'Second Section'
-        name: 'section2'
-        widget: 'object'
-        fields:
-              - {
-                  label: 'Title',
-                  name: title,
-                  widget: string,
-                }
-              - {
-                  label: 'Description',
-                  name: description,
-                  widget: text,
-                }
-              - {
-                  label: 'Link',
-                  name: link,
-                  widget: string,
-                }
-      - label: 'Third Section'
-        name: 'section3'
-        widget: 'object'
-        fields:
-              - {
-                  label: 'Title',
-                  name: title,
-                  widget: string,
-                }
-              - {
-                  label: 'Description',
-                  name: description,
-                  widget: text,
-                }
-              - {
-                  label: 'Link',
-                  name: link,
-                  widget: string,
-                }
-      - label: 'Fourth Section'
-        name: 'section4'
-        widget: 'object'
-        fields:
-              - {
-                  label: 'Title',
-                  name: title,
-                  widget: string,
-                }
-              - {
-                  label: 'Description',
-                  name: description,
-                  widget: text,
-                }
-              - {
-                  label: 'Link',
-                  name: link,
-                  widget: string,
-                }
+
+
+
 
   
      
