@@ -135,7 +135,7 @@ const Header = ({ siteTitle }) => {
                         </li>
 
                         <li class="nav-item dropdown">
-                            <a href="/resource" class="nav-link">Resources</a>
+                            <Link to={'/resources'}>Resources</Link>
                         </li>
 
                         
