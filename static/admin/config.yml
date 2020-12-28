@@ -254,7 +254,6 @@ collections:
       - { label: 'Title', name: 'title', widget: 'string', tagname: 'h1' }
       - { label: 'City', name: 'city', widget: 'string', tagname: 'h1' }
       - { label: 'Description', name: 'description', widget: 'text', hint: 'Description will be here' }
-      - { label: 'Description', name: 'description', widget: 'text' }
       - { label: 'Image', name: 'image', widget: 'image' }
       - { label: 'Link', name: 'link', widget: 'string' }
       - { label: 'Date', name: 'date', widget: 'date' }
@@ -274,7 +273,6 @@ collections:
       - { label: 'Title', name: 'title', widget: 'string', tagname: 'h1' }
       - { label: 'City', name: 'city', widget: 'string', tagname: 'h1' }
       - { label: 'Description', name: 'description', widget: 'text', hint: 'Description will be here' }
-      - { label: 'Description', name: 'description', widget: 'text' }
       - { label: 'Image', name: 'image', widget: 'image' }
       - { label: 'Link', name: 'link', widget: 'string' }
       - { label: 'Date', name: 'date', widget: 'date' }
@@ -293,7 +291,6 @@ collections:
       - { label: 'Title', name: 'title', widget: 'string', tagname: 'h1' }
       - { label: 'City', name: 'city', widget: 'string', tagname: 'h1' }
       - { label: 'Description', name: 'description', widget: 'text', hint: 'Description will be here' }
-      - { label: 'Description', name: 'description', widget: 'text' }
       - { label: 'Image', name: 'image', widget: 'image' }
       - { label: 'Link', name: 'link', widget: 'string' }
       - { label: 'Date', name: 'date', widget: 'date' }
