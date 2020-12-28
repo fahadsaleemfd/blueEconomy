@@ -1,5 +1,5 @@
 ---
-title1: Cambridge Advisors Network (CAN)
+title1: Key University Partners
 description1: >-
   Cambridge Advisors Network proactively works to develop collaborative linkages
   among industry, academia and government to build relationships within the
@@ -18,7 +18,7 @@ description1: >-
 image1: /assets/can-logo.webp
 link1: https://seaport-solutions.com/en/home-english/
 date1: 2020-12-23T08:57:58.044Z
-title2: Maritime Study Forum (MSF)
+title2: Sponsors
 description2: To mitigate the gaps in the national maritime domain, a need was
   felt to establish an informal yet professional research and outreach body to
   focus on the above aspects titled “Marine Echo”. The envisioned body named as
