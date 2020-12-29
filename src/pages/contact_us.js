@@ -9,8 +9,11 @@ import {Helmet} from "react-helmet";
 import { StaticQuery, graphql } from "gatsby"
 import { node } from "prop-types"
 
-const Contact = () => {
-    
+const Contact = () => (
+
+    <StaticQuery query={contactquery} render={data=>{
+            console.log(data)
+        // const fetchData = data.allMarkdownRemark.edges
   
         return (  
             <div>
@@ -113,10 +116,35 @@ const Contact = () => {
             </div>
         )
 
-    }
+    }}/>
+
+    )
 
   
+const contactquery = graphql`
+    query contacts{
+      allMarkdownRemark(filter: {fileAbsolutePath: {regex: "posts/contact_us/"}} 
+      ) {
+        edges {
+          node {
+            id
+            frontmatter {
+                address
+                phone_number
+                email
+                map
 
+            }
+            fields{
+              slug
+            }
+            excerpt
+          }
+        }
+      }
+    }
+    
+     `
 
 
   

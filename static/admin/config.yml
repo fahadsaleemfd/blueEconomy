@@ -433,7 +433,7 @@ collections:
     label: Contact US
     label_singular: Contact
     folder: src/pages/posts/contact_us/
-    summary: '{{title}}'
+    summary: '{{address}}'
     delete: false 
     description: >
       The description is a great place for tone setting, high level information, and editing
