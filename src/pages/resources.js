@@ -75,7 +75,7 @@ const Resources = () => (
                             
                             <h4>{fetchData.frontmatter.first.title}</h4>
                             <p>{fetchData.frontmatter.first.description}</p>
-                            <a class='btn ml-lg-auto primary-button' href={fetchData.frontmatter.first.link}>Register</a>
+                            <a class='btn ml-lg-auto primary-button' target="_blank" href={fetchData.frontmatter.first.link}>Register</a>
                         </div>
                     </div>
                     <div class="col-12 col-md-6 col-lg-6 item">
@@ -83,7 +83,7 @@ const Resources = () => (
                             
                             <h4>{fetchData.frontmatter.second.title}</h4>
                             <p>{fetchData.frontmatter.second.description}</p>
-                            <a class='btn ml-lg-auto primary-button' href={fetchData.frontmatter.second.link} >Register</a>
+                            <a class='btn ml-lg-auto primary-button' target="_blank" href={fetchData.frontmatter.second.link} >Register</a>
                         </div>
                     </div>
                     <div class="col-12 col-md-6 col-lg-6 item">
@@ -91,7 +91,7 @@ const Resources = () => (
                             
                             <h4>{fetchData.frontmatter.third.title}</h4>
                             <p>{fetchData.frontmatter.third.description}</p>
-                            <a class='btn ml-lg-auto primary-button' href={fetchData.frontmatter.third.link} >Register</a>
+                            <a class='btn ml-lg-auto primary-button' target="_blank" href={fetchData.frontmatter.third.link} >Register</a>
                         </div>
                     </div>
                     <div class="col-12 col-md-6 col-lg-6 item">
@@ -99,7 +99,7 @@ const Resources = () => (
                             
                             <h4>{fetchData.frontmatter.fourth.title}</h4>
                             <p>{fetchData.frontmatter.fourth.description}</p>
-                            <a class='btn ml-lg-auto primary-button' href={fetchData.frontmatter.fourth.link}>Register</a>
+                            <a class='btn ml-lg-auto primary-button' target="_blank" href={fetchData.frontmatter.fourth.link}>Register</a>
                         </div>
                     </div>
                    
