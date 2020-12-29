@@ -429,6 +429,23 @@ collections:
                 }
 
 
+  - name: contact_us
+    label: Contact US
+    label_singular: Contact
+    folder: src/pages/posts/contact_us/
+    summary: '{{title}}'
+    delete: false 
+    description: >
+      The description is a great place for tone setting, high level information, and editing
+      guidelines for Contact US.
+    fields:
+      - { label: 'Address', name: 'address', widget: 'text' }
+      - { label: 'Phone Number', name: 'phone_number', widget: 'text' }
+      - { label: 'Email', name: 'email', widget: 'string' }
+      - { label: 'MAP', name: 'map', widget: '' }
+      
+
+
 
   
      

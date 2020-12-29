@@ -137,19 +137,22 @@ const Header = ({ siteTitle }) => {
                             <Link to={'/resources'}>Resources</Link>
                         </li>
 
+                        {/* <li class="nav-item dropdown">
+                             <a href="#" to={'/contact_us'}  class="smooth-anchor btn ml-lg-auto primary-button"> &nbsp;CONTACT US</a>
+                        </li> */}
+
                         
 
                        
                     </ul>
 
-                  
                     <ul class="navbar-nav action">
                         <li class="nav-item ml-3">
-   
-                          <a href="#contact" class="smooth-anchor btn ml-lg-auto primary-button">CONTACT US</a>
-                           
+                             <Link href="#" to={'/contact_us'}  class="smooth-anchor btn ml-lg-auto primary-button">CONTACT US</Link>
                         </li>
                     </ul>
+
+
                 </div>
             </nav> 
 

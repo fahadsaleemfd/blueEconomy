@@ -116,12 +116,10 @@ const sponserquery = graphql`
             frontmatter {
                 title1
                 description1
-                image1
                 link1
                 date1
                 title2
                 description2
-                image2
                 link2
                 date2
             
