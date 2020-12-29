@@ -14,7 +14,7 @@ const Resources = () => (
     <StaticQuery query={Resourcesq} render={data=>{
         console.log(data)
             
-        // const fetchData = data.allMarkdownRemark.edges
+        const fetchData = data.allMarkdownRemark.edges[0].node
   
         return (  
         <div>
@@ -51,12 +51,12 @@ const Resources = () => (
                     <div class="col-12 col-lg-12 align-self-top text">
                         <div class="row intro m-0">
                             <div class="col-12  p-0">
-                                <h2><span class="featured"></span></h2>
+                                <h2>{fetchData.frontmatter.title}</h2>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-12 p-0 pr-md-5">
-                                {/* {fetchData.description} */}
+                                {fetchData.frontmatter.description}
                             </div>
                         </div>
                     </div>
@@ -72,30 +72,34 @@ const Resources = () => (
 
                     <div class="col-12 col-md-6 col-lg-6 item">
                         <div class="card">
-                            <i class="icon featured icon-people"></i>
-                            <h4>Human Capital</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras iaculis diam varius diam ultricies lacinia nauris lacus tellus.</p>
+                            
+                            <h4>{fetchData.frontmatter.first.title}</h4>
+                            <p>{fetchData.frontmatter.first.description}</p>
+                            <a class='btn ml-lg-auto primary-button' href={fetchData.frontmatter.first.link}>Register</a>
                         </div>
                     </div>
                     <div class="col-12 col-md-6 col-lg-6 item">
                         <div class="card">
-                            <i class="icon featured icon-people"></i>
-                            <h4>Human Capital</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras iaculis diam varius diam ultricies lacinia nauris lacus tellus.</p>
+                            
+                            <h4>{fetchData.frontmatter.second.title}</h4>
+                            <p>{fetchData.frontmatter.second.description}</p>
+                            <a class='btn ml-lg-auto primary-button' href={fetchData.frontmatter.second.link} >Register</a>
                         </div>
                     </div>
                     <div class="col-12 col-md-6 col-lg-6 item">
                         <div class="card">
-                            <i class="icon featured icon-people"></i>
-                            <h4>Human Capital</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras iaculis diam varius diam ultricies lacinia nauris lacus tellus.</p>
+                            
+                            <h4>{fetchData.frontmatter.third.title}</h4>
+                            <p>{fetchData.frontmatter.third.description}</p>
+                            <a class='btn ml-lg-auto primary-button' href={fetchData.frontmatter.third.link} >Register</a>
                         </div>
                     </div>
                     <div class="col-12 col-md-6 col-lg-6 item">
                         <div class="card">
-                            <i class="icon featured icon-people"></i>
-                            <h4>Human Capital</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras iaculis diam varius diam ultricies lacinia nauris lacus tellus.</p>
+                            
+                            <h4>{fetchData.frontmatter.fourth.title}</h4>
+                            <p>{fetchData.frontmatter.fourth.description}</p>
+                            <a class='btn ml-lg-auto primary-button' href={fetchData.frontmatter.fourth.link}>Register</a>
                         </div>
                     </div>
                    
@@ -124,9 +128,23 @@ const Resources = () => (
             description
             first{
                 title
+                description
+                link
             }
             second{
                 title
+                description
+                link
+            }
+            third{
+                title
+                description
+                link
+            }
+            fourth{
+                title
+                description
+                link
             }
             
           }
