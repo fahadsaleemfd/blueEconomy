@@ -3,13 +3,11 @@ import PropTypes from "prop-types"
 import React from "react"
 import {Helmet} from "react-helmet";
 
-
 const Header = ({ siteTitle }) => {
 
   return (<div>
           <Helmet>        
-                    
-                      <meta name="theme-color" content="#21333e"/>
+                <meta name="theme-color" content="#21333e"/>
                       <script src={withPrefix('assets/js/vendor/jquery.min.js')} type="text/javascript" />
                       <script src={withPrefix('assets/js/vendor/jquery.easing.min.js.js')} type="text/javascript" />
                       <script src={withPrefix('assets/js/vendor/jquery.inview.min.js')} type="text/javascript" />
@@ -28,6 +26,7 @@ const Header = ({ siteTitle }) => {
 
                 </Helmet>
   <header class="home">
+
       <nav class="navbar navbar-expand top">
                 <div class="container header">
                     <ul class="navbar-nav">
@@ -127,7 +126,7 @@ const Header = ({ siteTitle }) => {
                         </li>
 
                         <li class="nav-item dropdown">
-                            <Link to={'/bechallenge'} class="nav-link">Resources</Link>
+                            <Link to={'/bechallenge'} class="nav-link">Be Challenge 2021</Link>
                         </li>
 
                         <li class="nav-item dropdown">
