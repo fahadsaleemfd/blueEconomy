@@ -146,7 +146,7 @@ collections:
     label_singular: Funding Orgnizations
     folder: src/pages/posts/fundings/
     summary: '{{title}}'
-    slug: "{{year}}-{{month}}-{{day}}"
+    slug: "{{title}}"
     create: true
     description: >
       The description is a great place for tone setting, high level information, and editing
@@ -168,7 +168,7 @@ collections:
     label_singular: Business Competition
     folder: src/pages/posts/business/
     summary: '{{title}}'
-    slug: "{{year}}-{{month}}-{{day}}"
+    slug: "{{title}}"
     create: true
     description: >
       The description is a great place for tone setting, high level information, and editing
@@ -190,7 +190,7 @@ collections:
     label_singular: International Universities
     folder: src/pages/posts/international/
     summary: '{{title}}'
-    slug: "{{year}}-{{month}}-{{day}}"
+    slug: "{{title}}"
     create: true
     description: >
       The description is a great place for tone setting, high level information, and editing
