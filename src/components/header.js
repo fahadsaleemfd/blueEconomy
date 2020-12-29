@@ -127,7 +127,7 @@ const Header = ({ siteTitle }) => {
                         </li>
 
                         <li class="nav-item dropdown">
-                            <a  href="/bechallenge" class="nav-link">BE Challenege 2021</a>
+                            <Link to={'/bechallenge'} class="nav-link">Resources</Link>
                         </li>
 
                         <li class="nav-item dropdown">

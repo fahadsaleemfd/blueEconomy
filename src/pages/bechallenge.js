@@ -22,7 +22,7 @@ const Challenge = () => (
             <div classNameName="container">
                 <div className="row">
                     <div className="col-12 col-md-6 pr-md-5 align-self-center text-center text-md-left text items">
-                        <div data-aos="fade-up"  className="row intro mb-4">
+                        <div   className="row intro mb-4">
                             <div className="col-12 p-0">
                                 <span className="pre-title m-auto m-md-0">About {allData.title1}</span>
                                 <h2><span className="featured"><span>{allData.title1}</span></span> Challenge</h2>
@@ -30,7 +30,7 @@ const Challenge = () => (
                             </div>
                         </div>
                                               
-                        <div data-aos="fade-up" className="buttons">
+                        <div className="buttons">
                             <div className="d-sm-inline-flex mb-5 mb-md-0">
                                 <a href="#contact" className="smooth-anchor mx-auto mt-4 btn primary-button">Register</a>
                                 <a href="#" className="mx-auto ml-sm-4 mt-4 btn outline-button">Mentor Me</a>
@@ -163,7 +163,7 @@ const Challenge = () => (
                 <div class="row justify-content-center items">
 
                         {allData.slider2.map(tag => (
-                            <div data-aos="fade-up" class="col-12 col-md-6 item">
+                            <div data-aos="" class="col-12 col-md-6 item">
                                 <div class="card">
                                     <i class="icon icon-organization"></i>
                                     <h4>{tag.title}</h4>
