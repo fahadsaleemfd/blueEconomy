@@ -44,7 +44,7 @@ const Sponsors = () => (
         <section id="about" class="section-1 highlights team image-right">
             <div class="container">
                 <div class="row">
-                    <div class="col-12 col-lg-8 align-self-top text" style={{textAlign:"center"}}>
+                    <div class="col-12 col-lg-12 align-self-top text" style={{textAlign:"center"}}>
                         <div class="row intro m-0">
                             <div class="col-12 p-0">
                                 
@@ -58,13 +58,7 @@ const Sponsors = () => (
                             </div>
                         </div>
                     </div>
-                    <div  class="col-12 col-lg-4">
-                       
-                              
-                                <img src={queryData.image1} class="fit-image" /> 
-                             
-                        
-                    </div>
+                   
                 </div>
             </div>
         </section>
@@ -73,17 +67,13 @@ const Sponsors = () => (
         <section id="about" class="section-1 highlights team image-right" style={{background:"black"}}>
             <div class="container">
                 <div class="row">
-                <div  class="col-11 col-lg-4" style={{textAlign:"center"}}>
-   
-                       <img src={queryData.image2} class="fit-image" /> 
-                    
-                </div>
+              
                 
-                <div class="col-12 col-lg-8 align-self-top text" style={{textAlign:"left"}}>
+                <div class="col-12 col-lg-12 align-self-top text" >
                         <div class="row intro m-0">
-                            <div class="col-12 p-0">
+                            <div class="col-12 p-0" >
                                 
-                                <h2 style={{color:"white"}}>{queryData.title2}</h2>
+                                <h2 style={{}} style={{textAlign:"center", color:"white"}}>{queryData.title2}</h2>
 
                             </div>
                         </div>
