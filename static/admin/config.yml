@@ -465,7 +465,7 @@ collections:
     label_singular: Blue Economy List Section
     folder: src/pages/posts/blueeconomy/list_section/
     summary: '{{title}}'
-    delete: false 
+    create: true
     description: >
       The description is a great place for tone setting, high level information, and editing
       guidelines for Contact US.
