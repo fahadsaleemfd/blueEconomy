@@ -448,7 +448,7 @@ collections:
   - name: video_section
     label: Blue Economy Video Section
     label_singular: Contact
-    folder: src/pages/posts/blueeconomy/video_section.md
+    folder: src/pages/posts/blueeconomy/video_sction/
     summary: '{{title}}'
     delete: false 
     description: >
@@ -463,7 +463,7 @@ collections:
   - name: list_section
     label: Blue Economy List Section
     label_singular: Blue Economy List Section
-    folder: src/pages/posts/blueeconomy/list_section.md
+    folder: src/pages/posts/blueeconomy/list_section/
     summary: '{{title}}'
     delete: false 
     description: >
