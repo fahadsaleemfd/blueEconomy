@@ -26,7 +26,7 @@ const News = () => (
                 
                 <div class="swiper-wrapper">
                     <div class="swiper-slide slide-center">
-                        <img src="assets/images/bg-wide.jpg" alt="Full Image" class="full-image" data-mask="80"/>
+                        {/* <img src="assets/images/bg-wide.jpg" alt="Full Image" class="full-image" data-mask="80"/> */}
                         <div class="slide-content row text-center">
                             <div class="col-12 mx-auto inner">
                                 <h1 class="mb-0 title effect-static-text">News</h1>
@@ -47,7 +47,7 @@ const News = () => (
                 <div class="col-12 col-md-4 item">
                     <div class="card">
                         <div class="col-12">
-                            <img src={tag.node.frontmatter.image} alt="Logo" class="logo"/>
+                            <img src={tag.node.frontmatter.image} alt="Logo" class="logo" class="fit-image"/>
                             <h4>{tag.node.frontmatter.title}</h4>
                             <p>{tag.node.frontmatter.description.substring(0,100)}</p>
                             <Link to={tag.node.fields.slug}>Read more</Link>
