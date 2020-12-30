@@ -22,46 +22,14 @@ const Header = ({ siteTitle }) => {
                       <script src={withPrefix('assets/js/vendor/cookie-notice.min.js')} type="text/javascript" />
                       <script src={withPrefix('assets/js/vendor/particles.min.js')} type="text/javascript" />
                       <script src={withPrefix('assets/js/main.js')} type="text/javascript" />
+                      <script src={withPrefix('assets/js/map.js')} type="text/javascript" />
 
 
                 </Helmet>
   <header class="home">
 
-      <nav class="navbar navbar-expand top">
-                <div class="container header">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link pl-0"><i class="fas fa-clock mr-2"></i>Open Hours: Mon - Sat - 9:00 - 18:00</a>
-                        </li>
-                    </ul>
 
-                    <div class="ml-auto"></div>                 
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link"><i class="fas fa-phone-alt mr-2"></i>+1 (305) 1234-5678</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link"><i class="fas fa-envelope mr-2"></i>hello@example.com</a>
-                        </li>
-                    </ul>
-
-                  
-                    <ul class="navbar-nav icons">
-                        <li class="nav-item social">
-                            <a href="#" class="nav-link"><i class="fab fa-facebook-f"></i></a>
-                        </li>
-                        <li class="nav-item social">
-                            <a href="#" class="nav-link"><i class="fab fa-twitter"></i></a>
-                        </li>
-                        <li class="nav-item social">
-                            <a href="#" class="nav-link pr-0"><i class="fab fa-linkedin-in"></i></a>
-                        </li>
-                    </ul>
-
-                </div>
-         </nav>
-
-        <nav class="navbar navbar-expand navbar-fixed sub" style={{background:'black'}}>
+        <nav class="navbar navbar-expand navbar-fixed" style={{background:'black'}}>
                 <div class="container header">
 
                 
@@ -94,7 +62,7 @@ const Header = ({ siteTitle }) => {
                         </li>
 
                         <li class="nav-item dropdown">
-                            <a  class="nav-link"><Link to={'/'}>Blue Economy</Link></a>
+                            <Link class="nav-link" to={'/blue_economy'}>Blue Economy</Link>
                         </li>
 
                         <li class="nav-item dropdown">

@@ -8,18 +8,25 @@ import TrustedImage from "../dist/assets/images/logo-1.png"
 import {Helmet} from "react-helmet";
 import { StaticQuery, graphql } from "gatsby"
 import { node } from "prop-types"
+import SimpleMap from "./map.js"
 
 const Contact = () => (
 
+    
     <StaticQuery query={contactquery} render={data=>{
             console.log(data)
         // const fetchData = data.allMarkdownRemark.edges
   
         return (  
             <div>
+                <Helmet>
+                        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDI5R6l_RO_28-77Ah0uDc3p-U3qRr67Ls&callback=initMap" async defer />
+                        var map = new google.maps.Map(document.getElementById("googleMap"),mapProp)
+                </Helmet>
                  <Layout>
                       <SEO title="Be Challenge 2021" />            
                  </Layout>
+
 
         <section class="section-2">
             <div class="container">
@@ -35,7 +42,7 @@ const Contact = () => (
                                 </div>
 
                                 <div class="col-12 col-md-6 col-lg-8 m-0 p-2 input-group">
-                                     <p>Suite# 203, 2nd Floor, Plot No 37-C, 8th Lane Off Khayaban-e-Muslim, Bukhari Commercial, Phase 6 DHA, Karachi, Pakistan</p>
+                                     <p>{data.allMarkdownRemark.edges[0].node.frontmatter.address}</p>
                                 </div>
 
                             </div>
@@ -47,7 +54,7 @@ const Contact = () => (
                                     </div>
 
                                     <div class="col-12 col-md-6 col-lg-8 m-0 p-2 input-group">
-                                        <p>(+92)333-0202729 , (+92)300-2017020</p>
+                                        <p>{data.allMarkdownRemark.edges[0].node.frontmatter.phone_number}</p>
                                        
                                     </div>
 
@@ -61,7 +68,7 @@ const Contact = () => (
                                     </div>
 
                             <div class="col-12 col-md-6 col-lg-8 m-0 p-2 input-group">
-                                <p>bei@cambridgeadvisorsnetwork.com</p>
+                            <p>{data.allMarkdownRemark.edges[0].node.frontmatter.email}</p>
                             </div>
 
                             </div>
@@ -102,14 +109,14 @@ const Contact = () => (
         </section>
 
         <section class="section-3 odd" style={{background:"black"}}>
-            <div class="container smaller">
-                <div class="row intro">
-                   
+            
+                <div class="container">
+                    <div class="row">
+                        <SimpleMap/>
+                    </div>
                 </div>
-                <div class="row">
-                  Map will be display here  
-                </div>
-            </div>
+                
+            
         </section>
 
             
@@ -135,10 +142,7 @@ const contactquery = graphql`
                 map
 
             }
-            fields{
-              slug
-            }
-            excerpt
+           
           }
         }
       }
