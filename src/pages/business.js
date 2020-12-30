@@ -18,7 +18,7 @@ const Bestartup = () => (
         return (  
         <div>
             <Layout>
-                <SEO title="Be Challenge 2021" />            
+                <SEO title="Business Competition" />            
             </Layout>
 
 

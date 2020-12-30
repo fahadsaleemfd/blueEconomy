@@ -18,7 +18,7 @@ const International = () => (
         return (  
         <div>
             <Layout>
-                <SEO title="Be Challenge 2021" />            
+                <SEO title="International Universities" />            
             </Layout>
 
 

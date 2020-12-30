@@ -1,0 +1,99 @@
+import React from "react"
+import { withPrefix ,Link } from "gatsby"
+import Layout from "../components/layout"
+import Image from "../components/image"
+import SEO from "../components/seo"
+import bkImage from "../dist/assets/images/about-5.jpg"
+import TrustedImage from "../dist/assets/images/logo-1.png"
+import {Helmet} from "react-helmet";
+import { StaticQuery, graphql } from "gatsby"
+import { node } from "prop-types"
+
+const News = () => {
+    
+        return (  
+        <div>
+            <Layout>
+                <SEO title="News" />            
+            </Layout>
+
+        <section id="slider" class="hero p-0 odd featured">
+            <div class="swiper-container no-slider animation slider-h-50 slider-h-auto">
+                
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide slide-center">
+                        <img src="assets/images/bg-wide.jpg" alt="Full Image" class="full-image" data-mask="80"/>
+                        <div class="slide-content row text-center">
+                            <div class="col-12 mx-auto inner">
+                                <h1 class="mb-0 title effect-static-text">News</h1>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section id="result" class="section-1 offers">
+            <div class="container">
+            <div class="row items">
+              
+                <div class="col-12 col-md-4 item">
+                    <div class="card">
+                        <div class="col-12">
+                            <img src="assets/images/gallery-2.jpg" alt="Logo" class="logo"/>
+                            <h4>Result 6</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
+                            <a href="#">Read more</a>
+                        </div>
+                    </div>
+                </div>
+
+              
+            </div>
+            
+            </div>
+        </section>
+
+
+       
+            
+            
+            
+            
+            </div>
+        )
+  
+                    }
+
+  const Newsquery = graphql`
+  query newsindex{
+    allMarkdownRemark(filter: {fileAbsolutePath: {regex: "posts/news_and_events/news/"}} 
+    ) {
+      edges {
+        node {
+          id
+          frontmatter {
+            firsttitle
+            description
+            date
+            projectLink
+            link
+            image
+          }
+          fields{
+            slug
+          }
+          excerpt
+        }
+      }
+    }
+  }
+  
+   `
+
+
+
+  
+export default News

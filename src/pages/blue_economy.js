@@ -20,7 +20,7 @@ const Blueeconomy = () => (
           return (  
         <div>
             <Layout>
-                <SEO title="Be Challenge 2021" />            
+                <SEO title="Blue Economy" />            
             </Layout>
             <section class="hero p-0 odd">
             <div class="swiper-container full-slider slider-h-100 slider-h-auto">

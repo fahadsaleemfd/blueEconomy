@@ -475,6 +475,36 @@ collections:
       - { label: 'Image', name: 'image', widget: 'image' }
 
 
+  - name: news
+    label: News
+    label_singular: News
+    folder: src/pages/posts/news_and_events/news/
+    summary: '{{title}}'
+    create: true
+    description: >
+      The description is a great place for tone setting, high level information, and editing
+      guidelines for NEWS.
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Description', name: 'description', widget: 'text' }
+      - { label: 'Image', name: 'image', widget: 'image' }
+
+
+  - name: events
+    label: Events
+    label_singular: Events
+    folder: src/pages/posts/news_and_events/events/
+    summary: '{{title}}'
+    create: true
+    description: >
+      The description is a great place for tone setting, high level information, and editing
+      guidelines for Events.
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Description', name: 'description', widget: 'text' }
+      - { label: 'Image', name: 'image', widget: 'image' }
+
+
 
   
      

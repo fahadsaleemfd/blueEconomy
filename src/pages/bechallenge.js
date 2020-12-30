@@ -15,7 +15,7 @@ const Challenge = () => (
   return (  
   <div>
         <Layout>
-                <SEO title="Be Challenge 2021" />
+                <SEO title="Challenge 2021" />
         </Layout>
 
         <section id="funfacts" className="section-2 highlights image-right counter funfacts featured">

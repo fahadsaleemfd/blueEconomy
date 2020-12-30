@@ -18,7 +18,7 @@ const Smallscale = () => (
         return (  
         <div>
             <Layout>
-                <SEO title="Be Challenge 2021" />            
+                <SEO title="Small Scale" />            
             </Layout>
 
 

@@ -30,21 +30,8 @@ const Header = ({ siteTitle }) => {
 
 
         <nav class="navbar navbar-expand navbar-fixed" style={{background:'black'}}>
-                <div class="container header">
-
-                
-                    {/* <a class="navbar-brand" href="/">
-                        <span class="brand">
-                            <span class="featured">
-                                <span class="first">Blue</span>
-                            </span>
-                            <span class="last">Economy</span>
-                        </span>
-                    </a> */}
-
-                 
-                    <div class="ml-auto"></div>
-
+               
+                <div class="container">
 
                     <ul class="navbar-nav items">
                         <li class="nav-item dropdown">
@@ -66,10 +53,10 @@ const Header = ({ siteTitle }) => {
                         </li>
 
                         <li class="nav-item dropdown">
-                            <a href="#" class="nav-link">Be Ideas<i class="icon-arrow-down"></i></a>
+                            <a href="#" class="nav-link">Ideas<i class="icon-arrow-down"></i></a>
                             <ul class="dropdown-menu">
                                 <li class="nav-item dropdown">
-                                    <Link to={'/bestartup'} class="nav-link">BE Startups<i class="icon-arrow-right"></i></Link>
+                                    <Link to={'/bestartup'} class="nav-link">Startups<i class="icon-arrow-right"></i></Link>
                                     <Link to={'/smallscale'} class="nav-link">Small Scale<i class="icon-arrow-right"></i></Link>
                                     <Link to={'/medscale'} class="nav-link">Medium Scale</Link>
                                     <Link to={'/largescale'} class="nav-link">Large Scale</Link>
@@ -79,7 +66,7 @@ const Header = ({ siteTitle }) => {
 
 
                         <li class="nav-item dropdown">
-                            <a href="#" class="nav-link">BE Tracks<i class="icon-arrow-down"></i></a>
+                            <a href="#" class="nav-link">Tracks<i class="icon-arrow-down"></i></a>
                             <ul class="dropdown-menu">
                                 <li class="nav-item dropdown">
                                     {/* <a class="nav-link" href="/incubation"> */}
@@ -94,7 +81,7 @@ const Header = ({ siteTitle }) => {
                         </li>
 
                         <li class="nav-item dropdown">
-                            <Link to={'/bechallenge'} class="nav-link">Be Challenge 2021</Link>
+                            <Link to={'/bechallenge'} class="nav-link">Challenge 2021</Link>
                         </li>
 
                         <li class="nav-item dropdown">
@@ -105,9 +92,17 @@ const Header = ({ siteTitle }) => {
                             <Link to={'/resources'}>Resources</Link>
                         </li>
 
-                        {/* <li class="nav-item dropdown">
-                             <a href="#" to={'/contact_us'}  class="smooth-anchor btn ml-lg-auto primary-button"> &nbsp;CONTACT US</a>
-                        </li> */}
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link">News&Events<i class="icon-arrow-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li class="nav-item dropdown"> 
+                                    <Link class="nav-link" to={'/news'}>News<i class="icon-arrow-right"></i></Link>
+                                    <Link class="nav-link" to={'/events'}>Events<i class="icon-arrow-right"></i></Link>   
+                                </li>
+                            </ul>
+                        </li>
+
+                    
 
                         
 

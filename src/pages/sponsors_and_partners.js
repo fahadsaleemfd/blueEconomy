@@ -16,7 +16,7 @@ const Sponsors = () => (
         return (  
                 <div>
                     <Layout>
-                        <SEO title="Be Challenge 2021" />            
+                        <SEO title="Sponsors and Partners" />            
                     </Layout>
 
 

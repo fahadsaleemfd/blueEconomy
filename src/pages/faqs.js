@@ -15,7 +15,7 @@ const Faqs = () => {
         return (  
                 <div>
                     <Layout>
-                        <SEO title="Be Challenge 2021" />            
+                        <SEO title="FAQs" />            
                     </Layout>
 
                     <section id="blog" class="section-1 showcase blog-grid filter-section projects">

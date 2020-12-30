@@ -16,7 +16,7 @@ const About = () => (
         return (  
                 <div>
                     <Layout>
-                        <SEO title="Be Challenge 2021" />            
+                        <SEO title="Can and MSF" />            
                     </Layout>
 
 

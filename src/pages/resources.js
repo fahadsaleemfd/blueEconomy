@@ -19,7 +19,7 @@ const Resources = () => (
         return (  
         <div>
             <Layout>
-                <SEO title="Be Challenge 2021" />            
+                <SEO title="Resources" />            
             </Layout>
 
             <section id="slider" class="hero p-0 odd featured">
