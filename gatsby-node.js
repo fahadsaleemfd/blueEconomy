@@ -20,6 +20,7 @@ exports.createPages = async ({ graphql, actions }) => {
 	const business_templete = path.resolve('src/pages/single_business.js');
 	const international_templete = path.resolve('src/pages/single_international.js');
 	const scale_template = path.resolve('src/pages/single_scale.js');
+	const news_and_event_template = path.resolve('src/pages/single_news_and_events.js');
 
 
   return graphql(`
@@ -86,6 +87,27 @@ exports.createPages = async ({ graphql, actions }) => {
 			}
 
 			lgscale: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "posts/lgscale/"}}
+			) {
+				edges {
+					node {
+						fields {
+							slug
+						}
+					}
+				}
+			}
+			news: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "posts/news_and_events/news/"}}
+			) {
+				edges {
+					node {
+						fields {
+							slug
+						}
+					}
+				}
+			}
+
+			events: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "posts/news_and_events/events/"}}
 			) {
 				edges {
 					node {
@@ -170,6 +192,26 @@ exports.createPages = async ({ graphql, actions }) => {
 			createPage({
 				path: node.fields.slug,
         component: scale_template,
+        context: {
+          slug: node.fields.slug,
+        },
+			});
+		});
+
+		result.data.news.edges.forEach(({ node }) => {
+			createPage({
+				path: node.fields.slug,
+        component: news_and_event_template,
+        context: {
+          slug: node.fields.slug,
+        },
+			});
+		});
+
+		result.data.events.edges.forEach(({ node }) => {
+			createPage({
+				path: node.fields.slug,
+        component: news_and_event_template,
         context: {
           slug: node.fields.slug,
         },

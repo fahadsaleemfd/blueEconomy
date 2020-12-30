@@ -9,8 +9,12 @@ import {Helmet} from "react-helmet";
 import { StaticQuery, graphql } from "gatsby"
 import { node } from "prop-types"
 
-const News = () => {
-    
+const News = () => (
+
+    <StaticQuery query={Newsquery} render={data=>{
+        console.log(data)
+
+
         return (  
         <div>
             <Layout>
@@ -38,18 +42,20 @@ const News = () => {
         <section id="result" class="section-1 offers">
             <div class="container">
             <div class="row items">
-              
+            {data.allMarkdownRemark.edges.map((tag,index) => (
+
                 <div class="col-12 col-md-4 item">
                     <div class="card">
                         <div class="col-12">
-                            <img src="assets/images/gallery-2.jpg" alt="Logo" class="logo"/>
-                            <h4>Result 6</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
-                            <a href="#">Read more</a>
+                            <img src={tag.node.frontmatter.image} alt="Logo" class="logo"/>
+                            <h4>{tag.node.frontmatter.title}</h4>
+                            <p>{tag.node.frontmatter.description.substring(0,100)}</p>
+                            <Link to={tag.node.fields.slug}>Read more</Link>
                         </div>
                     </div>
                 </div>
-
+             
+             ))}
               
             </div>
             
@@ -64,8 +70,8 @@ const News = () => {
             
             </div>
         )
-  
-                    }
+    }}/>
+    )
 
   const Newsquery = graphql`
   query newsindex{
@@ -75,17 +81,14 @@ const News = () => {
         node {
           id
           frontmatter {
-            firsttitle
+            title
             description
-            date
-            projectLink
-            link
             image
           }
           fields{
             slug
           }
-          excerpt
+          
         }
       }
     }
