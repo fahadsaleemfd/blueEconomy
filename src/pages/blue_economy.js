@@ -15,42 +15,48 @@ const Blueeconomy = () => (
   <StaticQuery query={Bluequery} render={data=>{
 
           // const fetchData = data.allMarkdownRemark.edges
-          console.log(data.list_section.edges)
+          console.log(data.video_sections.edges[0].node.frontmatter.title)
+
           return (  
         <div>
             <Layout>
                 <SEO title="Be Challenge 2021" />            
             </Layout>
+            <section class="hero p-0 odd">
+            <div class="swiper-container full-slider slider-h-100 slider-h-auto">
+                <div class="swiper-wrapper">
 
+                    
+                    <div class="swiper-slide slide-center">
 
-            <section id="video" class="section-1 highlights image-center">
-            <div class="container">
+                    <video loop autoPlay class="full-image" data-mask="40">
+                            <source src={data.video_sections.edges[0].node.frontmatter.video} type="video/mp4"/>
+                    </video>
+                        {/* <img src="assets/images/bg-2.jpg" alt="Full Image" class="full-image" data-mask="40"/>   */}
 
-                <div class="row text-center intro">
-                    <div class="col-12">
-                        <h2>Thematic Areas</h2>
-                        <p>Unveiling the Opportunities in Coastal Economy Of Pakistan</p>
+                        <div class="slide-content row">
+                            <div class="col-12 d-flex justify-content-start justify-content-md-center inner">
+                                <div class="center text-left text-md-center">
+
+                                 
+                                    <h2 >{data.video_sections.edges[0].node.frontmatter.title}</h2>
+                                    <p>{data.video_sections.edges[0].node.frontmatter.description}</p>
+                                  
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
 
-                <div class="row">
-                    <div class="col-12 col-lg-12 gallery">
-                       
-                           
-                            <video width="100%"  autoPlay loop>
-                                <source src={Videofile} type="video/mp4"></source>
-                            </video>
-                       
-                    </div>
-                </div>
+                   
 
+
+                </div>
+                <div class="swiper-pagination"></div>
             </div>
         </section>
 
 
         <section id="about" class="section-1 highlights team image-right" style={{padding:"50px 0"}}>
-          
-       
         
           <div class="container">
             {data.list_section.edges.map((tag,index) => (
@@ -92,15 +98,25 @@ const Blueeconomy = () => (
   const Bluequery = graphql`
   {
     video_sections: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "posts/blueeconomy/video_section/"}}
-    ) {
+    )  {
       edges {
         node {
-          fields {
+          id
+          frontmatter {
+            
+            title
+            description
+            video
+        
+          }
+          fields{
             slug
           }
+          excerpt
         }
       }
     }
+    
     
     list_section: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "posts/blueeconomy/list_section/"}}
     )  {
