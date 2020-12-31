@@ -2,6 +2,7 @@ const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
+
   const { createNodeField } = actions
   if (node.internal.type === `MarkdownRemark`) {
     const slug = createFilePath({ node, getNode, basePath: `pages` })
@@ -217,6 +218,26 @@ exports.createPages = async ({ graphql, actions }) => {
         },
 			});
 		});
+
+
+
+		// pagination
+		const postsPerPage = 3
+		const numPages = Math.ceil(JSON.stringify(result.data.incu.edges.length / postsPerPage))
+		   
+		Array.from({ length: numPages }).forEach((_, i) => {
+			createPage({
+			  path: i === 0 ? `/incubation` : `/incubation/${i + 1}`,
+			  component: path.resolve("./src/pages/incubation.js"),
+			  context: {
+				limit: postsPerPage,
+				skip: i * postsPerPage,
+				numPages,
+				currentPage: i + 1,
+			  },
+			})
+		  })
+		
 
 
 

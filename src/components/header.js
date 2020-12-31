@@ -8,6 +8,8 @@ const Header = ({ siteTitle }) => {
   return (<div>
           <Helmet>        
                 <meta name="theme-color" content="#21333e"/>
+                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  
                       <script src={withPrefix('assets/js/vendor/jquery.min.js')} type="text/javascript" />
                       <script src={withPrefix('assets/js/vendor/jquery.easing.min.js.js')} type="text/javascript" />
                       <script src={withPrefix('assets/js/vendor/jquery.inview.min.js')} type="text/javascript" />
@@ -26,9 +28,7 @@ const Header = ({ siteTitle }) => {
 
 
                 </Helmet>
-  <header class="home">
-
-
+  <header id="header">
         <nav class="navbar navbar-expand navbar-fixed" style={{background:'black'}}>
                
                 <div class="container">
@@ -93,7 +93,7 @@ const Header = ({ siteTitle }) => {
                         </li>
 
                         <li class="nav-item dropdown">
-                            <a href="#" class="nav-link">News&Events<i class="icon-arrow-down"></i></a>
+                            <a href="#" class="nav-link">News & Events<i class="icon-arrow-down"></i></a>
                             <ul class="dropdown-menu">
                                 <li class="nav-item dropdown"> 
                                     <Link class="nav-link" to={'/news'}>News<i class="icon-arrow-right"></i></Link>
