@@ -112,7 +112,7 @@ export default class Incubation_Lists extends React.Component {
   }
 
   export const Incubationqueries = graphql`
-  query pagquery($skip: Int!, $limit: Int!){
+  query pagquery($skip: Int, $limit: Int){
     allMarkdownRemark(filter: {fileAbsolutePath: {regex: "posts/betracks/"}} 
     limit: $limit
     skip: $skip
