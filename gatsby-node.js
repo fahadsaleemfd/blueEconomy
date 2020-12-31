@@ -228,7 +228,7 @@ exports.createPages = async ({ graphql, actions }) => {
 		Array.from({ length: numPages }).forEach((_, i) => {
 			createPage({
 			  path: i === 0 ? `/incubation` : `/incubation/${i + 1}`,
-			  component: path.resolve("./src/pages/incubation.js"),
+			  component: path.resolve("./src/pages/incubation_lists.js"),
 			  context: {
 				limit: postsPerPage,
 				skip: i * postsPerPage,

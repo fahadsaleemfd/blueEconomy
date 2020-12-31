@@ -10,7 +10,7 @@ import { StaticQuery, graphql } from "gatsby"
 import { node } from "prop-types"
 import Pagination from "../components/pagination"
 
-export default class BlogList extends React.Component {
+export default class Incubation_Lists extends React.Component {
     render() {
 
       const posts = this.props.data.allMarkdownRemark.edges
@@ -68,7 +68,7 @@ export default class BlogList extends React.Component {
                 </div>
                     
 
-                <Pagination prevPage={prevPage} nextPage={nextPage} isFirst={isFirst} isLast={isLast} currentPage={currentPage} numPages={numPages} />
+                 <Pagination prevPage={prevPage} nextPage={nextPage} isFirst={isFirst} isLast={isLast} currentPage={currentPage} numPages={numPages} />
                 {/* <div class="row">
                         <div class="col-12">
                             <nav>
@@ -111,10 +111,11 @@ export default class BlogList extends React.Component {
     }
   }
 
-  export const Incubationquery = graphql`
-  query{
+  export const Incubationqueries = graphql`
+  query pagquery($skip: Int!, $limit: Int!){
     allMarkdownRemark(filter: {fileAbsolutePath: {regex: "posts/betracks/"}} 
-    limit: 3
+    limit: $limit
+    skip: $skip
     ) {
       edges {
         node {
