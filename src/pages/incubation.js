@@ -111,7 +111,7 @@ export default class BlogList extends React.Component {
   }
 
   export const Incubationquery = graphql`
-  query incubation($skip: Int, $limit: Int){
+  query incubation($skip: Int!, $limit: Int!){
     allMarkdownRemark(filter: {fileAbsolutePath: {regex: "posts/betracks/"}} 
     limit: $limit
     skip: $skip
