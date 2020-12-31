@@ -26,13 +26,13 @@ const Pagination = ({prevPage,nextPage,isFirst, isLast, currentPage, numPages}) 
                                             </li>
                                       )}
                                     <li class="page-item"><a class="page-link" href="#">{currentPage}/{numPages}</a></li>
-                                    {/* {!isLast && ( */}
+                                    {!isLast && (
                                         <li class="page-item">
                                             <Link class="page-link" to={'/incubation/' + nextPage}>
                                                 <i class="fas fa-angle-right"></i>
                                             </Link>
                                         </li>
-                                    {/* )} */}
+                                    )}
 
                                 </ul>
                                         

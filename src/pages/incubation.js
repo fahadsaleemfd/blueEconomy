@@ -14,6 +14,7 @@ export default class BlogList extends React.Component {
     render() {
 
       const posts = this.props.data.allMarkdownRemark.edges
+      const totalPages = this.props.data.allMarkdownRemark.edges.length
       const { currentPage, numPages } = this.props.pageContext
       const isFirst = currentPage === 1
       const isLast = currentPage === numPages
@@ -68,7 +69,7 @@ export default class BlogList extends React.Component {
                 </div>
                     
 
-                <Pagination prevPage={prevPage} nextPage={nextPage} isFirst={isFirst} isLast={isLast} currentPage={currentPage} numPages={numPages} />
+                <Pagination prevPage={prevPage} nextPage={2} isFirst={true} isLast={false} currentPage={'1'} numPages={totalPages} />
                 {/* <div class="row">
                         <div class="col-12">
                             <nav>
