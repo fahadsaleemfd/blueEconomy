@@ -11,7 +11,7 @@ export default class Business extends React.Component {
     render() {
 
       const posts = this.props.data.allMarkdownRemark.edges
-      const totalPages = this.props.pageResources.json.data.allMarkdownRemark.pageInfo.pageCount
+      const totalPages = this.props.data.allMarkdownRemark.edges.length
       const { currentPage, numPages } = this.props.pageContext
       const isFirst = currentPage === 1
       const isLast = currentPage === totalPages
@@ -84,7 +84,7 @@ export default class Business extends React.Component {
   export const Bestartupq = graphql`
   query Bestartupquery{
     allMarkdownRemark(filter: {fileAbsolutePath: {regex: "posts/business/"}} 
-    limit : 21
+    limit : 2
     ) {
       edges {
         node {
@@ -103,10 +103,7 @@ export default class Business extends React.Component {
           excerpt
         }
       }
-      pageInfo {
-        pageCount
-        totalCount
-      }
+      
     }
   }
   

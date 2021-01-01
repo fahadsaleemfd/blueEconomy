@@ -13,13 +13,12 @@ import Pagination from "../components/pagination"
 export default class Funding extends React.Component {
 
     render() {
-      console.log(this.props)
+
       const posts = this.props.data.allMarkdownRemark.edges
-      const totalPages = this.props.pageResources.json.data.allMarkdownRemark.pageInfo.pageCount
-      // const totalPages = this.props.data.allMarkdownRemark.pageInfo.pageCount
+      const totalPages = this.props.data.allMarkdownRemark.edges.length
       const { currentPage, numPages } = this.props.pageContext
       const isFirst = currentPage === 1
-      const isLast = currentPage === totalPages
+      const isLast = currentPage === numPages
       const prevPage = currentPage - 1 === 1 ? "" : (currentPage - 1).toString()
       const nextPage = (currentPage + 1).toString()
       const path = "/funding/";
@@ -72,7 +71,7 @@ export default class Funding extends React.Component {
 
 
                     </div>
-                    <Pagination prevPage={prevPage} nextPage={2} isFirst={true} isLast={isLast} currentPage={'1'} numPages={totalPages} path={path} />
+                    <Pagination prevPage={prevPage} nextPage={2} isFirst={true} isLast={false} currentPage={'1'} numPages={totalPages} path={path} />
                 </div>
             </div>
         </section>
@@ -86,30 +85,27 @@ export default class Funding extends React.Component {
       }
 
 export const fundings = graphql`
-  query {
-    allMarkdownRemark(filter: {fileAbsolutePath: {regex: "posts/funding/"}}, limit: 21) {
-    edges {
-      node {
-        id
-        frontmatter {
-          firsttitle
-          description
-          date
-          projectLink
-          link
-          image
+  query fundingquery{
+    allMarkdownRemark(filter: {fileAbsolutePath: {regex: "posts/fundings/"}}
+    limit: 2
+    ) {
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            description
+            date
+            link
+            image
+          }
+          fields{
+            slug
+          }
+          excerpt
         }
-        fields {
-          slug
-        }
-        excerpt
       }
     }
-    pageInfo {
-      pageCount
-      totalCount
-    }
-  }
   }
   
    `

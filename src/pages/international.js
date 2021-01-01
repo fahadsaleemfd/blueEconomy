@@ -15,10 +15,10 @@ export default class International extends React.Component {
     render() {
 
       const posts = this.props.data.allMarkdownRemark.edges
-      const totalPages = this.props.pageResources.json.data.allMarkdownRemark.pageInfo.pageCount
+      const totalPages = this.props.data.allMarkdownRemark.edges.length
       const { currentPage, numPages } = this.props.pageContext
       const isFirst = currentPage === 1
-      const isLast = currentPage === totalPages
+      const isLast = currentPage === numPages
       const prevPage = currentPage - 1 === 1 ? "" : (currentPage - 1).toString()
       const nextPage = (currentPage + 1).toString()
       const path = "/international/";
@@ -73,7 +73,7 @@ export default class International extends React.Component {
 
 
                     </div>
-                    <Pagination prevPage={prevPage} nextPage={2} isFirst={true} isLast={isLast} currentPage={'1'} numPages={totalPages} path={path} />
+                    <Pagination prevPage={prevPage} nextPage={2} isFirst={true} isLast={false} currentPage={'1'} numPages={totalPages} path={path} />
                 </div>
             </div>
         </section>
@@ -90,7 +90,7 @@ export default class International extends React.Component {
   export const Internationalq = graphql`
   query Internationalindex{
     allMarkdownRemark(filter: {fileAbsolutePath: {regex: "posts/international/"}} 
-    limit : 21
+    limit : 2
     ) {
       edges {
         node {
