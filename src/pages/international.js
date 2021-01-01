@@ -13,7 +13,7 @@ import Pagination from "../components/pagination"
 export default class International extends React.Component {
 
     render() {
-
+      console.log( this.props.pageContext)
       const posts = this.props.data.allMarkdownRemark.edges
       const totalPages = this.props.data.allMarkdownRemark.edges.length
       const { currentPage, numPages } = this.props.pageContext

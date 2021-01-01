@@ -115,7 +115,7 @@ export default class BlogList extends React.Component {
 
   export const Incubationquery = graphql`
   query{
-    allMarkdownRemark(filter: {fileAbsolutePath: {regex: "posts/betracks/"}}, limit: 21) {
+    allMarkdownRemark(filter: {fileAbsolutePath: {regex: "posts/betracks/"}}, limit: 3) {
       edges {
         node {
           id

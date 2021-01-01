@@ -223,7 +223,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
 		// pagination for incubation lists
 		const postsPerPageforIncubation = 21
-		const postincu = 21
+		const postincu = 3
 		const postsPerPage = 2
 		var numPages = Math.ceil(JSON.stringify(result.data.incu.edges.length / postincu))
 		   
