@@ -87,7 +87,7 @@ export default class Funding extends React.Component {
 export const fundings = graphql`
   query fundingquery{
     allMarkdownRemark(filter: {fileAbsolutePath: {regex: "posts/fundings/"}}
-    limit: 21
+    limit: 2
     ) {
       edges {
         node {
