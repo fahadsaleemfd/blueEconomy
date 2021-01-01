@@ -222,16 +222,17 @@ exports.createPages = async ({ graphql, actions }) => {
 
 
 		// pagination for incubation lists
+		const postsPerPageforIncubation = 21
 		const postsPerPage = 2
-		var numPages = Math.ceil(JSON.stringify(result.data.incu.edges.length / postsPerPage))
+		var numPages = Math.ceil(JSON.stringify(result.data.incu.edges.length / postsPerPageforIncubation))
 		   
 		Array.from({ length: numPages }).forEach((_, i) => {
 			createPage({
 			  path: i === 0 ? `/incubation` : `/incubation/${i + 1}`,
 			  component: path.resolve("./src/pages/pagination_templates/incubation_lists.js"),
 			  context: {
-				limit: postsPerPage,
-				skip: i * postsPerPage,
+				limit: postsPerPageforIncubation,
+				skip: i * postsPerPageforIncubation,
 				numPages,
 				currentPage: i + 1,
 			  },
@@ -240,15 +241,15 @@ exports.createPages = async ({ graphql, actions }) => {
 
 
 		// pagination for funding pages
-		 numPages = Math.ceil(JSON.stringify(result.data.funding.edges.length / postsPerPage))
+		 numPages = Math.ceil(JSON.stringify(result.data.funding.edges.length / postsPerPageforIncubation))
 			 
 		  Array.from({ length: numPages }).forEach((_, i) => {
 			  createPage({
 				path: i === 0 ? `/funding` : `/funding/${i + 1}`,
 				component: path.resolve("./src/pages/pagination_templates/funding_lists.js"),
 				context: {
-				  limit: postsPerPage,
-				  skip: i * postsPerPage,
+				  limit: postsPerPageforIncubation,
+				  skip: i * postsPerPageforIncubation,
 				  numPages,
 				  currentPage: i + 1,
 				},
@@ -256,15 +257,15 @@ exports.createPages = async ({ graphql, actions }) => {
 			})
 
 			// pagination for business competition pages
-			numPages = Math.ceil(JSON.stringify(result.data.business.edges.length / postsPerPage))
+			numPages = Math.ceil(JSON.stringify(result.data.business.edges.length / postsPerPageforIncubation))
 			 
 			Array.from({ length: numPages }).forEach((_, i) => {
 				createPage({
 				  path: i === 0 ? `/business` : `/business/${i + 1}`,
 				  component: path.resolve("./src/pages/pagination_templates/business_lists.js"),
 				  context: {
-					limit: postsPerPage,
-					skip: i * postsPerPage,
+					limit: postsPerPageforIncubation,
+					skip: i * postsPerPageforIncubation,
 					numPages,
 					currentPage: i + 1,
 				  },
@@ -272,15 +273,15 @@ exports.createPages = async ({ graphql, actions }) => {
 			  })
 
 			//   pagination for international universities pages
-			numPages = Math.ceil(JSON.stringify(result.data.international.edges.length / postsPerPage))
+			numPages = Math.ceil(JSON.stringify(result.data.international.edges.length / postsPerPageforIncubation))
 			 
 			Array.from({ length: numPages }).forEach((_, i) => {
 				createPage({
 				  path: i === 0 ? `/international` : `/international/${i + 1}`,
 				  component: path.resolve("./src/pages/pagination_templates/international_lists.js"),
 				  context: {
-					limit: postsPerPage,
-					skip: i * postsPerPage,
+					limit: postsPerPageforIncubation,
+					skip: i * postsPerPageforIncubation,
 					numPages,
 					currentPage: i + 1,
 				  },

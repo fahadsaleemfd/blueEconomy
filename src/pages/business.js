@@ -11,10 +11,10 @@ export default class Business extends React.Component {
     render() {
 
       const posts = this.props.data.allMarkdownRemark.edges
-      const totalPages = this.props.data.allMarkdownRemark.edges.length
+      const totalPages = this.props.pageResources.json.data.allMarkdownRemark.pageInfo.pageCount
       const { currentPage, numPages } = this.props.pageContext
       const isFirst = currentPage === 1
-      const isLast = currentPage === numPages
+      const isLast = currentPage === totalPages
       const prevPage = currentPage - 1 === 1 ? "" : (currentPage - 1).toString()
       const nextPage = (currentPage + 1).toString()
       const path = "/business/";
@@ -67,7 +67,7 @@ export default class Business extends React.Component {
 
 
                     </div>
-                    <Pagination prevPage={prevPage} nextPage={2} isFirst={true} isLast={false} currentPage={'1'} numPages={totalPages} path={path} />
+                    <Pagination prevPage={prevPage} nextPage={2} isFirst={true} isLast={isLast} currentPage={'1'} numPages={totalPages} path={path} />
                 </div>
             </div>
         </section>
@@ -84,24 +84,28 @@ export default class Business extends React.Component {
   export const Bestartupq = graphql`
   query Bestartupquery{
     allMarkdownRemark(filter: {fileAbsolutePath: {regex: "posts/business/"}} 
-    limit : 2
+    limit : 21
     ) {
       edges {
         node {
           id
           frontmatter {
-            title
+            firsttitle
             description
             date
             projectLink
             link
             image
           }
-          fields{
+          fields {
             slug
           }
           excerpt
         }
+      }
+      pageInfo {
+        pageCount
+        totalCount
       }
     }
   }
