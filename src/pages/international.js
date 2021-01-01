@@ -73,7 +73,7 @@ export default class International extends React.Component {
 
 
                     </div>
-                    <Pagination prevPage={prevPage} nextPage={2} isFirst={true} isLast={false} currentPage={'1'} numPages={totalPages} path={path} />
+                    <Pagination prevPage={prevPage} nextPage={2} isFirst={true} isLast={isLast} currentPage={'1'} numPages={numPages} path={path} />
                 </div>
             </div>
         </section>
@@ -90,7 +90,7 @@ export default class International extends React.Component {
   export const Internationalq = graphql`
   query Internationalindex{
     allMarkdownRemark(filter: {fileAbsolutePath: {regex: "posts/international/"}} 
-    limit : 2
+    limit : 21
     ) {
       edges {
         node {
