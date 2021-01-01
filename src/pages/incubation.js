@@ -28,7 +28,7 @@ export default class BlogList extends React.Component {
         <div>
         <Layout>
              <SEO title="Incubation Tracks" /> 
-        </Layout>
+        
 
         <section id="blog" class="section-1 showcase blog-grid filter-section projects">
             <div class="overflow-holder">
@@ -105,7 +105,7 @@ export default class BlogList extends React.Component {
 
 
 
-
+        </Layout>
 
 
         </div>

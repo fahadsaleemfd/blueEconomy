@@ -15,7 +15,7 @@ const SingleBusiness = ({data}) => {
                 <div>
                     <Layout>
                         <SEO title="Be Challenge 2021" />            
-                    </Layout>
+               
 
                     <section id="slider" class="hero p-0 odd featured">
             <div class="swiper-container no-slider animation slider-h-50 slider-h-auto">
@@ -88,8 +88,7 @@ const SingleBusiness = ({data}) => {
             </div>
         </section>
 
-        
-                    
+        </Layout>      
                     
                     </div>
         )

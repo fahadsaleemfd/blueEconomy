@@ -7,9 +7,12 @@ import SEO from "../components/seo"
 import {Helmet} from "react-helmet";
 
 const IndexPage = () => (
+  
   <Layout>
     <SEO title="Home" />
+    
   </Layout>
+  
 )
 
 export default IndexPage

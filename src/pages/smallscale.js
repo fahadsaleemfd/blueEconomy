@@ -23,7 +23,7 @@ export default class Smallscale extends React.Component {
         <div>
             <Layout>
                 <SEO title="Small Scale" />            
-            </Layout>
+         
 
 
 
@@ -91,7 +91,7 @@ export default class Smallscale extends React.Component {
             </div>
         </section>
             
-            
+        </Layout>
             
             
             </div>

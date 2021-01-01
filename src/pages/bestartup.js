@@ -21,7 +21,7 @@ const Bestartup = () => (
         <div>
             <Layout>
                 <SEO title="Startups" />            
-            </Layout>
+          
 
             <section id="services" class="section-2 odd offers" style={{background:"black"}}>
             <div class="container">
@@ -73,7 +73,7 @@ const Bestartup = () => (
                 </div>
             </div>
         </section>
-
+        </Layout>
 
 
         

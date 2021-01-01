@@ -24,7 +24,7 @@ export default class mediumscale_list extends React.Component {
         <div>
             <Layout>
                 <SEO title="International Universities" />            
-            </Layout>
+         
             <section id="slider" class="hero p-0 odd featured">
             <div class="swiper-container no-slider animation slider-h-50 slider-h-auto">
                 <div class="swiper-wrapper">
@@ -84,7 +84,7 @@ export default class mediumscale_list extends React.Component {
         </section>
             
             
-            
+        </Layout>
             
             </div>
           )

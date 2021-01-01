@@ -29,7 +29,7 @@ export default class International extends React.Component {
         <div>
             <Layout>
                 <SEO title="International Universities" />            
-            </Layout>
+         
 
 
         <section id="blog" class="section-1 showcase blog-grid filter-section projects">
@@ -78,7 +78,7 @@ export default class International extends React.Component {
             </div>
         </section>
             
-            
+        </Layout>
             
             
             </div>

@@ -25,7 +25,7 @@ const Contact = () => (
                 </Helmet>
                  <Layout>
                       <SEO title="Be Challenge 2021" />            
-                 </Layout>
+               
 
 
         <section class="section-2">
@@ -119,7 +119,7 @@ const Contact = () => (
             
         </section>
 
-            
+        </Layout>  
             </div>
         )
 

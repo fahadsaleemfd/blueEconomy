@@ -25,7 +25,7 @@ export default class Business extends React.Component {
         <div>
             <Layout>
                 <SEO title="Funding Orgnization" />            
-            </Layout>
+        
 
 
         <section id="blog" class="section-1 showcase blog-grid filter-section projects">
@@ -73,7 +73,7 @@ export default class Business extends React.Component {
         </section>
             
             
-            
+        </Layout>
             
             </div>
 

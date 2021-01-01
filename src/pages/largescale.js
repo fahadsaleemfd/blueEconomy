@@ -21,7 +21,7 @@ export default class Largescale extends React.Component {
         <div>
             <Layout>
                 <SEO title="Large Scale" />            
-            </Layout>
+         
 
 
             <section id="slider" class="hero p-0 odd featured">
@@ -90,7 +90,7 @@ export default class Largescale extends React.Component {
         </section>
             
        
-            
+        </Layout>
             
             </div>
         )

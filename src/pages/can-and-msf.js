@@ -17,7 +17,7 @@ const About = () => (
                 <div>
                     <Layout>
                         <SEO title="Can and MSF" />            
-                    </Layout>
+                   
 
 
 
@@ -108,7 +108,7 @@ const About = () => (
    
 
                     
-                    
+        </Layout>
                </div>
         )
         

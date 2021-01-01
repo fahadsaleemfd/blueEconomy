@@ -17,7 +17,7 @@ const Sponsors = () => (
                 <div>
                     <Layout>
                         <SEO title="Sponsors and Partners" />            
-                    </Layout>
+                   
 
 
 
@@ -97,7 +97,7 @@ const Sponsors = () => (
 
    
 
-                    
+        </Layout>
                     
                </div>
         )

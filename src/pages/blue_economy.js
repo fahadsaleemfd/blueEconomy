@@ -21,7 +21,7 @@ const Blueeconomy = () => (
         <div>
             <Layout>
                 <SEO title="Blue Economy" />            
-            </Layout>
+            
             <section class="hero p-0 odd">
             <div class="swiper-container full-slider slider-h-100 slider-h-auto">
                 <div class="swiper-wrapper">
@@ -89,7 +89,7 @@ const Blueeconomy = () => (
         
           
         </section>
-            
+        </Layout>
             </div>
         )
       }}/>
