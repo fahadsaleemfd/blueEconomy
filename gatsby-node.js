@@ -225,7 +225,7 @@ exports.createPages = async ({ graphql, actions }) => {
 		const postsPerPageforIncubation = 21
 		const postincu = 3
 		const postsPerPage = 2
-		var numPages = Math.ceil(JSON.stringify(result.data.incu.edges.length / postpostsPerPageforIncubationincu))
+		var numPages = Math.ceil(JSON.stringify(result.data.incu.edges.length / postsPerPageforIncubation))
 		   
 		Array.from({ length: numPages }).forEach((_, i) => {
 			createPage({
