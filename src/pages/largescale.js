@@ -100,7 +100,7 @@ export default class Largescale extends React.Component {
 export const largescale = graphql`
   query largescales{
     allMarkdownRemark(filter: {fileAbsolutePath: {regex: "posts/lgscale/"}} 
-    limit : 2
+    limit : 21
     ) {
       edges {
         node {

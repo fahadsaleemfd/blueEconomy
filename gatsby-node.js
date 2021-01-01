@@ -307,7 +307,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
 				  
 			  	//   pagination for med scale
-			numPages = Math.ceil(JSON.stringify(result.data.medscale.edges.length / 2))
+			numPages = Math.ceil(JSON.stringify(result.data.medscale.edges.length / postsPerPage))
 			 
 			Array.from({ length: numPages }).forEach((_, i) => {
 				createPage({
