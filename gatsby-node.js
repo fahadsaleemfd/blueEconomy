@@ -223,16 +223,17 @@ exports.createPages = async ({ graphql, actions }) => {
 
 		// pagination for incubation lists
 		const postsPerPageforIncubation = 21
+		const postincu = 21
 		const postsPerPage = 2
-		var numPages = Math.ceil(JSON.stringify(result.data.incu.edges.length / postsPerPageforIncubation))
+		var numPages = Math.ceil(JSON.stringify(result.data.incu.edges.length / postincu))
 		   
 		Array.from({ length: numPages }).forEach((_, i) => {
 			createPage({
 			  path: i === 0 ? `/incubation` : `/incubation/${i + 1}`,
 			  component: path.resolve("./src/pages/pagination_templates/incubation_lists.js"),
 			  context: {
-				limit: postsPerPageforIncubation,
-				skip: i * postsPerPageforIncubation,
+				limit: postincu,
+				skip: i * postincu,
 				numPages,
 				currentPage: i + 1,
 			  },
