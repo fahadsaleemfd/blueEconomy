@@ -17,7 +17,7 @@ export default class BlogList extends React.Component {
       const totalPages = this.props.data.allMarkdownRemark.edges.length
       const { currentPage, numPages } = this.props.pageContext
       const isFirst = currentPage === 1
-      const isLast = currentPage === numPages
+      const isLast = currentPage === totalPages
       const prevPage = currentPage - 1 === 1 ? "" : (currentPage - 1).toString()
       const nextPage = (currentPage + 1).toString()
       const path = "/incubation/";
@@ -70,7 +70,7 @@ export default class BlogList extends React.Component {
                 </div>
                     
 
-                <Pagination prevPage={prevPage} nextPage={2} isFirst={true} isLast={isLast} currentPage={'1'} numPages={numPages} path={path} />
+                <Pagination prevPage={prevPage} nextPage={2} isFirst={true} isLast={isLast} currentPage={'1'} numPages={totalPages} path={path} />
                 {/* <div class="row">
                         <div class="col-12">
                             <nav>
@@ -115,7 +115,7 @@ export default class BlogList extends React.Component {
 
   export const Incubationquery = graphql`
   query{
-    allMarkdownRemark(filter: {fileAbsolutePath: {regex: "posts/betracks/"}}, limit: 3) {
+    allMarkdownRemark(filter: {fileAbsolutePath: {regex: "posts/betracks/"}}, limit: 21) {
       edges {
         node {
           id
