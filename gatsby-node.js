@@ -221,14 +221,14 @@ exports.createPages = async ({ graphql, actions }) => {
 
 
 
-		// pagination
-		const postsPerPage = 3
-		const numPages = Math.ceil(JSON.stringify(result.data.incu.edges.length / postsPerPage))
+		// pagination for incubation lists
+		const postsPerPage = 2
+		var numPages = Math.ceil(JSON.stringify(result.data.incu.edges.length / postsPerPage))
 		   
 		Array.from({ length: numPages }).forEach((_, i) => {
 			createPage({
 			  path: i === 0 ? `/incubation` : `/incubation/${i + 1}`,
-			  component: path.resolve("./src/pages/incubation_lists.js"),
+			  component: path.resolve("./src/pages/pagination_templates/incubation_lists.js"),
 			  context: {
 				limit: postsPerPage,
 				skip: i * postsPerPage,
@@ -237,7 +237,107 @@ exports.createPages = async ({ graphql, actions }) => {
 			  },
 			})
 		  })
+
+
+		// pagination for funding pages
+		 numPages = Math.ceil(JSON.stringify(result.data.funding.edges.length / postsPerPage))
+			 
+		  Array.from({ length: numPages }).forEach((_, i) => {
+			  createPage({
+				path: i === 0 ? `/funding` : `/funding/${i + 1}`,
+				component: path.resolve("./src/pages/pagination_templates/funding_lists.js"),
+				context: {
+				  limit: postsPerPage,
+				  skip: i * postsPerPage,
+				  numPages,
+				  currentPage: i + 1,
+				},
+			  })
+			})
+
+			// pagination for business competition pages
+			numPages = Math.ceil(JSON.stringify(result.data.business.edges.length / postsPerPage))
+			 
+			Array.from({ length: numPages }).forEach((_, i) => {
+				createPage({
+				  path: i === 0 ? `/business` : `/business/${i + 1}`,
+				  component: path.resolve("./src/pages/pagination_templates/business_lists.js"),
+				  context: {
+					limit: postsPerPage,
+					skip: i * postsPerPage,
+					numPages,
+					currentPage: i + 1,
+				  },
+				})
+			  })
+
+			//   pagination for international universities pages
+			numPages = Math.ceil(JSON.stringify(result.data.international.edges.length / postsPerPage))
+			 
+			Array.from({ length: numPages }).forEach((_, i) => {
+				createPage({
+				  path: i === 0 ? `/international` : `/international/${i + 1}`,
+				  component: path.resolve("./src/pages/pagination_templates/international_lists.js"),
+				  context: {
+					limit: postsPerPage,
+					skip: i * postsPerPage,
+					numPages,
+					currentPage: i + 1,
+				  },
+				})
+			  })
+
+
+			//   pagination for small scale
+			numPages = Math.ceil(JSON.stringify(result.data.smallscale.edges.length / postsPerPage))
+			 
+			Array.from({ length: numPages }).forEach((_, i) => {
+				createPage({
+				  path: i === 0 ? `/smallscale` : `/smallscale/${i + 1}`,
+				  component: path.resolve("./src/pages/pagination_templates/small_scale.js"),
+				  context: {
+					limit: postsPerPage,
+					skip: i * postsPerPage,
+					numPages,
+					currentPage: i + 1,
+				  },
+				})
+			  })
 		
+
+				  
+			  	//   pagination for med scale
+			numPages = Math.ceil(JSON.stringify(result.data.medscale.edges.length / 2))
+			 
+			Array.from({ length: numPages }).forEach((_, i) => {
+				createPage({
+				  path: i === 0 ? `/medscale` : `/medscale/${i + 1}`,
+				  component: path.resolve("./src/pages/pagination_templates/medium_scale.js"),
+				  context: {
+					limit: postsPerPage,
+					skip: i * postsPerPage,
+					numPages,
+					currentPage: i + 1,
+				  },
+				})
+			  })
+
+
+			//   pagination for large scale
+			numPages = Math.ceil(JSON.stringify(result.data.lgscale.edges.length / postsPerPage))
+			 
+			Array.from({ length: numPages }).forEach((_, i) => {
+				createPage({
+				  path: i === 0 ? `/largescale` : `/largescale/${i + 1}`,
+				  component: path.resolve("./src/pages/pagination_templates/large_scale.js"),
+				  context: {
+					limit: postsPerPage,
+					skip: i * postsPerPage,
+					numPages,
+					currentPage: i + 1,
+				  },
+				})
+			  })
 
 
 

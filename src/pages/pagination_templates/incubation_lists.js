@@ -1,14 +1,9 @@
 import React from "react"
-import { withPrefix ,Link } from "gatsby"
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
-import bkImage from "../dist/assets/images/about-5.jpg"
-import TrustedImage from "../dist/assets/images/logo-1.png"
-import {Helmet} from "react-helmet";
-import { StaticQuery, graphql } from "gatsby"
-import { node } from "prop-types"
-import Pagination from "../components/pagination"
+import {Link } from "gatsby"
+import Layout from "../../components/layout"
+import SEO from "../../components/seo"
+import {graphql } from "gatsby"
+import Pagination from "../../components/pagination"
 
 export default class Incubation_Lists extends React.Component {
     render() {
@@ -19,6 +14,7 @@ export default class Incubation_Lists extends React.Component {
       const isLast = currentPage === numPages
       const prevPage = currentPage - 1 === 1 ? "" : (currentPage - 1).toString()
       const nextPage = (currentPage + 1).toString()
+      const path = "/incubation/";
 
 
 
@@ -68,7 +64,7 @@ export default class Incubation_Lists extends React.Component {
                 </div>
                     
 
-                 <Pagination prevPage={prevPage} nextPage={nextPage} isFirst={isFirst} isLast={isLast} currentPage={currentPage} numPages={numPages} />
+                 <Pagination prevPage={prevPage} nextPage={nextPage} isFirst={isFirst} isLast={isLast} currentPage={currentPage} numPages={numPages} path={path} />
                 {/* <div class="row">
                         <div class="col-12">
                             <nav>

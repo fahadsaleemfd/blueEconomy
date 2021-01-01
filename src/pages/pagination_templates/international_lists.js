@@ -1,16 +1,11 @@
 import React from "react"
-import { withPrefix ,Link } from "gatsby"
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
-import bkImage from "../dist/assets/images/about-5.jpg"
-import TrustedImage from "../dist/assets/images/logo-1.png"
-import {Helmet} from "react-helmet";
-import { StaticQuery, graphql } from "gatsby"
-import { node } from "prop-types"
-import Pagination from "../components/pagination"
+import { Link } from "gatsby"
+import Layout from "../../components/layout"
+import SEO from "../../components/seo"
+import { graphql } from "gatsby"
+import Pagination from "../../components/pagination"
 
-export default class Funding extends React.Component {
+export default class International_lists extends React.Component {
 
     render() {
 
@@ -21,14 +16,14 @@ export default class Funding extends React.Component {
       const isLast = currentPage === numPages
       const prevPage = currentPage - 1 === 1 ? "" : (currentPage - 1).toString()
       const nextPage = (currentPage + 1).toString()
-      const path = "/funding/";
+      const path = "/international/";
 
 
 
       return (
         <div>
             <Layout>
-                <SEO title="Funding Orgnization" />            
+                <SEO title="International Universities" />            
             </Layout>
 
 
@@ -64,14 +59,12 @@ export default class Funding extends React.Component {
                             </div>
                         </div>  
                         )
-                        
-                        
                     })}
 
 
 
                     </div>
-                    <Pagination prevPage={prevPage} nextPage={2} isFirst={true} isLast={false} currentPage={'1'} numPages={totalPages} path={path} />
+                    <Pagination prevPage={prevPage} nextPage={nextPage} isFirst={isFirst} isLast={isLast} currentPage={currentPage} numPages={numPages} path={path}/>
                 </div>
             </div>
         </section>
@@ -84,10 +77,11 @@ export default class Funding extends React.Component {
         }
       }
 
-export const fundings = graphql`
-  query fundingquery{
-    allMarkdownRemark(filter: {fileAbsolutePath: {regex: "posts/fundings/"}}
-    limit: 2
+export const internationalsquery = graphql`
+  query internationalindex($skip: Int, $limit: Int){
+    allMarkdownRemark(filter: {fileAbsolutePath: {regex: "posts/international/"}}
+    limit: $limit
+    skip: $skip
     ) {
       edges {
         node {
