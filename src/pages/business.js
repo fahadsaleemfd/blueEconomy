@@ -84,7 +84,7 @@ export default class Business extends React.Component {
   export const Bestartupq = graphql`
   query Bestartupquery{
     allMarkdownRemark(filter: {fileAbsolutePath: {regex: "posts/business/"}} 
-    limit : 2
+    limit : 21
     ) {
       edges {
         node {
