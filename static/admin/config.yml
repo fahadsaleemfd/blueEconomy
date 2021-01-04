@@ -524,6 +524,7 @@ collections:
     slug: "{{title}}"
     summary: '{{title}}'
     create: true
+    delete: false 
     description: >
       The description is a great place for tone setting, high level information, and editing
       guidelines for HOME PAGE.
