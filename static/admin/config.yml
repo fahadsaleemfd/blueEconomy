@@ -517,5 +517,6 @@ collections:
                widget: 'list'
                fields:
                     - { label: 'Title', name: 'title', widget: 'string' }
+                    - { label: 'Description', name: 'dsecription', widget: 'text' }
   
      
