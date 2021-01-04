@@ -107,13 +107,57 @@ const IndexPage = () => (
               </div>
               <br></br><br></br><br></br>
               </div>
-              {/* ))} */}
+           
           </div>
-         
-      
-        
       </section>
+      <section id="services" class="section-3 odd offers" style={{background:"black"}}>
+            <div class="container">
+            <div class="row intro">
+                    <div class="col-12 col-md-9 align-self-center text-center text-md-left">
+                        <h2>Our Work Philosophy</h2>
+                        
+                    </div>
+              </div>
+               
+                <div class="row justify-content-center items">
+                    
+                    <div class="col-12 col-md-6 col-lg-4 item">
+                        <div class="card">
+                            <i class="icon icon-briefcase"></i>
+                            <h4>{data.allMarkdownRemark.edges[0].node.frontmatter.Section3.title1}</h4>
+                            {/* <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                             */}
+                             <p>{data.allMarkdownRemark.edges[0].node.frontmatter.Section3.dsecription1}</p>
+                            <a href="#"><i class="btn-icon pulse fas fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                  
+                
+                    <div class="col-12 col-md-6 col-lg-4 item">
+                    <div class="card">
+                            <i class="icon icon-briefcase"></i>
+                            <h4>{data.allMarkdownRemark.edges[0].node.frontmatter.Section3.title2}</h4>
+                            {/* <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                             */}
+                             <p>{data.allMarkdownRemark.edges[0].node.frontmatter.Section3.dsecription2}</p>
+                            <a href="#"><i class="btn-icon pulse fas fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 item">
+                    <div class="card">
+                            <i class="icon icon-briefcase"></i>
+                            <h4>{data.allMarkdownRemark.edges[0].node.frontmatter.Section3.title3}</h4>
+                            {/* <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                             */}
+                             <p>{data.allMarkdownRemark.edges[0].node.frontmatter.Section3.dsecription3}</p>
+                            <a href="#"><i class="btn-icon pulse fas fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
 
+
+                </div>
+            </div>
+        </section>               
 
 
 
@@ -139,6 +183,14 @@ export const Homepage = graphql`
             section2description
             section2image
             image
+            Section3{
+              title1
+              dsecription1
+              title2
+              dsecription2
+              title3
+              dsecription3
+            }
           }
           html
           excerpt
