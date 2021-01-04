@@ -132,7 +132,7 @@ collections:
       - { label: 'First Title', name: 'firsttitle', widget: 'string', tagname: 'h1' }
       - {label: "Tags", name: "tags", widget: "list"}
       - { label: 'Second Title', name: 'secondtitle', widget: 'string', tagname: 'h1' }
-      - { label: 'Description', name: 'description', widget: 'markdown', hint: 'Description will be here' }
+      - { label: 'Description', name: 'description', widget: 'text', hint: 'Description will be here' }
       - { label: 'Link', name: 'link', widget: 'string' }
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - { label: 'Project Link', name: 'projectLink', widget: 'string' }
@@ -503,7 +503,29 @@ collections:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Description', name: 'description', widget: 'text' }
       - { label: 'Image', name: 'image', widget: 'image' }
-
+  
+  - name: homepage
+    label: Home Page
+    label_singular: Home Page
+    folder: src/pages/posts/homepage/
+    summary: '{{title}}'
+    description: >
+      The description is a great place for tone setting, high level information, and editing
+      guidelines for HOME PAGE.
+    fields:
+        name: 'Video'
+        widget: 'object'
+        fields:
+              - {
+                  label: 'Title',
+                  name: title,
+                  widget: string,
+                }
+              - {
+                  label: 'video',
+                  name: video,
+                  widget: file,
+                }
 
 
   

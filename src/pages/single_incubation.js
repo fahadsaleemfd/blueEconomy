@@ -53,8 +53,8 @@ const SingleIncubation = ({data}) => {
                             <div class="col-12 align-self-center">
                                 
                               
-                                 {/* <p>{data.markdownRemark.frontmatter.description}</p> */}
-                                 <div dangerouslySetInnerHTML={{__html:data.markdownRemark.frontmatter.description}}></div>
+                                 <p>{data.markdownRemark.frontmatter.description}</p>
+                                 {/* <div dangerouslySetInnerHTML={{__html:data.allMarkdownRemark.edges[0].node.html}}></div> */}
 
                                 <div class="mb-5 gallery">
                                         <img src={data.markdownRemark.frontmatter.image} class="fit-image" alt="Introduction Video"/>
