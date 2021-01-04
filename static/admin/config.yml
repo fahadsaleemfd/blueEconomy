@@ -521,6 +521,7 @@ collections:
     label: Ideathon
     label_singular: Ideathon
     folder: src/pages/posts/ideathon/
+    slug: "{{title}}"
     summary: '{{title}}'
     create: true
     description: >
