@@ -17,6 +17,21 @@ section2description: >-
 
   While, climate change and pollution are responsible for the degradation of biodiversity of this area, sustainable blue industries can help turn the same for providing economic growth, food production, tourism, trade and at the same time help mitigate effects of climate change.
 section2image: /assets/map.webp
+Section3:
+  title1: Adoption
+  dsecription1: Application/Introduction of Products, Services, Technologies,
+    Processes, Business Models that already exist in other parts of Pakistan,
+    region or the world, but may be new to a particular locality, city, or
+    Pakistan.
+  title2: Adaptation
+  dsecription2: Modification of Products, Services, Technologies, Processes,
+    Business Models that already exist in other parts of Pakistan, region, or
+    the world to suite local conditions and then Application/Introduction in a
+    locality, city, or Pakistan.
+  title3: Creation
+  dsecription3: Coming up new Products, Services, Technologies, Processes and
+    Business Models that do not exists anywhere in world; then
+    Application/Introduction of the same in a locality, city or Pakistan.
 ---
 What is Blue Economy Initiative?
 
