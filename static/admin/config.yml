@@ -513,20 +513,12 @@ collections:
       The description is a great place for tone setting, high level information, and editing
       guidelines for HOME PAGE.
     fields:
-        name: 'Video'
-        widget: 'object'
-        fields:
-              - {
-                  label: 'Title',
-                  name: title,
-                  widget: string,
-                }
-              - {
-                  label: 'video',
-                  name: video,
-                  widget: file,
-                }
-
-
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Video', name: 'video', widget: 'file' }
+      - { label: 'Section1 Title', name: 'section1title', widget: 'string' }
+      - { label: 'Section1 Description', name: 'body', widget: 'markdown' }
+      - { label: 'Section2 Title', name: 'section2title', widget: 'string' }
+      - { label: 'Section2 Description', name: 'section2description', widget: 'text' }
+      - { label: 'Section2 Image', name: 'section2image', widget: 'image' }
   
      
