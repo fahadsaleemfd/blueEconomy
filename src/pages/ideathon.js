@@ -244,7 +244,39 @@ If the participant is member of a team, that team is wholly responsible for dete
  
 )
 
-
+export const ideathonQuery = graphql`
+  query ideathonQueryIndex{
+    allMarkdownRemark(filter: {fileAbsolutePath: {regex: "posts/homepage/"}} 
+    ) {
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            video
+            section1title
+            section2title
+            section2description
+            section2image
+            image
+            Section3{
+              title1
+              dsecription1
+              title2
+              dsecription2
+              title3
+              dsecription3
+            }
+          }
+          html
+          excerpt
+        }
+      }
+      
+    }
+  }
+  
+   `
 
 
 
