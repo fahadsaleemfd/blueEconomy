@@ -508,6 +508,7 @@ collections:
     label: Home Page
     label_singular: Home Page
     folder: src/pages/posts/homepage/
+    create: true
     summary: '{{title}}'
     description: >
       The description is a great place for tone setting, high level information, and editing
