@@ -516,7 +516,7 @@ collections:
                max: 3
                min: 3
                collapsed: true
-               allow_add: false
+               allow_add: true
                widget: 'list'
                fields:
                     - { label: 'Title', name: 'title', widget: 'string' }
