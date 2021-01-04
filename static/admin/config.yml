@@ -507,9 +507,6 @@ collections:
       - { label: 'Section2 Title', name: 'section2title', widget: 'string' }
       - { label: 'Section2 Description', name: 'section2description', widget: 'text' }
       - { label: 'Section2 Image', name: 'section2image', widget: 'image' }
-        fields:
-      - { label: 'Title', name: 'title', widget: 'string', tagname: 'h1' }
-      - { label: 'Description', name: 'description', widget: 'text', hint: 'Description will be here' }
       - label: 'Section 3'
         name: 'Section3'
         widget: 'object'
