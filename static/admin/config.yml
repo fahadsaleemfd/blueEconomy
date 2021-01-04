@@ -494,7 +494,6 @@ collections:
     label: Home Page
     label_singular: Home Page
     folder: src/pages/posts/homepage/
-    create: true
     summary: '{{title}}'
     description: >
       The description is a great place for tone setting, high level information, and editing
@@ -514,6 +513,10 @@ collections:
              - { label: 'Title', name: 'title', widget: 'string' }
              - label: 'Section 3 Inner'
                name: 'innersection'
+               max: 3
+               min: 3
+               collapsed: true
+               allow_add: false
                widget: 'list'
                fields:
                     - { label: 'Title', name: 'title', widget: 'string' }
