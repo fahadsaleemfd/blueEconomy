@@ -63,7 +63,8 @@ const Incubation = () => (
 
                                         <Link to={tag.node.fields.slug}>
                                             <h4>{tag.node.frontmatter.firsttitle }</h4>
-                                            <p>{tag.node.frontmatter.description.substring(0,200)}</p>
+                                            {/* <p>{tag.node.frontmatter.description.substring(0,200)}</p> */}
+ 
                                         
                                         </Link>
                 
