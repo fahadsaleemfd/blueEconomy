@@ -22,21 +22,7 @@ collections:
         widget: 'file'
         required: true
       - { label: 'description', name: 'description', widget: 'string', hint: 'Description will be here' }
-  - name: beStartup
-    label: BE Startup
-    label_singular: Slider Image
-    folder: src/pages/posts/beStartups/
-    summary: '{{title}}'
-    description: >
-      The description is a great place for tone setting, high level information, and editing
-      guidelines for BE Startups.
-    fields:
-      - { label: 'Title', name: 'title', widget: 'string', tagname: 'h1' }
-      - label: 'Image '
-        name: 'image'
-        widget: 'image'
-        required: true
-      - { label: 'description', name: 'description', widget: 'string', hint: 'Description will be here' }
+  
 
   - name: beChallenge
     label: BE Challenge 2021
@@ -521,5 +507,13 @@ collections:
       - { label: 'Section2 Title', name: 'section2title', widget: 'string' }
       - { label: 'Section2 Description', name: 'section2description', widget: 'text' }
       - { label: 'Section2 Image', name: 'section2image', widget: 'image' }
+        fields:
+      - { label: 'Title', name: 'title', widget: 'string', tagname: 'h1' }
+      - { label: 'Description', name: 'description', widget: 'text', hint: 'Description will be here' }
+      - label: 'Section 3'
+        name: 'Section3'
+        widget: 'object'
+        fields:
+             - { label: 'Title', name: 'title', widget: 'string' }
   
      
