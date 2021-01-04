@@ -521,13 +521,14 @@ collections:
     label: Ideathon
     label_singular: Ideathon
     folder: src/pages/posts/ideathon/
-    summary: '{{Section1.title}}'
+    summary: '{{title}}'
     slug:'{{title}}'
     create: true
     description: >
       The description is a great place for tone setting, high level information, and editing
       guidelines for HOME PAGE.
     fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
       - label: 'Section 1'
         name: 'Section1'
         widget: 'object'
