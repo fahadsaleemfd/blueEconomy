@@ -512,5 +512,10 @@ collections:
         widget: 'object'
         fields:
              - { label: 'Title', name: 'title', widget: 'string' }
+             - label: 'Section 3 Inner'
+              name: 'innersection'
+              widget: 'list'
+              fields:
+                    - { label: 'Title', name: 'title', widget: 'string' }
   
      
