@@ -513,13 +513,6 @@ collections:
         min: 1
         fields:
              - { label: 'Title', name: 'title', widget: 'string' }
-             - label: 'Section 3 Inner'
-               name: 'innersection'
-               widget: 'list'
-               max: 3
-               min: 1
-               fields:
-                    - { label: 'Title', name: 'title', widget: 'string' }
-                    - { label: 'Description', name: 'dsecription', widget: 'text' }
+             - { label: 'Description', name: 'dsecription', widget: 'text' }
   
      
