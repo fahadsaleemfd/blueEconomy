@@ -512,5 +512,11 @@ collections:
         widget: 'object'
         fields:
              - { label: 'Title', name: 'title', widget: 'string' }
+             - label: 'Sections'
+                name: 'Section3'
+                widget: 'object'
+                fields:
+                  - { label: 'Title', name: 'title', widget: 'string' }
+                  - { label: 'Description', name: 'title', widget: 'string' }
   
      
