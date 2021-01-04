@@ -509,6 +509,8 @@ collections:
       - label: 'Section 3'
         name: 'Section3'
         widget: 'list'
+        max: 3
+        min: 1
         fields:
              - { label: 'Title', name: 'title', widget: 'string' }
              - label: 'Section 3 Inner'
