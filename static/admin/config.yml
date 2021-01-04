@@ -521,7 +521,7 @@ collections:
     label: Ideathon
     label_singular: Ideathon
     folder: src/pages/posts/ideathon/
-    summary: '{{title}}'
+    summary: '{{Section1.title}}'
     slug:'{{title}}'
     create: true
     description: >
