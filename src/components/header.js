@@ -85,7 +85,7 @@ const Header = ({ siteTitle }) => {
                         </li>
 
                         <li class="nav-item dropdown">
-                            <a  class="nav-link"><Link to={'/'}>Ideathon</Link></a>
+                            <a  class="nav-link"><Link to={'/ideathon'}>Ideathon</Link></a>
                         </li>
 
                         <li class="nav-item dropdown">
