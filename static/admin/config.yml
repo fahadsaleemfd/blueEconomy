@@ -132,7 +132,7 @@ collections:
       - { label: 'First Title', name: 'firsttitle', widget: 'string', tagname: 'h1' }
       - {label: "Tags", name: "tags", widget: "list"}
       - { label: 'Second Title', name: 'secondtitle', widget: 'string', tagname: 'h1' }
-      - { label: 'Description', name: 'body', widget: 'markdown', hint: 'Description will be here' }
+      - { label: 'Description', name: 'description', widget: 'markdown', hint: 'Description will be here' }
       - { label: 'Link', name: 'link', widget: 'string' }
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - { label: 'Project Link', name: 'projectLink', widget: 'string' }
