@@ -519,9 +519,10 @@ collections:
 
   - name: Ideathon
     label: Ideathon
-    label_singular: Home Page
+    label_singular: Ideathon
     folder: src/pages/posts/ideathon/
     summary: '{{title}}'
+    slug:'{{title}}'
     create: true
     description: >
       The description is a great place for tone setting, high level information, and editing
