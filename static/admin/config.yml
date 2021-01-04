@@ -524,10 +524,12 @@ collections:
     slug: "{{title}}"
     summary: '{{title}}'
     create: true
+    delete: false 
     description: >
       The description is a great place for tone setting, high level information, and editing
       guidelines for HOME PAGE.
     fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
       - label: 'Section 1'
         name: 'Section1'
         widget: 'object'
