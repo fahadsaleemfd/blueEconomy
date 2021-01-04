@@ -26,7 +26,7 @@ const Pagination = ({prevPage,nextPage,isFirst, isLast, currentPage, numPages,pa
                                                 
                                             </li>
                                      
-                                    <li class="page-item"><a class="page-link" href="#">{currentPage}</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">{currentPage}/{numPages}</a></li>
                                     {/* {!isLast && ( */}
                                         <li class="page-item">
                                             <Link className={` page-link ${disableButtonLast}`} to={path + nextPage}>

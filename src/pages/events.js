@@ -65,7 +65,7 @@ const Eventspage = () => (
             </div>
         )
     }}/>
-)
+    )
 
 const Eventquery = graphql`
   query eventindex{

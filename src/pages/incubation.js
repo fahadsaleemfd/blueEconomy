@@ -10,22 +10,31 @@ import { StaticQuery, graphql } from "gatsby"
 import { node } from "prop-types"
 import Pagination from "../components/pagination"
 
-export default class BlogList extends React.Component {
-    render() {
-      console.log(this.props.pathContext.numPages)
-      const posts = this.props.data.allMarkdownRemark.edges
-      const totalPages = this.props.data.allMarkdownRemark.edges.length
-      const { currentPage, numPages } = this.props.pageContext
-      const isFirst = currentPage === 1
-      const isLast = currentPage === totalPages
-      const prevPage = currentPage - 1 === 1 ? "" : (currentPage - 1).toString()
-      const nextPage = (currentPage + 1).toString()
-      const path = "/incubation/";
+const Incubation = () => (
 
+  <StaticQuery query={Incubationquery} render={data=>{
 
+    console.log(data.allMarkdownRemark.pageInfo)
 
-      return (
-        <div>
+      // const posts = data.allMarkdownRemark.
+      // const totalPages = this.props.data.allMarkdownRemark.edges.length
+      // const { currentPage, numPages } = this.props.pageContext
+      // const isFirst = currentPage === data.allMarkdownRemark.pageInfo.currentPage
+      // const isLast = currentPage === numPages
+      // const prevPage = currentPage - 1 === 1 ? "" : (currentPage - 1).toString()
+      // const nextPage = (currentPage + 1).toString()
+
+    
+      const totalPages =  data.allMarkdownRemark.pageInfo.pageCount
+      const prevPage = data.allMarkdownRemark.pageInfo.hasPreviousPage
+      // const nextPage = currentPage === data.allMarkdownRemark.pageInfo.nextPage
+      const isLast  = data.allMarkdownRemark.pageInfo.currentPage === totalPages
+      const path = "/incubation/"
+      const nextPage = (data.allMarkdownRemark.pageInfo.currentPage + 1).toString()
+
+      return (  
+      <div>
+      
         <Layout>
              <SEO title="Incubation Tracks" /> 
         
@@ -37,25 +46,24 @@ export default class BlogList extends React.Component {
                
                     <div class="row items filter-items">
 
-                    {posts.map(({ node }) => {
+                    {data.allMarkdownRemark.edges.map((tag,index) => (
 
-                     return(                        
+                                          
                         <div class="col-12 col-md-6 col-lg-4 item filter-item" data-groups='["innovation","social","technology"]'>
                             
                             <div class="row card p-0 text-center">
                                 <div class="image-over">
-                                    <img src={node.frontmatter.image} alt="Lorem ipsum"/>
+                                    <img src={tag.node.frontmatter.image} alt="Lorem ipsum"/>
                                 </div>
                                 <div class="card-footer d-lg-flex align-items-center justify-content-center">
-                                    {/* <Link to={node.fields.slug} class="d-lg-flex align-items-center"><i class="icon-user"></i></Link> */}
-                                    {/* <a href="#" class="d-lg-flex align-items-center"><i class="icon-clock"></i>2 Days Ago</a> */}
+                                  
                                 </div>
                                 <div class="card-caption col-12 p-0">
                                     <div class="card-body">
 
-                                        <Link to={node.fields.slug}>
-                                            <h4>{node.frontmatter.firsttitle }</h4>
-                                            <p>{node.frontmatter.description.substring(0,200)}</p>
+                                        <Link to={tag.node.fields.slug}>
+                                            <h4>{tag.node.frontmatter.firsttitle }</h4>
+                                            <p>{tag.node.frontmatter.description.substring(0,200)}</p>
                                         
                                         </Link>
                 
@@ -63,42 +71,21 @@ export default class BlogList extends React.Component {
                                 </div>
                             </div>
                         </div> 
-
-                        )
-                        
-                        })} 
+    
+                      
+                         ))}
                 </div>
                     
 
-                <Pagination prevPage={prevPage} nextPage={2} isFirst={true} isLast={isLast} currentPage={'1'} numPages={totalPages} path={path} />
-                {/* <div class="row">
-                        <div class="col-12">
-                            <nav>
-
-                            <ul class="pagination justify-content-center">
-                                    {!isFirst && (
-                                            <li class="page-item">
-                                        
-                                                <Link class="page-link" to={'/incubation/'+prevPage}>
-                                                            <i class="fas fa-angle-left"></i>
-                                                </Link>
-                                                
-                                            </li>
-                                     )}
-                                    <li class="page-item"><a class="page-link" href="#">{currentPage}/{numPages}</a></li>
-                                    {!isLast && (
-                                        <li class="page-item">
-                                            <Link class="page-link" to={'/incubation/' + nextPage}>
-                                                <i class="fas fa-angle-right"></i>
-                                            </Link>
-                                        </li>
-                                    )}
-
-                                </ul>
-                                        
-                            </nav>
-                        </div>
-                    </div> */}
+                <Pagination
+                  prevPage={prevPage} 
+                  nextPage={nextPage} 
+                  isFirst={1} 
+                  isLast={isLast} 
+                  currentPage={'1'} 
+                  numPages={totalPages} 
+                  path={path} />
+                
                 </div>
             </div>
         </section>
@@ -109,13 +96,16 @@ export default class BlogList extends React.Component {
 
 
         </div>
-      )
-    }
-  }
+        )
+    }}/>
+)
 
   export const Incubationquery = graphql`
-  query{
-    allMarkdownRemark(filter: {fileAbsolutePath: {regex: "posts/betracks/"}}, limit: 21) {
+  {
+    allMarkdownRemark(filter: {fileAbsolutePath: {regex: "posts/betracks/"}}
+    limit: 21
+    )
+    {
       edges {
         node {
           id
@@ -133,9 +123,19 @@ export default class BlogList extends React.Component {
           excerpt
         }
       }
-      totalCount
+      pageInfo {
+        currentPage
+        hasNextPage
+        hasPreviousPage
+        itemCount
+        pageCount
+        perPage
+        totalCount
+      }
     }
   }
   
    `
 
+
+   export default Incubation
