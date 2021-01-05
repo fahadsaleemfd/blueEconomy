@@ -555,6 +555,22 @@ collections:
              - { label: 'Third Title', name: 'title3', widget: 'string' }
              - { label: 'Second Description', name: 'description3', widget: 'text' }
 
+      - label: 'Section 4'
+        name: 'ideathonprizes'
+        widget: 'object'
+        fields:
+             - { label: 'Title', name: 'title', widget: 'string' }
+             - { label: 'Description', name: 'description', widget: 'text' }
+             - label: 'Prizes'
+               name: 'prizes'
+               widget: 'object'
+               fields:
+                    - { label: 'First Prize', name: 'title', widget: 'string' }
+                    - { label: 'Runner up Prize', name: 'runnerup', widget: 'string' }
+                    - { label: '2nd Runner up Prize', name: 'secondrunnerup', widget: 'string' }
+                    
+
+
      
   
      

@@ -89,26 +89,23 @@ const Idea = () => (
                 <div class="row justify-content-center text-center items">
                     <div class="col-12 col-md-6 col-lg-2 item">
                         <div class="step"><span>01</span></div>
-                        <h4>Competition opens</h4>
-                        <p>January 15 Who can compete: any individual,Pakistani age 15 and above</p>
-                        {/* <p>{allData.timeline.preparation}</p> */}
+                        <h4>{data.allMarkdownRemark.edges[0].node.frontmatter.process.title1}</h4>
+                        <p>{data.allMarkdownRemark.edges[0].node.frontmatter.process.description1}</p>
+                    
                     </div>
                     <div class="col-12 col-md-6 col-lg-2 item">
                         <div class="step"><span>02</span></div>
-                        <h4>Last Date to Submit an Idea</h4>
-                        <p>Fill in the online form February 15</p>
-                        {/* <p>{allData.timeline.round1}</p> */}
+                        <h4>{data.allMarkdownRemark.edges[0].node.frontmatter.process.title2}</h4>
+                        <p>{data.allMarkdownRemark.edges[0].node.frontmatter.process.description2}</p>
+                   
                     </div>
                     <div class="col-12 col-md-6 col-lg-2 item">
                         <div class="step"><span>03</span></div>
-                        <h4>Announcement of Winners</h4>
+                        <h4>{data.allMarkdownRemark.edges[0].node.frontmatter.process.title3}</h4>
+                        <p>{data.allMarkdownRemark.edges[0].node.frontmatter.process.description3}</p>
                     </div>
                    
-                    {/* <div class="col-12 col-md-6 col-lg-2 item">
-                        <div class="step"><span>05</span></div>
-                        <h4>Continuity formalization</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur.</p>
-                    </div> */}
+                 
                 </div>
             </div>
         </section>
@@ -261,6 +258,17 @@ export const ideathonQuery = graphql`
             Section2{
                 title
                 description
+                
+            }
+            process{
+                title1
+                description1
+                title2
+                description2
+                title3
+                description3
+                
+
                 
             }
            
