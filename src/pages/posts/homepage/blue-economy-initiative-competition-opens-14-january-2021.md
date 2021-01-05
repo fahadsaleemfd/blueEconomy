@@ -4,9 +4,9 @@ video: /assets/file-1-.mp4
 section1title: What is Blue Economy Initiative?
 section2title: Pakistan's Untapped Ocean Resources
 section2description: >-
-  
-
-  Spread over 990 Km, Pakistan’s coastline is an asset for Pakistan. Extending over 240,00 KM to an Exclusive Economic Zone (EEZ) extends up to 350 nautical miles from the coastline including the continental shelf. 
+  Spread over 990 Km, Pakistan’s coastline is an asset for Pakistan. Extending
+  over 240,00 KM to an Exclusive Economic Zone (EEZ) extends up to 350 nautical
+  miles from the coastline including the continental shelf. 
 
 
   These areas feature rich  ecology and geology consisting of mangroves, green turtles, fishes, dolphins, whales, corals, oil & gas, minerals, and volcanoes. Additionally, Pakistan has abundant oceanic resources that can be tapped to develop sustainable communities and businesses.
@@ -46,9 +46,7 @@ This means to:
 * Develop a range of related sectors and policies in a manner such that they balance economic growth, ocean sustainability as well as protect the coastal lives of existing and future communities
 * Collaborate across borders and sectors through a variety of partnerships, and on a scale that has not been previously achieved
 
-​
-
-The aim of Blue Economy is to shift resources from scarcity to abundance, and to start tackling issues that cause environmental problems, put forward the management tool based on ecosystem service framework for the growth of coastal areas. To achieve long-term sustainable blue growth we need collaboration, inclusion, and trust in the marine sector.
+​The aim of Blue Economy is to shift resources from scarcity to abundance, and to start tackling issues that cause environmental problems, put forward the management tool based on ecosystem service framework for the growth of coastal areas. To achieve long-term sustainable blue growth we need collaboration, inclusion, and trust in the marine sector.
 
 Our ultimate objective is to not only bring forward the international donors and funding both also bringing the experts from startups and encourage them to work with world-class experts. We promote the culture of collaboration and participation among youth, academia, and industrialists to come forward and come up with solutions for these opportunities.
 
