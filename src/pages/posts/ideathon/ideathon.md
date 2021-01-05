@@ -46,7 +46,7 @@ ideathonprizes:
     will be invited to present their ideas on our ideathon showcase Certificates
     of Participation: for all participants."
   prizes:
-    title: Rs 10,000 plus a trip to Gwadar
+    first: Rs 10,000 plus a trip to Gwadar
     runnerup: Rs 5,000 Plus a tour of a port of choice
     secondrunnerup: Rs 5,000
 ---

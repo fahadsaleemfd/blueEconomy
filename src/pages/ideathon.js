@@ -116,12 +116,11 @@ const Idea = () => (
             <div class="container">
                 <div class="row text-center intro">
                     <div class="col-12">
-                        <h2>IDEATHON PRIZES</h2>
+                        <h2>{data.allMarkdownRemark.edges[0].node.frontmatter.ideathonprizes.title}</h2>
                         <div class="row item widget-tags">
                             <div class="col-12 align-self-center">
-                            Prize winning ideas will be given a cash prize and an opportunity to participate in a longer Blue Economy Challenge
-                            Best Idea in the Theme: will be invited to present their ideas on our ideathon showcase Certificates of Participation: for all participants.
-
+                            
+                                {data.allMarkdownRemark.edges[0].node.frontmatter.ideathonprizes.description}
                             </div>
                         </div>
                     </div>
@@ -135,7 +134,7 @@ const Idea = () => (
                          
                             <div class="buttons">
                                 <div class="d-sm-inline-flex">
-                                 {/* Rs.{allData.prizes.first} */}
+                                 {data.allMarkdownRemark.edges[0].node.frontmatter.ideathonprizes.prizes.first}
                                 </div>
                             </div>
                         </div>
@@ -146,7 +145,7 @@ const Idea = () => (
                             <h4>Runner Up</h4>
                             <div class="buttons">
                                 <div class="d-sm-inline-flex">
-                                 {/* Rs. {allData.prizes.third} */}
+                                {data.allMarkdownRemark.edges[0].node.frontmatter.ideathonprizes.prizes.runnerup}
                                 </div>
                             </div>
                         </div>
@@ -158,7 +157,7 @@ const Idea = () => (
 
                             <div class="buttons">
                                 <div class="d-sm-inline-flex">
-                                 {/* Rs. {allData.prizes.second}  */}
+                                {data.allMarkdownRemark.edges[0].node.frontmatter.ideathonprizes.prizes.secondrunnerup}
                                 </div>
                             </div>
                         </div>
@@ -270,6 +269,16 @@ export const ideathonQuery = graphql`
                 
 
                 
+            }
+            ideathonprizes{
+                title
+                description
+                prizes{
+                    first
+                    runnerup
+                    secondrunnerup
+
+                }
             }
            
           }

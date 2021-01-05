@@ -565,9 +565,17 @@ collections:
                name: 'prizes'
                widget: 'object'
                fields:
-                    - { label: 'First Prize', name: 'title', widget: 'string' }
+                    - { label: 'First Prize', name: 'first', widget: 'string' }
                     - { label: 'Runner up Prize', name: 'runnerup', widget: 'string' }
                     - { label: '2nd Runner up Prize', name: 'secondrunnerup', widget: 'string' }
+
+      - label: 'Section 5'
+        name: 'rulesAndRegulations'
+        widget: 'object'
+        fields:
+             - { label: 'Title', name: 'title', widget: 'string' }
+             - { label: 'Description', name: 'description', widget: 'markdown' }
+            
                     
 
 
