@@ -7,6 +7,8 @@ import bkImage from "../dist/assets/images/about-5.jpg"
 import TrustedImage from "../dist/assets/images/logo-1.png"
 import {Helmet} from "react-helmet";
 import { StaticQuery, graphql } from "gatsby"
+import { Remarkable } from 'remarkable';
+var md = new Remarkable();
 
 const SingleIncubation = ({data}) => {
         console.log(data)
@@ -52,8 +54,8 @@ const SingleIncubation = ({data}) => {
                         <div class="row">
                             <div class="col-12 align-self-center">
                                 
-                              
-                                 <p>{data.markdownRemark.frontmatter.description}</p>
+                            <div dangerouslySetInnerHTML={{__html:md.render(data.markdownRemark.frontmatter.description)}}></div>
+                                 {/* <p>{data.markdownRemark.frontmatter.description}</p> */}
                                  {/* <div dangerouslySetInnerHTML={{__html:data.allMarkdownRemark.edges[0].node.html}}></div> */}
 
                                 <div class="mb-5 gallery">

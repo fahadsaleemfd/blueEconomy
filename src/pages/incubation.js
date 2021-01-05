@@ -1,14 +1,12 @@
 import React from "react"
-import { withPrefix ,Link } from "gatsby"
+import { Link } from "gatsby"
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
-import bkImage from "../dist/assets/images/about-5.jpg"
-import TrustedImage from "../dist/assets/images/logo-1.png"
-import {Helmet} from "react-helmet";
 import { StaticQuery, graphql } from "gatsby"
-import { node } from "prop-types"
 import Pagination from "../components/pagination"
+import { Remarkable } from 'remarkable';
+var md = new Remarkable();
+
 
 const Incubation = () => (
 
@@ -16,18 +14,11 @@ const Incubation = () => (
 
     console.log(data.allMarkdownRemark.pageInfo)
 
-      // const posts = data.allMarkdownRemark.
-      // const totalPages = this.props.data.allMarkdownRemark.edges.length
-      // const { currentPage, numPages } = this.props.pageContext
-      // const isFirst = currentPage === data.allMarkdownRemark.pageInfo.currentPage
-      // const isLast = currentPage === numPages
-      // const prevPage = currentPage - 1 === 1 ? "" : (currentPage - 1).toString()
-      // const nextPage = (currentPage + 1).toString()
+  
 
     
       const totalPages =  data.allMarkdownRemark.pageInfo.pageCount
       const prevPage = data.allMarkdownRemark.pageInfo.hasPreviousPage
-      // const nextPage = currentPage === data.allMarkdownRemark.pageInfo.nextPage
       const isLast  = data.allMarkdownRemark.pageInfo.currentPage === totalPages
       const path = "/incubation/"
       const nextPage = (data.allMarkdownRemark.pageInfo.currentPage + 1).toString()
@@ -46,11 +37,8 @@ const Incubation = () => (
                
                     <div class="row items filter-items">
 
-                    {data.allMarkdownRemark.edges.map((tag,index) => (
-
-                                          
+                    {data.allMarkdownRemark.edges.map((tag,index) => (        
                         <div class="col-12 col-md-6 col-lg-4 item filter-item" data-groups='["innovation","social","technology"]'>
-                            
                             <div class="row card p-0 text-center">
                                 <div class="image-over">
                                     <img src={tag.node.frontmatter.image} alt="Lorem ipsum"/>
@@ -63,8 +51,8 @@ const Incubation = () => (
 
                                         <Link to={tag.node.fields.slug}>
                                             <h4>{tag.node.frontmatter.firsttitle }</h4>
-                                            <p>{tag.node.frontmatter.description.substring(0,200)}</p>
- 
+                                            {/* <p>{tag.node.frontmatter.description.substring(0,200)}</p> */}
+                                            <div dangerouslySetInnerHTML={{__html:md.render(tag.node.frontmatter.description).substring(0,20)}}></div>
                                         
                                         </Link>
                 
@@ -104,7 +92,7 @@ const Incubation = () => (
   export const Incubationquery = graphql`
   {
     allMarkdownRemark(filter: {fileAbsolutePath: {regex: "posts/betracks/"}}
-    limit: 21
+   
     )
     {
       edges {
@@ -121,7 +109,7 @@ const Incubation = () => (
           fields {
             slug
           }
-          excerpt
+
         }
       }
       pageInfo {
