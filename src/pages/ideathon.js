@@ -27,7 +27,7 @@ const Idea = () => (
         <div class="container">
             <div>
               <div class="row">
-                  <div class="col-12 col-lg-8 align-self-top text" style={{textAlign:"center"}}>
+                  <div class="col-12 col-lg-8 align-self-top text">
                       <div class="row intro m-0">
                           <div class="col-12 p-0">
                               
@@ -52,16 +52,26 @@ const Idea = () => (
  {/* Section 1 end here */}
 
 {/* Section 2   stert here*/}
-      <section class="section-4 offers" style={{background:"#eef4ed"}}>
-            <div class="container full-grid">
+        <section class="section-2 offers" style={{background:"#eef4ed"}}>
+            <div class="container">
                 <div class="row text-center intro">
                     <div class="col-12">
                          <h2>{data.allMarkdownRemark.edges[0].node.frontmatter.Section2.title}</h2>
-                        <div dangerouslySetInnerHTML={{__html:md.render(data.allMarkdownRemark.edges[0].node.frontmatter.Section2.description)}}></div>
+                        <div class="row item widget-tags">
+                            <div class="col-12 align-self-center">
+                           <div class="col-12 align-self-center" dangerouslySetInnerHTML={{__html:md.render(data.allMarkdownRemark.edges[0].node.frontmatter.Section2.description)}}>
+                            </div>
+
+                            </div>
+                        </div>
                     </div>
-                </div>
-              
+                   </div>
+        
+                <div class="row justify-content-center items">
+           
             </div>
+         </div>
+          
         </section>
 
 
