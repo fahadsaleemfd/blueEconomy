@@ -20,7 +20,7 @@ Section1:
     February 15: Last Date of Submission
     March 1: Competition Winners Announcement
 Section2:
-  title: BLUE-A-THON 2021 – IDEAS FOR A BLUE PAKISTAN
+  title: PURPOSE OF THE IDEATHON
   description: >-
     * Create a platform for young talent to brainstorm and share new innovative
     ideas
