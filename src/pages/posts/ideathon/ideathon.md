@@ -49,6 +49,35 @@ ideathonprizes:
     first: Rs 10,000 plus a trip to Gwadar
     runnerup: Rs 5,000 Plus a tour of a port of choice
     secondrunnerup: Rs 5,000
+rulesAndRegulations:
+  title: RULES AND REGULATIONS
+  description: >-
+    By registering at or submitting an entry, the applicants represent and
+    warrant the following:
+
+
+    (a)	Applicants will not submit content that is copyrighted, protected by trade secret or otherwise subject to third party intellectual property rights or other proprietary rights, including privacy and publicity rights, unless the individual is the owner of such rights or has permission from the rightful owner to post the content and participate in the Ideathon;
+
+
+    (b)	Applicants will not submit content that is unlawful, obscene, defamatory, threatening, hateful, racially or ethnically offensive, or encourages conduct that would be considered a criminal offense, give rise to civil liability or is otherwise inappropriate;
+
+
+    (c)	Applicants will not publish falsehoods or misrepresentations that could damage the reputation of organizers;
+
+
+    (d)	Applicants will not post advertisements or solicitations of business;
+
+
+    (e)	Organization will not be obligated to pay any compensation to, or permit any participation by, any third party in connection with the use, reproduction, modification, publication, display or other exploitation of any of the content that is submitted;
+
+
+    (f)	The content submitted by applicants does not contain any viruses, Trojan horses, worms or other disabling devices or malicious code; and
+
+
+    (g)	Participants will not attempt, create, or use any unauthorized access toorganizers or other digital communication or data storage systems.
+
+
+    (h)	SBP reserves the right to initiate any legal action and/or alert authorities in the case of any property damage or theft or any other violation of law or violation of this Agreement.
 ---
 
 # Heading
