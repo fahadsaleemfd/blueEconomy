@@ -78,6 +78,21 @@ rulesAndRegulations:
 
 
     (h)	SBP reserves the right to initiate any legal action and/or alert authorities in the case of any property damage or theft or any other violation of law or violation of this Agreement.
+section6:
+  title: Intellectual Property
+  description: >-
+    Organizers asserts no ownership, through the Blue-A-Thon, in any
+    intellectual property that may result from participation in the event.
+    Notwithstanding the foregoing, Participant may be subject to general
+    Intellectual Property rules in Pakistan. Nothing in this Agreement will be
+    construed to supersede or interfere with other obligations to Participant/
+    Organizers.
+
+
+    By registering and presenting or submitting an entry (regardless of the form or medium of such content), Participant grants Organizers a worldwide, perpetual, irrevocable, non-exclusive, royalty-free license to discuss, publicize, demonstrate, and otherwise display content derived from or relating to such entry for promotional and marketing purposes Participant will not receive any compensation for this use of such entry.
+
+
+    If the participant is member of a team, that team is wholly responsible for determining ownership of any intellectual property rights developed during this period. Participant agrees that organizers will not be responsible for any disputes regarding intellectual property. Participant agrees that there is no obligation of confidentiality on the part of Ideathon staff or other Participants regarding submissions or ideas generated at the. Participant agrees and acknowledges that any idea, conversation or submission may be considered a public disclosure under local laws.
 ---
 
 # Heading
