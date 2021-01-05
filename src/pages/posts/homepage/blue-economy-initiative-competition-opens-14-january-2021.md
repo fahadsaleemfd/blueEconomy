@@ -4,11 +4,7 @@ video: /assets/file-1-.mp4
 section1title: What is Blue Economy Initiative?
 section2title: Pakistan's Untapped Ocean Resources
 section2description: >-
-  ![image](/assets/bureo.webp "image")
-
-
-  # Economic Zone
-
+  
 
   Spread over 990 Km, Pakistan’s coastline is an asset for Pakistan. Extending over 240,00 KM to an Exclusive Economic Zone (EEZ) extends up to 350 nautical miles from the coastline including the continental shelf. 
 
