@@ -52,7 +52,7 @@ ideathonprizes:
 rulesAndRegulations:
   title: RULES AND REGULATIONS
   description: >-
-    By registering at or submitting an entry, the applicants represent and
+    \    By registering at or submitting an entry, the applicants represent and
     warrant the following:
 
 
