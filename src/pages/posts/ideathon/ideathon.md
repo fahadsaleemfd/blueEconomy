@@ -39,6 +39,16 @@ process:
   description2: Fill in the online form February 15
   title3: Announcement of Winners
   description3: Fill in the online form February 15
+ideathonprizes:
+  title: IDEATHON PRIZES
+  description: "Prize winning ideas will be given a cash prize and an opportunity
+    to participate in a longer Blue Economy Challenge Best Idea in the Theme:
+    will be invited to present their ideas on our ideathon showcase Certificates
+    of Participation: for all participants."
+  prizes:
+    title: Rs 10,000 plus a trip to Gwadar
+    runnerup: Rs 5,000 Plus a tour of a port of choice
+    secondrunnerup: Rs 5,000
 ---
 
 # Heading
