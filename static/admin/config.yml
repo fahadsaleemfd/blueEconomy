@@ -140,7 +140,7 @@ collections:
     fields:
       - { label: 'Title', name: 'title', widget: 'string', tagname: 'h1' }
       - {label: "Tags", name: "tags", widget: "list"}
-      - { label: 'Description', name: 'description', widget: 'text', hint: 'Description will be here' }
+      - { label: 'Description', name: 'description', widget: 'markdown', hint: 'Description will be here' }
       - { label: 'Link', name: 'link', widget: 'string' }
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - { label: 'Project Link', name: 'projectLink', widget: 'string' }
@@ -523,7 +523,6 @@ collections:
     folder: src/pages/posts/ideathon/
     slug: "{{title}}"
     summary: '{{title}}'
-    create: true
     delete: false 
     description: >
       The description is a great place for tone setting, high level information, and editing

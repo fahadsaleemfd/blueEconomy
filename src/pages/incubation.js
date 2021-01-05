@@ -10,13 +10,7 @@ var md = new Remarkable();
 
 const Incubation = () => (
 
-  <StaticQuery query={Incubationquery} render={data=>{
-
-    console.log(data.allMarkdownRemark.pageInfo)
-
-  
-
-    
+  <StaticQuery query={Incubationquery} render={data=>{    
       const totalPages =  data.allMarkdownRemark.pageInfo.pageCount
       const prevPage = data.allMarkdownRemark.pageInfo.hasPreviousPage
       const isLast  = data.allMarkdownRemark.pageInfo.currentPage === totalPages
@@ -29,7 +23,6 @@ const Incubation = () => (
         <Layout>
              <SEO title="Incubation Tracks" /> 
         
-
         <section id="blog" class="section-1 showcase blog-grid filter-section projects">
             <div class="overflow-holder">
               
@@ -52,7 +45,7 @@ const Incubation = () => (
                                         <Link to={tag.node.fields.slug}>
                                             <h4>{tag.node.frontmatter.firsttitle }</h4>
                                             {/* <p>{tag.node.frontmatter.description.substring(0,200)}</p> */}
-                                            <div dangerouslySetInnerHTML={{__html:md.render(tag.node.frontmatter.description).substring(0,20)}}></div>
+                                            <div dangerouslySetInnerHTML={{__html:md.render(tag.node.frontmatter.description).substring(0,200)}}></div>
                                         
                                         </Link>
                 
@@ -92,7 +85,7 @@ const Incubation = () => (
   export const Incubationquery = graphql`
   {
     allMarkdownRemark(filter: {fileAbsolutePath: {regex: "posts/betracks/"}}
-   
+      limit : 21
     )
     {
       edges {
