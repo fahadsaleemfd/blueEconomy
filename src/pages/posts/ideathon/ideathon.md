@@ -22,16 +22,16 @@ Section1:
 Section2:
   title: PURPOSE OF THE IDEATHON
   description: >-
-    * Create a platform for young talent to brainstorm and share new innovative
+    1. Create a platform for young talent to brainstorm and share new innovative
     ideas
 
-    * Market and promotethe Blue Economy Initiative. Promising Idea entries will be invited to participate in the Blue Economy challenge Business Plan Competition
+    2. Market and promotethe Blue Economy Initiative. Promising Idea entries will be invited to participate in the Blue Economy challenge Business Plan Competition
 
-    * Engages Potential Stakeholders: Engages potential stakeholders from Academia, Government and Private Sector
+    3. Engages Potential Stakeholders: Engages potential stakeholders from Academia, Government and Private Sector
 
-    * Raises Awareness of Potential of Blue Economy <https://fatimachoudhripk.wixsite.com/canbei/ideathon>
+    4. Raises Awareness of Potential of Blue Economy <https://fatimachoudhripk.wixsite.com/canbei/ideathon>
 
-    * Offers a fun and exciting and inclusive way to get involved in the Ocean Communities of Pakistan
+    5. Offers a fun and exciting and inclusive way to get involved in the Ocean Communities of Pakistan
 ---
 
 # Heading
