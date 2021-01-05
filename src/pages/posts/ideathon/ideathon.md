@@ -32,6 +32,13 @@ Section2:
     4. Raises Awareness of Potential of Blue Economy <https://fatimachoudhripk.wixsite.com/canbei/ideathon>
 
     5. Offers a fun and exciting and inclusive way to get involved in the Ocean Communities of Pakistan
+process:
+  title1: Competition opens
+  description1: "January 15 Who can compete: any individual,Pakistani age 15 and above"
+  title2: Last Date to Submit an Idea
+  description2: Fill in the online form February 15
+  title3: Announcement of Winners
+  description3: Fill in the online form February 15
 ---
 
 # Heading
