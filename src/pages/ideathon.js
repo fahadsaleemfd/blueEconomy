@@ -35,8 +35,12 @@ const Idea = () => (
                           </div>
                       </div>
                   </div>
-                  <div  class="col-12 col-lg-4" style={{background:"red"}}>  
-                             
+                  <div  class="col-12 col-lg-4">  
+            
+                        <div class="card" style={{background:"black"}}>
+                            <h4 style={{color:"#ffff"}}>{data.allMarkdownRemark.edges[0].node.frontmatter.Section1.keyNote}</h4>
+                        </div>
+                        
                   </div>
                 </div>
               </div>
@@ -227,7 +231,8 @@ export const ideathonQuery = graphql`
             Section1{
                 description
                 title
-                image
+                keyNote
+                
             }
             Section2{
                 title
