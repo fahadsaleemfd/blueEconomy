@@ -504,7 +504,7 @@ collections:
       - { label: 'Section1 Title', name: 'section1title', widget: 'string' }
       - { label: 'Section1 Description', name: 'body', widget: 'markdown' }
       - { label: 'Section2 Title', name: 'section2title', widget: 'string' }
-      - { label: 'Section2 Description', name: 'section2description', widget: 'text' }
+      - { label: 'Section2 Description', name: 'section2description', widget: 'markdown' }
       - { label: 'Section2 Image', name: 'section2image', widget: 'image' }
       - label: 'Section 3'
         name: 'Section3'

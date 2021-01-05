@@ -11,17 +11,10 @@ const Idea = () => (
   
 
     <StaticQuery query={ideathonQuery} render={data=>{
-        console.log(data)
-        console.log(data.allMarkdownRemark.edges[0].node.frontmatter.Section2.dsecription1)
-        console.log(md.render(data.allMarkdownRemark.edges[0].node.frontmatter.Section2.dsecription1));
-
-           
+               
         return (
-
         <Layout>
                 <SEO title="Ideathon" />  
-               
-           
 {/* Section 1  */}
     <section id="about" class="section-1 highlights team image-right">
         <div class="container">
@@ -68,16 +61,12 @@ const Idea = () => (
                    </div>
         
                 <div class="row justify-content-center items">
-           
             </div>
          </div>
-          
-        </section>
-
-
+    </section>
 
         {/* Section 3  */}
-      <section id="process" class="section-4 process offers">
+    <section id="process" class="section-4 process offers">
             <div class="container full">
                 <div class="row text-center intro">
                 <div class="col-12 p-0">
@@ -209,14 +198,9 @@ const Idea = () => (
             <div class="container full-grid">
                 <div class="row text-center intro">
                     <div class="col-12">
-                        <h2>Intellectual Property</h2>
-                        <p class="text-max-800 mb-4" style={{textAlign:"left"}}>
-                        Organizers asserts no ownership, through the Blue-A-Thon, in any intellectual property that may result from participation in the event. Notwithstanding the foregoing, Participant may be subject to general Intellectual Property rules in Pakistan. Nothing in this Agreement will be construed to supersede or interfere with other obligations to Participant/ Organizers.
-By registering and presenting or submitting an entry (regardless of the form or medium of such content), Participant grants Organizers a worldwide, perpetual, irrevocable, non-exclusive, royalty-free license to discuss, publicize, demonstrate, and otherwise display content derived from or relating to such entry for promotional and marketing purposes Participant will not receive any compensation for this use of such entry.
-If the participant is member of a team, that team is wholly responsible for determining ownership of any intellectual property rights developed during this period. Participant agrees that organizers will not be responsible for any disputes regarding intellectual property. Participant agrees that there is no obligation of confidentiality on the part of Ideathon staff or other Participants regarding submissions or ideas generated at the. Participant agrees and acknowledges that any idea, conversation or submission may be considered a public disclosure under local laws.
-
-</p>
-                       
+                        <h2>{data.allMarkdownRemark.edges[0].node.frontmatter.section6.title}</h2>
+                        <div style={{textAlign:"left"}} class="col-12 text-max-800 mb-4" dangerouslySetInnerHTML={{__html:md.render(data.allMarkdownRemark.edges[0].node.frontmatter.section6.description)}}>
+                            </div>
                     </div>
                 </div>
               
@@ -272,6 +256,10 @@ export const ideathonQuery = graphql`
                 }
             }
             rulesAndRegulations{
+                title
+                description
+            }
+            section6{
                 title
                 description
             }

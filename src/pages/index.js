@@ -1,11 +1,10 @@
 import React from "react"
 import { StaticQuery,Link } from "gatsby"
-import bkImage from "../dist/assets/images/about-5.jpg"
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
-import {Helmet} from "react-helmet";
-import Videofile from "../dist/assets/file.mp4"
+import { Remarkable } from 'remarkable';
+var md = new Remarkable();
+
 
 const IndexPage = () => (
 
@@ -95,7 +94,7 @@ const IndexPage = () => (
                       </div>
                       <div class="row">
                           <div class="col-12 p-0 pr-md-5" style={{textAlign:"justify"}}>
-                             <p>{data.allMarkdownRemark.edges[0].node.frontmatter.section2description}</p>
+                             <div dangerouslySetInnerHTML={{__html:md.render(data.allMarkdownRemark.edges[0].node.frontmatter.section2description)}}></div>
                           </div>
                       </div>
                   </div>
