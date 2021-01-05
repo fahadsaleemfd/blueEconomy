@@ -1,82 +1,71 @@
 import React from "react"
-import { withPrefix ,Link } from "gatsby"
-import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
 import bkImage from "../dist/assets/images/about-5.jpg"
-import TrustedImage from "../dist/assets/images/logo-1.png"
-import Videofile from "../dist/assets/file.mp4"
-import {Helmet} from "react-helmet";
-import { StaticQuery, graphql } from "gatsby"
-import { node } from "prop-types"
+import { StaticQuery } from "gatsby"
+import Layout from "../components/layout"
+import { Remarkable } from 'remarkable';
+var md = new Remarkable();
 
-const Ideathon = () => (
+const Idea = () => (
     
+  
 
+    <StaticQuery query={ideathonQuery} render={data=>{
+        console.log(data)
+        console.log(data.allMarkdownRemark.edges[0].node.frontmatter.Section2.dsecription1)
+        console.log(md.render(data.allMarkdownRemark.edges[0].node.frontmatter.Section2.dsecription1));
 
-         
-    
+           
+        return (
+
         <Layout>
-                <SEO title="Ideathon" />            
-
+                <SEO title="Ideathon" />  
+               
+           
 {/* Section 1  */}
     <section id="about" class="section-1 highlights team image-right">
-        
         <div class="container">
-          {/* {data.list_section.edges.map((tag,index) => ( */}
             <div>
               <div class="row">
                   <div class="col-12 col-lg-8 align-self-top text" style={{textAlign:"center"}}>
                       <div class="row intro m-0">
                           <div class="col-12 p-0">
                               
-                              <h2>BLUE-A-THON 2021 – IDEAS FOR A BLUE PAKISTAN</h2>
-
+                              <h2>{data.allMarkdownRemark.edges[0].node.frontmatter.Section1.title}</h2>
+                               
+                              <div dangerouslySetInnerHTML={{__html:md.render(data.allMarkdownRemark.edges[0].node.frontmatter.Section1.description)}}></div>
                           </div>
                       </div>
                       <div class="row">
                           <div class="col-12 p-0 pr-md-5" style={{textAlign:"justify"}}>
-                              <p>The Blue Economy Initiative brings you BLUE-A-THON PAKISTAN. Blue Economy Ideas for a better Pakistan Blue Economy
-Our Oceans have great potential for Food, Economic growth, trade and logistics, tourism, and leisure. We are at a crossroads where we can set the stage for sustainable growth that will reward generations to come.
-With the latest developments of: CPEC, eCommerce, Pakistan Current affairs, Tourism Opportunities, it is important that a vibrant coastal ecosystem is developed in a manner such as to protect rights of existing human and wildlife and nature as well as find the potential to grow.
-The CNS BEI has been designed to create awareness, educate, develop mentor and coach and implement blue economy initiatives through learning from the data available on the portal. We are inviting youth and academia to look at these opportunities in various sectors, their real-life examples, and then follow the strategies of adoption, adaptation, or invention. This is the first of the kind attempt where an organization is working in multidimensional strategies for fast-tracking the growth of Blue Economy in Pakistan.
-</p>
-                             {/* <p>{tag.node.frontmatter.description}</p> */}
+                          
                           </div>
                       </div>
                   </div>
-                  <div  class="col-12 col-lg-4">
-                            
-                              <img src={bkImage} class="fit-image" />    
+                  <div  class="col-12 col-lg-4" style={{background:"red"}}>  
+                             
                   </div>
+                </div>
               </div>
-              <br></br><br></br><br></br>
-              </div>
-              {/* ))} */}
           </div>
-         
-        
       </section>
+ {/* Section 1 end here */}
 
-{/* Section 2  */}
+{/* Section 2   stert here*/}
       <section class="section-4 offers" style={{background:"#eef4ed"}}>
             <div class="container full-grid">
                 <div class="row text-center intro">
                     <div class="col-12">
-                        <h2>PURPOSE OF THE IDEATHON</h2>
-                        <p class="text-max-800 mb-4" style={{textAlign:"left"}}>
-                            1-	Create a platform for young talent to brainstorm and share new innovative ideas <br></br>
-                            2-	Market and promotethe Blue Economy Initiative. Promising Idea entries will be invited to participate in the Blue Economy challenge Business Plan Competition<br></br>
-                            3-	Engages Potential Stakeholders: Engages potential stakeholders from Academia, Government and Private Sector<br></br>
-                            4-	Raises Awareness of Potential of Blue Economy<br></br>
-                            5-	Offers a fun and exciting and inclusive way to get involved in the Ocean Communities of Pakistan
-</p>
-                       
+                         <h2>{data.allMarkdownRemark.edges[0].node.frontmatter.Section2.title}</h2>
+                        <div dangerouslySetInnerHTML={{__html:md.render(data.allMarkdownRemark.edges[0].node.frontmatter.Section2.description)}}></div>
                     </div>
                 </div>
               
             </div>
         </section>
+
+
+
         {/* Section 3  */}
       <section id="process" class="section-4 process offers">
             <div class="container full">
@@ -240,33 +229,31 @@ If the participant is member of a team, that team is wholly responsible for dete
 
 
         </Layout>
-         
- 
-)
-
+        )
+   
+        
+    }}/>
+    )
 export const ideathonQuery = graphql`
   query ideathonQueryIndex{
-    allMarkdownRemark(filter: {fileAbsolutePath: {regex: "posts/homepage/"}} 
+    allMarkdownRemark(filter: {fileAbsolutePath: {regex: "posts/ideathon/"}} 
     ) {
       edges {
         node {
           id
           frontmatter {
             title
-            video
-            section1title
-            section2title
-            section2description
-            section2image
-            image
-            Section3{
-              title1
-              dsecription1
-              title2
-              dsecription2
-              title3
-              dsecription3
+            Section1{
+                description
+                title
+                image
             }
+            Section2{
+                title
+                description
+                
+            }
+           
           }
           html
           excerpt
@@ -281,4 +268,4 @@ export const ideathonQuery = graphql`
 
 
   
-export default Ideathon
+export default Idea

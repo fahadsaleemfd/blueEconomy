@@ -21,7 +21,7 @@ Section1:
   image: /assets/business-team-discussing-ideas-startup_74855-4380.jpg
 Section2:
   title: BLUE-A-THON 2021 – IDEAS FOR A BLUE PAKISTAN
-  dsecription1: >-
+  description: >-
     # Heading
 
 
@@ -35,3 +35,16 @@ Section2:
 
     5- Offers a fun and exciting and inclusive way to get involved in the Ocean Communities of Pakistan
 ---
+
+# Heading
+
+
+    1- Create a platform for young talent to brainstorm and share new innovative ideas\
+
+    2- Market and promotethe Blue Economy Initiative. Promising Idea entries will be invited to participate in the Blue Economy challenge Business Plan Competition\
+
+    3- Engages Potential Stakeholders: Engages potential stakeholders from Academia, Government and Private Sector\
+
+    4- Raises Awareness of Potential of Blue Economy\
+
+    5- Offers a fun and exciting and inclusive way to get involved in the Ocean Communities of Pakistan
