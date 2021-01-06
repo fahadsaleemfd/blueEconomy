@@ -48,7 +48,7 @@ export default class Funding_lists extends React.Component {
 
                                         <Link to={node.fields.slug}>
                                             <h4>{node.frontmatter.title }</h4>
-                                           <div dangerouslySetInnerHTML={{__html:md.render(node.frontmatter.frontmatter.description).substring(0,200)}}></div>
+                                           <div dangerouslySetInnerHTML={{__html:md.render(node.frontmatter.description).substring(0,200)}}></div>
                                         
                                         </Link>
                 
