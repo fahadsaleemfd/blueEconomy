@@ -7,21 +7,19 @@ import bkImage from "../dist/assets/images/about-5.jpg"
 import TrustedImage from "../dist/assets/images/logo-1.png"
 import {Helmet} from "react-helmet";
 import { StaticQuery, graphql } from "gatsby"
-import { node } from "prop-types"
 import Pagination from "../components/pagination"
+import { Remarkable } from 'remarkable';
+var md = new Remarkable();
 
-export default class Funding extends React.Component {
+const Funding = () => (
 
-    render() {
 
-      const posts = this.props.data.allMarkdownRemark.edges
-      const totalPages = this.props.data.allMarkdownRemark.edges.length
-      const { currentPage, numPages } = this.props.pageContext
-      const isFirst = currentPage === 1
-      const isLast = currentPage === numPages
-      const prevPage = currentPage - 1 === 1 ? "" : (currentPage - 1).toString()
-      const nextPage = (currentPage + 1).toString()
-      const path = "/funding/";
+      <StaticQuery query={fundings} render={data=>{    
+        const totalPages =  data.allMarkdownRemark.pageInfo.pageCount
+        const prevPage = data.allMarkdownRemark.pageInfo.hasPreviousPage
+        const isLast  = data.allMarkdownRemark.pageInfo.currentPage === totalPages
+        const nextPage = (data.allMarkdownRemark.pageInfo.currentPage + 1).toString()
+        const path = "/funding/";
 
 
 
@@ -30,32 +28,28 @@ export default class Funding extends React.Component {
             <Layout>
                 <SEO title="Funding Orgnization" />            
           
-
-
         <section id="blog" class="section-1 showcase blog-grid filter-section projects">
             <div class="overflow-holder">
                 <div class="container">
                     
                     <div class="row items filter-items">
 
-                    {posts.map(({ node }) => {
+                    {data.allMarkdownRemark.edges.map((tag,node ) => {
                         return( 
                         <div class="col-12 col-md-6 col-lg-4 item filter-item" data-groups='["innovation","social","technology"]'>
                             
                             <div class="row card p-0 text-center">
                                 <div class="image-over">
-                                    <img src={node.frontmatter.image} alt="Lorem ipsum"/>
+                                    <img src={tag.node.frontmatter.image} alt="Lorem ipsum"/>
                                 </div>
                                 <div class="card-footer d-lg-flex align-items-center justify-content-center">
-                                    {/* <Link to={node.fields.slug} class="d-lg-flex align-items-center"><i class="icon-user"></i></Link> */}
-                                    {/* <a href="#" class="d-lg-flex align-items-center"><i class="icon-clock"></i>2 Days Ago</a> */}
                                 </div>
                                 <div class="card-caption col-12 p-0">
                                     <div class="card-body">
 
-                                        <Link to={node.fields.slug}>
-                                            <h4>{node.frontmatter.title }</h4>
-                                            <p>{node.frontmatter.description.substring(0,200)}</p>
+                                        <Link to={tag.node.fields.slug}>
+                                            <h4>{tag.node.frontmatter.title }</h4>
+                                            <div dangerouslySetInnerHTML={{__html:md.render(tag.node.frontmatter.description).substring(0,200)}}></div>
                                         
                                         </Link>
                 
@@ -71,7 +65,15 @@ export default class Funding extends React.Component {
 
 
                     </div>
-                    <Pagination prevPage={prevPage} nextPage={2} isFirst={true} isLast={isLast} currentPage={'1'} numPages={numPages} path={path} />
+                    <Pagination
+                        prevPage={prevPage} 
+                        nextPage={nextPage} 
+                        isFirst={1} 
+                        isLast={isLast} 
+                        currentPage={'1'} 
+                        numPages={totalPages} 
+                        path={path}
+                    />
                 </div>
             </div>
         </section>
@@ -81,13 +83,13 @@ export default class Funding extends React.Component {
         </Layout>
             </div>
           )
-        }
-      }
+        }}/>
+    )
 
 export const fundings = graphql`
   query fundingquery{
     allMarkdownRemark(filter: {fileAbsolutePath: {regex: "posts/fundings/"}}
-    limit: 21
+    limit : 21
     ) {
       edges {
         node {
@@ -105,11 +107,21 @@ export const fundings = graphql`
           excerpt
         }
       }
+        pageInfo {
+        currentPage
+        hasNextPage
+        hasPreviousPage
+        itemCount
+        pageCount
+        perPage
+        totalCount
+      }
+      
     }
   }
   
    `
 
 
-
+   export default Funding
   

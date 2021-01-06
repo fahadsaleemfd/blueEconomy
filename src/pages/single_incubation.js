@@ -37,35 +37,22 @@ const SingleIncubation = ({data}) => {
                             <div class="col-12">
                                 <h2 class="mb-0"><span>{data.markdownRemark.frontmatter.secondtitle}</span></h2>
                             </div>
-
-                          
-                            {/* <div class="row post-meta mx-auto ml-lg-0">
-                                <div class="col-12 align-self-center">
-                                    <span class="author"><i class="fas fa-calendar-alt"></i>{data.markdownRemark.frontmatter.date}</span>  
-                                </div>
-                            </div> */}
                         </div>
 
                         <div class="row">
                             <div class="col-12 align-self-center">
                                 
                             <div dangerouslySetInnerHTML={{__html:md.render(data.markdownRemark.frontmatter.description)}}></div>
-                                 {/* <p>{data.markdownRemark.frontmatter.description}</p> */}
-                                 {/* <div dangerouslySetInnerHTML={{__html:data.allMarkdownRemark.edges[0].node.html}}></div> */}
-
+            
                                 <div class="mb-5 gallery">
                                         <img src={data.markdownRemark.frontmatter.image} class="fit-image" alt="Introduction Video"/>
                                     
                                 </div>
 
-                        
                             </div>
                         </div>
-
-            
                     </div>
                     
-                   
                     <aside class="col-12 col-lg-4 pl-lg-5 p-0 float-right sidebar">
                         <div class="row item widget-tags">
                             <div class="col-12 align-self-center">

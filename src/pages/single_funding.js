@@ -7,7 +7,8 @@ import bkImage from "../dist/assets/images/about-5.jpg"
 import TrustedImage from "../dist/assets/images/logo-1.png"
 import {Helmet} from "react-helmet";
 import { StaticQuery, graphql } from "gatsby"
-
+import { Remarkable } from 'remarkable';
+var md = new Remarkable();
 const SingleFunding = ({data}) => {
         console.log(data.markdownRemark.frontmatter)
         return (  
@@ -40,20 +41,13 @@ const SingleFunding = ({data}) => {
                             <div class="col-12">
                                 <h2 class="mb-0"><span>{data.markdownRemark.frontmatter.title}</span></h2>
                             </div>
-
-                          
-                            {/* <div class="row post-meta mx-auto ml-lg-0">
-                                <div class="col-12 align-self-center">
-                                    <span class="author"><i class="fas fa-calendar-alt"></i>{data.markdownRemark.frontmatter.date}</span>  
-                                </div>
-                            </div> */}
                         </div>
 
                         <div class="row">
                             <div class="col-12 align-self-center">
                                 
-                              
-                                 <p>{data.markdownRemark.frontmatter.description}</p>
+                                <div dangerouslySetInnerHTML={{__html:md.render(data.markdownRemark.frontmatter.description).substring(0,200)}}></div>
+                                
 
                                 <div class="mb-5 gallery">
                                         <img src={data.markdownRemark.frontmatter.image} class="fit-image" alt="Introduction Video"/>

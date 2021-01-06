@@ -4,6 +4,8 @@ import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 import { graphql } from "gatsby"
 import Pagination from "../../components/pagination"
+import { Remarkable } from 'remarkable';
+var md = new Remarkable();
 
 export default class Funding_lists extends React.Component {
 
@@ -41,16 +43,12 @@ export default class Funding_lists extends React.Component {
                                 <div class="image-over">
                                     <img src={node.frontmatter.image} alt="Lorem ipsum"/>
                                 </div>
-                                <div class="card-footer d-lg-flex align-items-center justify-content-center">
-                                    {/* <Link to={node.fields.slug} class="d-lg-flex align-items-center"><i class="icon-user"></i></Link> */}
-                                    {/* <a href="#" class="d-lg-flex align-items-center"><i class="icon-clock"></i>2 Days Ago</a> */}
-                                </div>
                                 <div class="card-caption col-12 p-0">
                                     <div class="card-body">
 
                                         <Link to={node.fields.slug}>
                                             <h4>{node.frontmatter.title }</h4>
-                                            <p>{node.frontmatter.description.substring(0,200)}</p>
+                                           <div dangerouslySetInnerHTML={{__html:md.render(node.frontmatter.frontmatter.description).substring(0,200)}}></div>
                                         
                                         </Link>
                 
