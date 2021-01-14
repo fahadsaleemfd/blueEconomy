@@ -29,23 +29,29 @@ class ContactFormPage extends React.Component {
         // Loop through this component's refs (the fields) and add them to the
         // formData object. What we're left with is an object of key-value pairs
         // that represent the form data we want to send to Netlify.
-       
+        const formData = {}
         var fd = new FormData();
         fd.append('form-name','Contact Form')
         fd.append( 'name', this.state.name);
         fd.append( 'last_name', this.state.last_name);
         fd.append( 'email', this.state.email);
         fd.append( 'message', this.state.message);
+        // console.log(fd)
+        for (var key of fd.entries()) {
+            console.log(key[0] + ', ' + key[1]);
+            formData[key[0]] = key[1]
+        }
+        console.log(formData)
        
         // Object.keys(this.domRef.current.value).map(key => (formData[key] = this.domRef.current.value))
       
         // Set options for axios. The URL we're submitting to
         // (this.props.location.pathname) is the current page.
         const axiosOptions = {
-          url: 'https://loving-yonath-0e5da8.netlify.app/contact_us',
+          url: this.props.location.pathname,
           method: "post",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          data: qs.stringify(fd),
+          data: qs.stringify(formData),
         }
       
         // Submit to Netlify. Upon success, set the feedback message and clear all
