@@ -42,7 +42,7 @@ class ContactFormPage extends React.Component {
         // Set options for axios. The URL we're submitting to
         // (this.props.location.pathname) is the current page.
         const axiosOptions = {
-          url: this.props.location.pathname,
+          url: 'https://loving-yonath-0e5da8.netlify.app/contact_us',
           method: "post",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
           data: qs.stringify(fd),
