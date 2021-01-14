@@ -31,6 +31,7 @@ class ContactFormPage extends React.Component {
         // that represent the form data we want to send to Netlify.
        
         var fd = new FormData();
+        fd.append('form-name','Contact Form')
         fd.append( 'name', this.state.name);
         fd.append( 'last_name', this.state.last_name);
         fd.append( 'email', this.state.email);
