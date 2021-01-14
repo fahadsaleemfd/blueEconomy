@@ -61,6 +61,11 @@ class ContactFormPage extends React.Component {
           .then(response => {
             this.setState({
               feedbackMsg: "Form submitted successfully!",
+              name: '',
+              last_name : '',
+              email: '',
+              message : '',
+
             })
             // this.domRef.current.reset()
           })
