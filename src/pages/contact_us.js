@@ -77,11 +77,6 @@ const Contact = () => (
                     <div class="col-12 col-lg-6">
                     <form name="contact" method="POST" data-netlify="true">
 
-                            <input type="hidden" name="section" value="nexgen_form"/>
-
-                            <input type="hidden" name="reCAPTCHA"/>
-                           
-
                             <div class="row form-group-margin">
                                 <div class="col-12 col-md-6 col-lg-6 m-0 p-2 input-group">
                                     <input type="text" name="name" class="form-control field-name" placeholder="Name"/>
