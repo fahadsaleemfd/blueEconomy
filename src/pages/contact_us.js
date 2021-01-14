@@ -1,22 +1,31 @@
 import React from "react"
-import { withPrefix ,Link } from "gatsby"
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
-import bkImage from "../dist/assets/images/about-5.jpg"
-import TrustedImage from "../dist/assets/images/logo-1.png"
 import {Helmet} from "react-helmet";
 import { StaticQuery, graphql } from "gatsby"
-import { node } from "prop-types"
 import SimpleMap from "./map.js"
+const axios = require('axios').default;
 
 const Contact = () => (
 
-    
+   
     <StaticQuery query={contactquery} render={data=>{
             console.log(data)
         // const fetchData = data.allMarkdownRemark.edges
-  
+        const submitForm = (e) => {
+            e.preventDefault()
+            let myForm = document.getElementById('contact');
+            let formData = new FormData(myForm)
+            fetch('/', {
+                method: 'POST',
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: new URLSearchParams(formData).toString()
+              }).then(() => console.log('Form successfully submitted')).catch((error) =>
+                alert(error))
+            
+            
+
+        }
         return (  
             <div>
                 <Helmet>
@@ -75,7 +84,7 @@ const Contact = () => (
                     </div>
 
                     <div class="col-12 col-lg-6">
-                    <form name="contact" method="POST" data-netlify="true">
+                    <form name="contact" method="POST" data-netlify="true" id="contact">
 
                             <div class="row form-group-margin">
                                 <div class="col-12 col-md-6 col-lg-6 m-0 p-2 input-group">
@@ -95,7 +104,7 @@ const Contact = () => (
                                     <span class="form-alert"></span>
                                 </div>
                                 <div class="col-12 input-group m-0 p-2">
-                                    <a class="btn primary-button">SEND</a>
+                                    <a class="btn primary-button" onClick={submitForm}>SEND</a>
                                 </div>
                             </div>
                         </form>
