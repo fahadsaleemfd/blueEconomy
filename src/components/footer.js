@@ -1,7 +1,5 @@
-import {withPrefix, Link } from "gatsby"
-import PropTypes from "prop-types"
+import { Link } from "gatsby"
 import React from "react"
-import {Helmet} from "react-helmet";
 
 const Footer = ({ siteTitle }) => {
 
@@ -39,7 +37,7 @@ const Footer = ({ siteTitle }) => {
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#contact" class="mt-4 btn outline-button smooth-anchor">GET IN TOUCH</a>
+                        <Link to={'/contact_us'} class="mt-4 btn outline-button smooth-anchor">GET IN TOUCH</Link>
                     </li>
                 </ul>
             </div>
@@ -47,35 +45,31 @@ const Footer = ({ siteTitle }) => {
                 <div class="row items">
                     <div class="col-12 col-lg-4 item">
                         <div class="card">
-                            <h4>About</h4>
-                            <a href="#"><i class="icon-arrow-right"></i>The Company</a>
-                            <a href="#"><i class="icon-arrow-right"></i>Institutional</a>
-                            <a href="#"><i class="icon-arrow-right"></i>Social & Events</a>
-                            <a href="#"><i class="icon-arrow-right"></i>Innovation</a>
-                            <a href="#"><i class="icon-arrow-right"></i>Environment</a>
-                            <a href="#"><i class="icon-arrow-right"></i>Technology</a>
+                             <Link to={'/'}>HOME</Link>
+                             <Link  to={'/can-and-msf'}>CAN and MSF</Link>
+                             <Link  to={'/blue_economy'}>Blue Economy</Link>
+                             <Link to={'/bechallenge'}>Challenge 2021</Link>
+                             <Link to={'/ideathon'}>Ideathon</Link>
+                             <Link to={'/resources'}>Resources</Link>
                         </div>
                     </div>
                     <div class="col-12 col-lg-4 item">
                         <div class="card">
-                            <h4>Services</h4>
-                            <a href="#"><i class="icon-arrow-right"></i>Audit & Assurance</a>
-                            <a href="#"><i class="icon-arrow-right"></i>Financial Advisory</a>
-                            <a href="#"><i class="icon-arrow-right"></i>Analytics M&A</a>
-                            <a href="#"><i class="icon-arrow-right"></i>Middle Marketing</a>
-                            <a href="#"><i class="icon-arrow-right"></i>Legal Consulting</a>
-                            <a href="#"><i class="icon-arrow-right"></i>Regulatory Risk</a>
+                            <h4>Ideas</h4>
+                                    <Link to={'/bestartup'}>Startups</Link>
+                                    <Link to={'/smallscale'}>Small Scale</Link>
+                                    <Link to={'/medscale'}>Medium Scale</Link>
+                                    <Link to={'/largescale'}>Large Scale</Link>
                         </div>
                     </div>
                     <div class="col-12 col-lg-4 item">
                         <div class="card">
-                            <h4>Support</h4>
-                            <a href="#"><i class="icon-arrow-right"></i>Responsibility</a>
-                            <a href="#"><i class="icon-arrow-right"></i>Terms of Use</a>
-                            <a href="#"><i class="icon-arrow-right"></i>About Cookies</a>
-                            <a href="#"><i class="icon-arrow-right"></i>Privacy Policy</a>
-                            <a href="#"><i class="icon-arrow-right"></i>Accessibility</a>
-                            <a href="#"><i class="icon-arrow-right"></i>Information</a>
+                            <h4>Tracks</h4>
+                                   <Link to={'/incubation'}>Incubation Tracks</Link>   
+                                    <Link  to={'/funding'}>Funding Orgnizations</Link>
+                                    <Link  to={'/business'}>Business Competition</Link>
+                                    <Link  to={'/international'}>Inernational Universities</Link>
+                                    <Link to={'/faqs'}>FAQS</Link>
                         </div>
                     </div>
                 </div>

@@ -1,12 +1,6 @@
 import React from "react"
-import { withPrefix ,Link } from "gatsby"
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
-import bkImage from "../dist/assets/images/about-5.jpg"
-import TrustedImage from "../dist/assets/images/logo-1.png"
-import {Helmet} from "react-helmet";
-import { StaticQuery, graphql } from "gatsby"
 import { Remarkable } from 'remarkable';
 var md = new Remarkable();
 const SingleFunding = ({data}) => {
@@ -46,7 +40,7 @@ const SingleFunding = ({data}) => {
                         <div class="row">
                             <div class="col-12 align-self-center">
                                 
-                                <div dangerouslySetInnerHTML={{__html:md.render(data.markdownRemark.frontmatter.description).substring(0,200)}}></div>
+                                <div dangerouslySetInnerHTML={{__html:md.render(data.markdownRemark.frontmatter.description)}}></div>
                                 
 
                                 <div class="mb-5 gallery">

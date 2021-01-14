@@ -1,12 +1,8 @@
 import React from "react"
-import { withPrefix ,Link } from "gatsby"
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
-import bkImage from "../dist/assets/images/about-5.jpg"
-import TrustedImage from "../dist/assets/images/logo-1.png"
-import {Helmet} from "react-helmet";
-import { StaticQuery, graphql } from "gatsby"
+import { Remarkable } from 'remarkable';
+var md = new Remarkable();
 
 const SingleBusiness = ({data}) => {
         console.log(data.markdownRemark.frontmatter)
@@ -41,19 +37,13 @@ const SingleBusiness = ({data}) => {
                                 <h2 class="mb-0"><span>{data.markdownRemark.frontmatter.title}</span></h2>
                             </div>
 
-                          
-                            {/* <div class="row post-meta mx-auto ml-lg-0">
-                                <div class="col-12 align-self-center">
-                                    <span class="author"><i class="fas fa-calendar-alt"></i>{data.markdownRemark.frontmatter.date}</span>  
-                                </div>
-                            </div> */}
                         </div>
 
                         <div class="row">
                             <div class="col-12 align-self-center">
                                 
                               
-                                 <p>{data.markdownRemark.frontmatter.description}</p>
+                               <div dangerouslySetInnerHTML={{__html:md.render(data.markdownRemark.frontmatter.description)}}></div>
 
                                 <div class="mb-5 gallery">
                                         <img src={data.markdownRemark.frontmatter.image} class="fit-image" alt="Introduction Video"/>
