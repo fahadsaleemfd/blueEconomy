@@ -11,18 +11,32 @@ class ContactFormPage extends React.Component {
 
     constructor(props) {
         super(props)
-        this.domRef = React.createRef()
+        // this.domRef = React.createRef()
         this.state = { feedbackMsg: null }
+        this.state = {name : '' , last_name: '' , email: 'email', message : 'message'}
+
       }
-  
+
+      handleChange = (event) => {        
+    
+        this.setState({[event.target.name] : event.target.value});
+      }
+
       handleSubmit(event) {
+
         // Do not submit form via HTTP, since we're doing that via XHR request.
         event.preventDefault()
         // Loop through this component's refs (the fields) and add them to the
         // formData object. What we're left with is an object of key-value pairs
         // that represent the form data we want to send to Netlify.
-        const formData = {}
-        Object.keys(this.refs).map(key => (formData[key] = this.refs[key].value))
+       
+        var fd = new FormData();
+        fd.append( 'name', this.state.name);
+        fd.append( 'last_name', this.state.last_name);
+        fd.append( 'email', this.state.email);
+        fd.append( 'message', this.state.message);
+       
+        // Object.keys(this.domRef.current.value).map(key => (formData[key] = this.domRef.current.value))
       
         // Set options for axios. The URL we're submitting to
         // (this.props.location.pathname) is the current page.
@@ -30,7 +44,7 @@ class ContactFormPage extends React.Component {
           url: this.props.location.pathname,
           method: "post",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          data: qs.stringify(formData),
+          data: qs.stringify(fd),
         }
       
         // Submit to Netlify. Upon success, set the feedback message and clear all
@@ -41,12 +55,13 @@ class ContactFormPage extends React.Component {
             this.setState({
               feedbackMsg: "Form submitted successfully!",
             })
-            this.domRef.current.reset()
+            // this.domRef.current.reset()
           })
           .catch(err =>
-            this.setState({
-              feedbackMsg: "Form could not be submitted.",
-            })
+            console.log(err)
+            // this.setState({
+            //   f.",
+            // })
           )
       }
   
@@ -112,22 +127,22 @@ class ContactFormPage extends React.Component {
 
                     <div class="col-12 col-lg-6">
                     {this.state.feedbackMsg && <p>{this.state.feedbackMsg}</p>}
-                    <form ref={this.domRef} name="Contact Form" method="POST" data-netlify="true" onSubmit={event => this.handleSubmit(event)}>
-                            <input ref="form-name" type="hidden" name="form-name" value="Contact Form" />
+                    <form  name="Contact Form" method="POST" data-netlify="true" onSubmit={event => this.handleSubmit(event)}>
+                            <input  type="hidden" name="form-name" value="Contact Form" />
                             
                             <div class="row form-group-margin">
                                 <div class="col-12 col-md-6 col-lg-6 m-0 p-2 input-group">
-                                    <input type="text" name="name" class="form-control field-name" placeholder="Name"/>
+                                    <input type="text" name="name" class="form-control field-name" onChange={this.handleChange} placeholder="Name"/>
                                 </div>
                                 <div class="col-12 col-md-6 col-lg-6 m-0 p-2 input-group">
-                                    <input type="text" name="last_name" class="form-control field-email" placeholder="Last Name"/>
+                                    <input type="text" name="last_name" onChange={this.handleChange} class="form-control field-email" placeholder="Last Name"/>
                                 </div>
                                 <br></br>
                                 <div class="col-12 m-0 p-2 input-group">
-                                    <input type="email" name="email" class="form-control field-phone" placeholder="Email"/>
+                                    <input type="email" name="email" onChange={this.handleChange} class="form-control field-phone" placeholder="Email"/>
                                 </div>
                                 <div class="col-12 m-0 p-2 input-group">
-                                    <textarea name="message" class="form-control field-message" placeholder="Message"></textarea>
+                                    <textarea name="message" class="form-control  field-message" onChange={this.handleChange} placeholder="Message"></textarea>
                                 </div>
                                 <div class="col-12 col-12 m-0 pl-md-2">
                                     <span class="form-alert"></span>
